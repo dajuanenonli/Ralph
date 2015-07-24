@@ -1,0 +1,82 @@
+#pile-main {
+  position: relative;
+  margin: 50px;
+  min-height: 100px;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#pile-main div[class^='pile-group-'],
+#pile-main div[class*=' pile-group-'] {
+  width: 240px;
+  height: 240px;
+  background-color: #FFF;
+  border: 10px solid white;
+  position: absolute;
+  display: inline-block;
+  box-shadow: 0 2px 3px rgba(150, 150, 150, 0.3);
+  -webkit-transition: left 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: left 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s, -moz-transform 0.3s;
+  -ms-transition: left 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s, -ms-transform 0.3s;
+  -o-transition: left 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s, -o-transform 0.3s;
+  transition: left 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s, transform 0.3s;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#pile-main div[class^='pile-group-'] a,
+#pile-main div[class*=' pile-group-'] a {
+  position: absolute;
+}
+#pile-main div[class^='pile-group-'] img,
+#pile-main div[class*=' pile-group-'] img {
+  width: 240px;
+  height: 240px;
+}
+#pile-main div[class^='pile-group-'] div.label,
+#pile-main div[class*=' pile-group-'] div.label {
+  position: absolute;
+  font-weight: 300;
+  left: 0;
+  color: black;
+  bottom: 30px;
+}
+#pile-main div[class^='pile-group-'] div.label .pretitle,
+#pile-main div[class*=' pile-group-'] div.label .pretitle {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.94);
+}
+#pile-main div[class^='pile-group-'] div.label .title,
+#pile-main div[class*=' pile-group-'] div.label .title {
+  display: inline-block;
+  position: relative;
+  max-width: 85%;
+  padding: 5px 10px;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(68, 69, 73, 0.9);
+}
+#pile-main div[class^='pile-group-'] div.label .description,
+#pile-main div[class*=' pile-group-'] div.label .description {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px;
+  max-width: 85%;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#pile-main .pile-group-d img:hover {
+  content: url("../images/card_book_components.jpg");
+}

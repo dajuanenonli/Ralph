@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <!-- PRINT -->
+    <link href="../../../_internals/css/print.css" rel="stylesheet" type="text/css" />
+    <style>
+      @page {
+        margin: 3cm;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Cheat Sheet <strong>Actions</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_ej5tx58w7b9">The most important Actions</h1>
+      <p class="subtitle">in Edge Animate</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This cheat sheet will provide you with the most commonly used actions and code snippets for the use in Edge Animate. With each snippet, you will find a short description of its function and what you need to consider. Have fun! 
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+    
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_6h7rp4uc8fr">Playback Actions</h3>  <p>    Controll the playback of your animations with these actions:  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Play from current playhead position
+sym.play();
+       
+// Play from label
+// Indicate target label as string, e.g. "myLabel"
+sym.play("myLabel");
+        
+// Play from point in time
+// Indicate point in time in milliseconds, e.g. 1000
+sym.play(1000);
+        
+// Play in opposite direction
+// (also works with labels and timestamps)
+sym.playReverse();
+        
+// Stop playback
+sym.stop();
+        
+// Stop playback and move playhead to label
+sym.stop("myLabel");
+      
+// Stop playback and move playhead to point in time
+sym.stop(1000);
+      
+// Toggle play or pause the current timeline 
+if (sym.isPlaying()) {
+	sym.stop();
+} else {
+	sym.play();
+}
+    </code>    </code>  </pre>  </section>
+
+ <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_rv01bcblnmi">Addressing symbols and elements</h3>  <p>    Using the Animate API to get the reference to the stage, symbols and elements:  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Get reference to the stage (independent of current scope)
+sym.getComposition().getStage();
+        
+// Get reference to a certain symbol (here: mySymbol) within the current scope, e.g. on the stage
+sym.getSymbol("mySymbol");
+      
+// Get reference to a certain element (here: myElement) within the current scope
+sym.$("myElement");
+      
+// Get reference to a symbol's containing element from within the symbol
+sym.getSymbolElement("mySymbol");
+    </code>    </code>  </pre>  </section>
+ 
+    <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_tjmfxfde7b9">Creating and deleting symbols</h3>  <p>    Using scripts to create and delete symbols at runtime  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Creating a symbol instance inside a target element
+// First parameter defines the symbol, second the target
+sym.createChildSymbol("mySymbol", "myElement");
+        
+// Deleting a symbol instance
+sym.deleteSymbol("mySymbol");
+      
+// Removing the content of a specific element
+// e.g. removing a symbol instance as created above
+sym.$("myElement").empty();
+    </code>    </code>  </pre>  </section>
+  
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_eal1drvygb9">Variables and scopes</h3>  <p>    Using variables throughout different scopes  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Setting a variable (on current scope)
+// First parameter defines variable name, second its value
+sym.setVariable("myVariable", value);
+        
+// Retrieving a variable
+sym.getVariable("myVariable");
+      
+// EXAMPLE:
+// Creating variable "count" on stage level, 
+// then passing it into the symbol "mySymbol"
+      
+// (on stage level)
+var count = 0;
+      
+sym.getSymbol("mySymbol").setVariable("count", count);
+
+// (within the symbol) 
+var count = sym.getVariable("count");
+    </code>    </code>  </pre>  </section>
+  
+
+  
+   <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_3j8adjcerk9">Adding content</h3>  <p>    Using scripts to add or alter content at runtime  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Changing the html inside an element 
+// e.g. to change text inside a text element
+sym.$("myElement").html("Your new text goes here");
+
+// Adding content to existing elements
+// e.g. adding further text
+sym.$("myElement").append("Additional text goes here");
+    </code>    </code>  </pre>  </section>
+  
+  
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_zdp1eaeb3xr">Links</h3>  <p>    Navigate to a different location with these actions:  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Navigate to a new URL in the current window
+window.open("http://www.adobe.com", "_self");
+        
+// Navigate to a new URL in a new window
+window.open("http://www.adobe.com", "_blank");
+      
+// Email to certain address
+window.location.href("mailto:destination@address.com");
+    </code>    </code>  </pre>  </section>
+  
+  
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_rqkouf5stt9">Hide/Show</h3>  <p>    Hide or reveal hidden elements and symbols with these actions:  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Hide an element 
+sym.$("Element_Name").hide();
+        
+// Show an element 
+sym.$("Element_Name").show();
+      
+// Set a toggle to hide or show an element 
+if (sym.$("Element_Name").is(":visible")) {
+	sym.$("Element_Name").hide();
+} else {
+	sym.$("Element_Name").show();
+}
+    </code>    </code>  </pre>  </section>  
+  
+  
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Cheat Sheet <strong>Events</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_uhxb9o7ds4i">The most important Events</h1>
+      <p class="subtitle">in Edge Animate</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <p>
+      This cheat sheet will provide you with the Events you will most likely encounter using Edge Animate. With each Event, you will find a short description of its purpose and what you need to consider. Enjoy! 
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_gsh76k9y66r">Stage Events</h2>  
+      <ul>
+        <li><strong>creationComplete:</strong> This event fires when the stage instance is created. Similar to <i>compositionReady</i>, this event can be used to set and define initialization statements.
+        </li>
+        <li><strong>beforeDeletion:</strong> This event can be used to clean up before the stage is being removed.</li>
+        <li><strong>compositionReady:</strong> The compositionReady event fires after the composition is initialized. This allows you to further prepare the composition with code, e.g. by setting variables or loading extensions like external CSS.</li>
+         <li><strong>scroll:</strong> This event fires when the user scrolls within the composition.</li>
+         <li><strong>keydown/keyup:</strong> This event fires when a key is pressed or released, respectively.</li>
+         <li><strong>orientationchange:</strong> This event is specific for mobile devices. It fires when the device is rotated, e.g. from portrait to landscape view.</li>
+         <li><strong>resize:</strong> This event fires as soon as the size of the browser window changes.</li>
+         <li><strong>onError:</strong> This event is a global error handler and is always called when the code for some other event produces a JavaScript error.</li>
+      </ul>
+    </section><!-- /Widget -->
+    
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_qu6nweo2yb9">Element Events</h2>  
+      <ul>
+        <li><strong>click:</strong> This event is fired when the user clicks on the element.</li>
+        <li><strong>dblclick:</strong> This event fires when the user uses a double click on the element.</li>
+        <li><strong>mouseover:</strong> This event fires when the mouse cursor enters the area of the element.</li>
+        <li><strong>mouseout:</strong> This event fires when the mouse cursor leaves the area of the element.</li>
+        <li><strong>mousedown:</strong> This event fires when the user uses a double click on the element.</li>
+        <li><strong>mouseup:</strong> This event fires when the user uses a double click on the element.</li>
+        <li><strong>mousemove:</strong> This event runs continously while the mouse moves over the element.</li>
+        <li><strong>touchstart:</strong> This event fires when a finger touches the element on a touch screen.</li>
+        <li><strong>touchmove:</strong> This event fires continously when the finger moves over the touch screen after <i>touchstart</i>.</li>
+        <li><strong>touchend:</strong> This event fires when the user releases the finger from touch screen.</li>
+        <li><strong>mouseenter/mouseleave:</strong> These events are similar to mouseover/mouseout, but in these cases the event is only fired once within the boundaries of the element.</li>
+        <li><strong>focus:</strong> This event is fired when the element gets the focus.</li>
+        <li><strong>swipeleft/right:</strong> This event fires when the user finger-swipes the element on a touch screen.</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_1f4scbx1or">Symbol Events</h2>  
+      <ul>
+        <li><strong>creationComplete:</strong> This event fires when a symbol instance is being created on the stage. This allows you to define initializing statements.</li>
+        <li><strong>beforeDeletion:</strong> This event can be used to clean up before the symbol is being removed from the stage.</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_kenp2jra4i">Timeline Events</h2>  
+      <ul>
+        <li><strong>update:</strong> This event is fired continously when the playhead moves on the timeline, i.e. the timeline is playing.</li>
+        <li><strong>play:</strong> This event is triggered when the playhead starts to move.</li>
+        <li><strong>complete:</strong> This event fires when the playhead reaches the end of the timeline.</li>
+        <li><strong>stop:</strong> This event fires when the playhead is being stopped.</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Cheat Sheet <strong>Shortcuts</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_8cs82blz0k9">The most useful Keyboard Shortcuts</h1>
+      <p class="subtitle">for Edge Animate</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <p>
+      This cheat sheet will provide you with the most useful keyboard shortcuts for a faster workflow in Edge Animate. Enjoy! 
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_in6h2z3q5mi">General</h2>  
+      <ul>
+        <li>new Project: CMD/Ctrl + N</li>
+        <li>save Project: CMD/Ctrl + S</li>
+        <li>preview in browser: CMD/Ctrl + Enter</li>
+        <li>code view: CMD/Ctrl + E</li>
+        <li>publish: alt + CMD/Ctrl + S</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_wuuazrjatt9">Tools</h2>  
+      <ul>
+        <li>selection tool: V</li>
+        <li>transform tool: Q</li>
+        <li>clipping tool: C</li>
+        <li>rectangle tool: M</li>
+        <li>rounded rectangle tool: R</li>
+        <li>ellipse tool: O</li>
+        <li>text tool: T</li>
+        <li>hand tool: H</li>
+        <li>zoom tool: Z</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_hvkfx647vi">Edit</h2>  
+      <ul>
+        <li>undo: CMD/Ctrl + Z</li>
+        <li>redo: CMD/Ctrl + Shift + Z</li>
+        <li>cut: CMD/Ctrl + X</li>
+        <li>copy: CMD/Ctrl + C</li>
+        <li>paste: CMD/Ctrl + V</li>
+        <li>paste transitions from location: Shift + CMD/Ctrl + V</li>
+        <li>paste inverted: Shift + alt + V</li>
+        <li>paste all: Shift + CMD/Ctrl + V</li>
+        <li>duplicate: CMD/Ctrl + D</li>
+        <li>select all: CMD/Ctrl + A</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_mpkp2lw61or">Timeline</h2>  
+      <ul>
+        <li>play/pause: Space</li>
+        <li>return to previous position: Enter</li>
+        <li>next keyframe: CMD/Ctrl + right</li>
+        <li>next keyframe: CMD/Ctrl + left</li>
+        <li>toggle pin: P</li>
+        <li>auto-keyframe mode: K</li>
+        <li>auto-transition mode: X</li>
+        <li>flip playhead and pin: Shift + P</li>
+        <li>remove transition: Shift + Backspace</li>
+        <li>transport playhead:
+          <ul>
+            <li>move to end: End</li>
+            <li>move to beginning: Home</li>
+          </ul>
+        </li>
+        <li>set trigger: CMD/Ctrl + T</li>
+        <li>set label: CMD/Ctrl + L</li>
+      </ul>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_gaesrurqkt9">Modify</h2>  
+      <ul>
+        <li>Group elements: CMD/Ctrl + G</li>
+        <li>Ungroup elements: Shift + CMD/Ctrl + G</li>
+        <li>Convert to symbol: CMD/Ctrl + Y</li>
+        <li>Move along only one axis: Shift (pressed)</li>
+      </ul>
+    </section><!-- /Widget -->
+
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Cheat Sheet <strong>Terminology</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_sy2i0t6s9k9">The most important terms and expressions</h1>
+      <p class="subtitle">for Edge Animate</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <p>
+      This cheat sheet will provide you with the most important terms and expressions used in regards to Edge Animate. This will help you get an easier access to the tool, its mechanisms and this guide book. Enjoy! 
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_1qka9110pb9">Runtime</h2>
+        Refers to the composition being executed in a browser as opposed to the preview in Edge Animate during -> design time.
+      </p>
+      <p><h2 id="anchor_k4hp0cqh0k9">Design time</h2>
+        Representation of the Animate composition in Edge Animate.
+      </p>
+      <p><h2 id="anchor_29cdpap2e29">Trigger</h2>
+        A trigger allows you to define a point on the Timeline on which an action is then being executed.
+      </p>
+      <p><h2 id="anchor_3t4cu0g4x6r">Label</h2>
+        Marker on the Timeline that can be used as a reference, e.g. within playback commands or triggers.
+      </p>
+      <p><h2 id="anchor_6i0u2tke29">Action</h2>
+        Actions are JavaScript code snippets that effect for example the playback of the Timeline or define the result of a click event.
+      </p>
+      <p><h2 id="anchor_bl9v534bo6r">Scope</h2>
+        The scope refers to the current context, for example being on the stage level or within a symbol.
+      </p>
+      <p><h2 id="anchor_x1czq0hehfr">Stage</h2>
+        The stage is your design canvas and the top most element of your composition. The stage has unique events and settings.
+      </p>
+      <p><h2 id="anchor_0c12dtpgb9">Stage Level</h2>
+        The stage level refers in general to the top most scope of your Animate composition.
+      </p>
+      <p><h2 id="anchor_cn830izfr">Symbol</h2>
+        Symbols are powerful entities in Edge Animate. They encapsulate elements and actions and have an independent timeline. They can be regarded as some kind of sub-composition (similar to movie-clips in Flash).  
+      </p>
+      <p><h2 id="anchor_jgx65n4s4i">Transition</h2>
+        A transition is the computed animation sequence between two keyframes, so that each step is interpolated.
+      </p>
+      <p><h2 id="anchor_raqrpco9a4i">Keyframe</h2>
+        A keyframe sets the starting or ending point of an animation by storing the value of a property on the timeline.
+      </p>
+    </section><!-- /Widget -->
+    
+
+    
+</article>
+</div>    
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

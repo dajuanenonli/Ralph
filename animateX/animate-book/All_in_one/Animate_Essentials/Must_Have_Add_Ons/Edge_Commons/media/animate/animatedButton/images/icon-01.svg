@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px"
+	 height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+<g id="Grid" display="none">
+	<path display="inline" opacity="0.5" fill="#CCCCCC" d="M41.2,20h-2H20v19v2v19h19.2h2H60V41v-2V20H41.2z M22,22h17v17H22V22z
+		 M39,58H22V41h17V58z M58,58H41V41h17V58z M41,39V22h17v17H41z"/>
+</g>
+<g id="Layer_1">
+	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="20" y1="59" x2="60" y2="59"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="40" y1="21" x2="40" y2="51"/>
+	<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="54.2,41 40.2,52 
+		26.2,41 	"/>
+</g>
+</svg>

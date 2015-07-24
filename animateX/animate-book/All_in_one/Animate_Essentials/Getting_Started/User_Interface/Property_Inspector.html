@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[0];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[0].chapters[2];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[0].chapters[2].pages[1];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+
+  <!-- Page -->
+  <article>
+    
+    
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Understanding the <strong>User Interface</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  
+    <!-- Spacer -->
+    <div style="height: 50px"></div>
+    
+    <header>
+      <hgroup>
+        <h1 id="anchor_mih73jcq5mi">Property Inspector</h1>
+        <p class="subtitle">The basics</p>
+      </hgroup>
+    </header>    
+    
+
+    <!-- Status 
+    <note>
+      17.02.2015 DC.status: RC?<br />
+      03.12.2014 DC.status: Under construction<br />
+      13.11.2014 SW.status: 60%<br/>
+      13.11.2014 SW: Make a Page "Working with Symbols" in Creation chapter<br/>
+      13.11.2014 SW: Properties (Details) kommen zu früh und gehören irgendwie nicht wirklich in UI (ggf. nach oder sogar in Creation)<br/>
+    </note> -->   
+    
+    
+    
+    <!-- Widget: Text Image Left-->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/card_knowledge.jpg" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+      </p><p>
+        In this section you will get introduced to the property inspector and the basic concept of properties in Edge Animate. You will learn about their functions and in which context they can be used. Note that almost all of the properties can be animated using so called keyframes. We will tackle that topic a bit later. Yet it is worth mentioning that the small diamond shaped button next to a property can be used to set such a keyframe for that particular property value on the timeline.</p>
+      <p>
+        In order to provide a general overview first, we will focus on the basics of working with the property inspector in this chapter. You can find a reference list of all the different properties and their meaning in the Creation chapter of the Essentials Book.
+      </p>
+      <p></p>
+    <p></p>    <p></p>  </div></section>
+    
+    
+    
+      
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_485t7vf5hfr">Understanding the Property Inspector</h2>  
+      <p>
+        The property inspector gives you detailed information about the currently selected element. It serves as a survey of all the properties that are responsible for the visible representation of that element. This can for instance be the stage itself, any given element or a symbol.
+      </p>
+      <p>
+      The listed property values are therefore closely linked to the visual representation on the stage. When you change a value in the inspector, the element on the stage will instantly display this change. This also works the other way around: When you change the position of an element by moving it on the stage, the properties for positioning in the property inspector will be updated accordingly.    
+    </p>
+    <p>
+      This illustrates the fact, that the properties actually represent CSS values, that are used to create the visual representation on the stage and the actual composition. You can get the info about the according CSS attribute when you hover over the property in the inspector.
+    </p>
+    <p>
+      Most of the properties have a small diamond shaped icon next to the value. This is the option to set a keyframe on the timeline, which allows you to <i>animate</i> this property. Most of the properties can be animated, allowing you to create awesome effects. We will come back to that later.    
+    </p>
+    </section>
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_63le6qlrf6r">Context</h2>
+        The property inspector is context sensitive, which means that it changes depending on what kind of element you have currently selected. This is due to the fact that the different types of elements have different aspects and therefore options in the property inspector. The advantage is that you can be sure that all available properties are applicable for the currently selected element type. You also have a better control and overview. 
+    </p>
+    <p>
+      <strong>Let's have a quick look at the different contexts that you might encounter when working in Edge Animate:</strong>
+    </p>
+    </section>
+      
+
+  <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/00200_Property_Stage010.png" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+      </p><p><h3 id="anchor_cmsrzr529">Stage properties</h3>
+      If you have nothing else selected, the current context is the stage. This is the top most level in Edge Animate. The property inspector accordingly reveals the relevant properties of the stage.
+    </p>
+      <p>As the containing element for the entire composition, the property inspector also gives you access to properties that apply to the entire composition when the stage is selected. Here you can define autoplay and can also find the options Down-level Stage for legacy browsers and settings for the Preloader.</p>
+      <p>
+        Note that the stage itself is a DIV container and therefore can be modified. You can for example set a background color or change the size. These properties can be animated as well.
+      </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget -->
+      
+  
+   <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/00200_Property_Symbol010.png" width="200">      <img src="media/images/00200_Property_Symbol020.png" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+        </p><p><h3 id="anchor_y94q3pfzuxr">Symbol Properties</h3>
+          Symbols are a very integral part of Edge Animate, especially because of their independent timeline. They can be seen as some kind of composition within the composition. Therefore, a symbol has two different scopes: From the outer composition and from within the symbol itself.</p>
+      <p>Since the property inspector is context-sensitiv, it changes depending on the scope: On the outer level, it treats the symbol as an element. When you go into the symbol, the symbol becomes the new stage, and thus the property inspector chages accordingly.</p>
+    <p>
+      The image on the left shows both states of the property inspector while a symbol is being selected: On the top image you see the context from the outside scope, and on the bottom image when being inside of the symbol. 
+    </p>
+    <p>
+      You can see that a symbol is kind of an arbitrary matter: From the outside it resembles an element, within the symbol it is similar to the stage. We already looked at the stage, so let's have a look at what the property inspector offers when dealing with elements:
+    </p>
+    <p></p>    <p></p>  </div></section>      
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_tbuw6ei2j4i">Element Properties</h3>
+        Besides the stage and symbols, elements are the most basic aspects you will encounter. Everything you place on the stage is basically an element. There are different types of elements however, depending on their type. For instance basic shapes are plain DIV elements. Text in Animate generelly is placed as a DIV element as well. The fundamental properties of element types are much alike in every context. You can find a summary of all the different properties and element types later in the Creation chapter of the Essentials book.</p>
+    <p>This is how the property inspector looks like when you select a plain element:</p>
+      <!-- insert image of element property panel here -->
+      <img src="media/images/00200_Property_Element010.png" width="100%" max-width="600px">
+    <p>
+    The most important aspects here are the <strong>Title</strong> of the element, the properties for <strong>visibility</strong> like display and opacity, the <strong>positioning</strong> and the <strong>color</strong> attributes.
+    </p>
+    </section><!-- /Widget -->
+      
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_dgnifiuow29">Special Properties</h2>  
+      <title>Special Properties</title>
+        <p>As we have already indicated, there are different types of elements, each of which have specific properties. We don't want to go too much into detail here, just make sure that you understand that the property inspector gives you different options depending on the element type. Here is a quick overview of the most important aspects:
+      </p>
+    </section>      
+
+  <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/00200_Property_Element020.png" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+      <h3 id="anchor_ecnf7axlxr">Text properties</h3>
+      </p><p>Edge Animate allows you to place and modify text. When you select a text element you can not only edit the content but define the visual apperearance as well. Since these are different properties than with plain shapes, another section appears, offering you options for font family, text color, alignment, font size and so on.</p>
+    <p></p>    <p></p>  </div></section>
+  
+ <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/00200_Property_Element030.png" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+      <h3 id="anchor_3e0jybke29">Image Properties</h3>
+      </p><p>When using images in your Edge Animate compositions, you have two options: Either use the image as background image for a DIV element, which is the default behavior, or within its own IMAGE tag. You can find the options next to the title in the top part of the property inspector when an image is selected. Note that like in any web context, it makes a difference whether an image is used in an image tag or as background image. Accordingly, you have different options in the property inspector.
+      </p>
+    <p></p>    <p></p>  </div></section>      
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_83rkvs4i">Audio and  Video Properties</h3>
+        Audio and Video elements have some unique properties that become available as soon as such a media element is selected. In the according section you can set the volume level and several presets, such as Autoplay, Loop and whether the file is to be preloaded. These are the options that come with HTML5 audio and video implementation.
+      </p>
+    </section>      
+      
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Now that you have a basic understanding of the property inspector, it is time to have look at where the different element types can be found in your <i>Library</i>. We also want to take a closer look at the mighty <i>Timeline</i>. So let's move along.
+      </p>
+    </section>    
+      
+  </article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

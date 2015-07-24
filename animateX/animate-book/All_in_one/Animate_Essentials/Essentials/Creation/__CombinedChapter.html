@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <!-- PRINT -->
+    <link href="../../../_internals/css/print.css" rel="stylesheet" type="text/css" />
+    <style>
+      @page {
+        margin: 3cm;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_opeagfzuxr">Creative workflows with Edge Animate</h1>
+      <h3 id="anchor_stml4nrvn29">Fast Forward</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This section will teach you how to use Edge Animate as a creative tool. In the first part, you will learn how to create and modify elements in Edge Animate itself. Although the options in a web environment are rather limited for creative expression, it is very handy to know your way around the basic creation tools of Edge Animate and how and when to use them. We will further cover the different asset types you can use – for example images from external tools like Photoshop – and explain, what you have to consider here. You will learn how to import such assets and how to use them to create even more awesome compositions. <br>So let's get creative...
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!-- Section: Text -->
+  <section class="text">
+    <h2 id="anchor_lzo60awz5mi">Big Picture</h2>
+    <p>
+      As you have already learned in the introductory part, Edge Animate is far more than "just" an animation tool. In fact, it gives you quite the power to literally get creative and build web standard complient content – without having to write a single line of code. Edge Animate offers you a selection of creation tools, that enable you to visually create content, such as shapes and text. Yet, since we are in a web environment, we are generally dealing with DIV elements, which according to their nature ALWAYS remain rectangle-shaped, even when they appear to be circles or ellipses. You ought to keep that in mind, since it might affect the result of your creation. On the other hand, DIV elements have the benefit that they can contain other DIV elements, which allows you to form groups and nest elements within one another. This is quite useful in many cases. And it can help to keep a clean structure in your project.
+    </p>
+    
+<!--  old:  <ul>
+        <li>Animate as creative tool</li>
+        <li>limitations of web elements</li>
+        <li>creating with web standards</li>
+        <li>design in the browser</li>
+        <li>engaging content</li>
+        <li>use cases</li>
+    </ul>
+-->
+  </section><!-- /Section -->
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+   <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/card_knowledge.jpg" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+      </p><p>
+        While you are using the interface of Edge Animate to create visually, you are actually working with pure web standards – HTML, CSS and JavaScript. This not only makes it compliant to trends in modern web design, it also means that you are not limited to the options offered by Animate itself. You can use your entire knowledge in this area to tweak your composition, for instance by adding custom CSS. Since you are working on a browser instance, you see the result immediately. Even without any animation, Edge Animate is a great tool to create engagig content for the web or the various output forms. You can even create entire websites.    
+    </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget -->
+  
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_72i60llerk9">Section Overview</h2>  
+        In this chapter we will cover the following topics:
+        <ul>
+            <li>Starting from scratch</li>
+            <li>Working with text</li>
+            <li>Positioning, alignment and grouping elements</li>
+            <li>Creating symbols</li>
+            <li>Working with assets</li>
+        </ul>
+    <p>So let's start with creating from scratch and have a look at the possibilities of creating within Edge Animate itself...</p>
+    </section><!-- /Widget -->
+    
+    
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_cu80ue7mn29">Starting from scratch</h1>
+      <h3 id="anchor_rtea64dkj4i">First steps</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This section will show you how to get started with Edge Animate as a creative tool. We will have a look at what needs to be considered when starting with a new, empty project and which options we have before diving deeper into the creation process with basic shapes and assets.
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!-- Section: Text -->
+  <section class="text">
+    <h2 id="anchor_6n6ototj4i">Before we start...</h2>
+    <p>
+      Let's quickly talk about preparations first. Every time you beginn with a new project, there are a couple of steps before you can actually start with the creation process. You can start for instance with an empty project or use a template. Templates are basically Animate projects that already contain some elements and settings, so that you only need to make some minor adjustments like adding colors and assets. But for now we want to focus on starting a new project from scratch.
+    </p>
+  </section><!-- /Section -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Start screen options </strong>in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->      
+    
+  
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_1zzmtv5cdi">Starting a new project</h2>  
+    <p>
+     When you start with an empty project ("Create New" on the start screen or "File > New"), the first thing you most likely want to do is make some adjustments to the stage. The stage is selected automatically by default once you create a new project, so you can edit it with the <i>property inspector</i> right away.
+    </p>
+    </section><!-- /Widget -->  
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting_emptyStage.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%"><strong>Empty stage </strong>at the beginning of a new project.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+    <p>
+     Here you can make basic decisions. Most likely you start by defining the size of your composition with the width and height properties. Note that you can switch from px values to percentage based units in order to make the stage flexible (we will come to that later). You can also set a background color or gradient and decide whether or not the entire composition should play automatically – just to name the most important options here.
+    </p>
+    <p>
+      Remember: <i>The stage is your design canvas.</i> Set it to the needs of your project before starting to build your design on it (although you can still edit the stage later on).
+    </p>
+    <p>
+      Also keep in mind that the stage is the topmost level of your (average) Animate project and therefore defines the measures and features of the entire composition.
+    </p>
+    <p>
+      You can find more about the single options within the property panel for the stage in the Property Inspector section in this chapter.
+    </p>
+  </section><!-- /Widget -->   
+    
+    
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Once you have made some adjustments and changes, it would be a good idea to <i>save your project</i>. Simply go to "File" > "Save As" and follow the instructions.
+        </p>
+    </section><!-- /Widget -->
+ 
+       
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting_saveAs.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Saving</strong> a new project.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Note that the title of your project above the stage changes according to the name of the saved file.
+        </p>
+    </section><!-- /Widget -->
+ 
+       
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting_newName.png" alt="" width="100%" style="display: inline; max-width: 250px">        <figcaption style="max-width: 80%">The <strong>Title </strong>of your composition already indicates that it is an HTML file.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+         <p>
+           Now with the stage set, we can start with the actual creation process.
+        </p>
+    </section><!-- /Widget -->
+  
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_e2ix7axlxr">Creating with shapes</h1>
+      <h3 id="anchor_tx357j2x1or">Options and features</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this section you will learn how to use Edge Animate as a creation tool. You will learn the basics of how to create and modify elements in Edge Animate. Although you will most likely use a bunch of assets like images to create your compositions, it is good to know what Edge Animate itself has to offer. So let's see what we can do here...
+    </p>
+  </section><!-- /Section -->
+
+
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_zxjienj0pb9">Creating elements</h2>  
+        <p>
+          The most basic way to create something in Animate is by using elements. You can create new elements by using the according tool bar right above the property inspector. You can use them for example to create basic shapes and text elements.
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_tools010.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>The tool bar</strong> in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Let's first have a look at these shapes. There are three options here you can choose from: <i>rectangles, rectangles with rounded corners and ellipses</i> – represented by the according icons in the tool bar. If you click on one of these icons, your cursor turns into a crosshair when entering the stage, allowing you to create a shape. To actually draw the shape onto the canvas, you have to click and drag. The shape is drawn between the point where you start the click and the point where you release the mouse button...as you have most likely already figured out yourself.
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting02.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The three basic shapes </strong>created in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          <i>Tip</i>: You can create symmetrical shapes like squares and circles when holding the shift key while drawing a shape.
+        </p>
+        <p>
+          Notice that you can also draw shapes into the empty space around the stage element as well. This way they are positioned <i>outside</i> of the stage. Keep in mind, that only those elements are visible in the browser later, which are placed within the constraints of the stage element (unless the overflow setting is changed to 'visible').
+        </p>
+        <p>
+          Every time you draw a shape, the new element appears in the elements panel and is selected automatically. Selected elements are highlighted on the stage by being surrounded with blue lines including handles in each corner and along each side. These handles can be used to visually change the dimensions of the element. Your mouse cursor indicates these options when you hover over the lines or handles. The filled blue square in the middle indicates the <i>origin</i> of the element (i.e. its logical "point of reference"), which is important for transformations, for example. If you click anywhere within the blue lines, you can reposition the element while holding the mouse button pressed.
+        </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting03.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The selected element </strong>is indicated by blue lines.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/00200_Starting04.png" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+        </p><p>
+          If you take a look at the property inspector, you will notice that changes when an element is selected: It is now displaying the options for the element and no longer those for the stage. All properties shown here apply to the element that is selected. In order to deselect an element, click anywhere outside the blue lines. This will automatically change the scope back to the stage (unless you click on a different element, which is then selected instead).
+        </p>
+        <p>
+          The <i>property inspector</i> not only provides you with information about the currently selected element, it also allows you to change it. We have already got to know the property inspector in the "Understanding the User Interface" chapter. Now it's time to understand how it works in the creation process.
+        </p>
+        <p>
+          We already got to know how to position and resize an element visually on the stage. With the property inspector, you can make changes to the values immediately and even type in precise measures. Notice that the element on the stage changes accordingly.
+        </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget -->
+    
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_py7tkl6jemi">Adding Background color and Gradients</h2>  
+        <p>
+          When you draw shapes on the stage, the default color is a light grey. You can change the color by clicking on the left area in the color section of the property inspector. This opens up the color selection panel. Here you can adjust the color with the selector on the left and the bars for hue, lightness and alpha channel on the right or use the input field to set the color in RGBa, Hex or HSLa.  
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting05.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The color selection panel</strong> allows you to change the color of the selected element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+           If you want to use a color that already exists somewhere on the stage, you can select a sample with the pipette tool. The corresponding color will then be calculated automatically. Note that when you start making changes, the preview in the top left corner shows both the new and the previous color. This way you can switch back to the original real quick by simply clicking on the old color.</p> 
+        <p>Also quite helpful is the option to save the current color selection by clicking on the "+" button on the right hand side. This allows you to create color swatches and reuse the same colors throughout your composition. Note that the selected color becomes the new default for the next shape you draw.
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Similar to the background color is the option to add a <i>gradient</i> to your element. By default, this option is set to "none" (the preview area being crossed with a red line). When you click on this field, the corresponding menu opens up, which is pretty similar to the color selection panel:
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting06.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The gradient selection panel</strong> enables you to add gradients to the selected element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          To activate a gradient, select linear or radial gradient in the top left bar. With linear gradients you have the option to set the radius, i.e. the direction in which the gradient shall occur. With radial gradients, you can define the point of origin from which the gradient spreads.
+        </p>
+    </section><!-- /Widget -->            
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting07.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Linear and radial gradient</strong> applied on a rounded rectangle.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->         
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          For both options, you have the preview bar with the color stops. These color stops indicate the colors used for the gradient, their position determines the percentage (start and end point). To change their color, select one of the color stops and use the color selection panel on the right hand side. You can add furhter color stops by clicking on the preview bar itself. To remove color stops again, drag them out of the preview bar.  
+        </p>
+    </section><!-- /Widget -->        
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting08.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Additional <strong>color stop</strong> on the gradient preview bar.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->         
+    
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Just like with the color selection, you can also save your gradient settings to use them for other elements as well. Simply click on the "+" button and the gradient settings will be stored as a swatch.
+        </p>
+        <p>
+           The gradient lies ontop of the background image, therefore the background color is only visible if you use an alpha channel for the gradient. 
+        </p>
+        <p>
+          <i>Hint:</i> Gradients are not fully supported by all browsers. A safe bet is to apply a plain background color as well, so that the element will at least be displayed in that color in the corresponding browsers.
+       </p>
+    </section><!-- /Widget -->          
+  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ymvkzus1yvi">Borders</h2>  
+        <p>
+          The third option in the color section of the property inspector deals with borders. These borders can have a color, size and style. The default setting for style is none, so that the new element doesn't show a border yet, although it already has a border color: 
+        </p>
+    </section><!-- /Widget -->       
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting23.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Border settings</strong> can be found in the color section of the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          In order to make the border visible, you have to change the border style to either solid, dotted or dashed. Lastly you can define the thickness of the border with the value on the right. You should keep in mind though that the size of the border will increase the size of the element as a whole. 
+        </p>
+    </section><!-- /Widget -->       
+      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_0xbdwdk7qfr">Transforming elements</h2>  
+        <p>
+          Your shapes and elements can further be tweaked and edited with the options in the "Transform" section of the property inspector. You can use <i>scaling</i>, <i>skew</i> elements and <i>rotate</i> them. Lastly you can determine the origin where the transformation relates to.
+        </p>
+    </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting09.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Transform section</strong> in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The first option here is <i>scaling</i> the selected element. This can have effects on the properties for positioning and width or height respectively as well. You can use negative values here as well. So if you set the scaling value to -100% the element is flipped around. Note that by default, both axis are linked. You can unlink the properties by clicking on the link symbol left to the values.
+        </p>
+        <p>
+          Scaling might not seem to be so powerful on the first look, but it can create better results when applied to images or texts instead of plain shapes. Also keep in mind that you can animate the scaling property as well to create interesting effects.
+        </p>
+        <p>
+          <i>Skewing</i> shifts two sides of the element according to the value in degrees. Applied to a rectangle, this creates a parallelogram.
+        </p>
+        <p>
+          As a third option, <i>rotation</i> enables you to rotate the element around the point of origin. The value is presented in degree and defines, how much the element is being rotated. A positive value rotates clockwise, a negative value counter-clockwise. Here is an example of applied transformations:
+        </p>
+    </section><!-- /Widget --> 
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting10.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Element before and after <strong>transformation</strong> applied.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          With the <i>origin</i> property, you can define the point around which the transformation should take place. It is represented by the filled blue square within the selected element. By default it is located in the center of the element. Since the value is relative to the top left corner, this default is 50% on both axis. Note that you can have negative and values greater than 100% as well. This lets you for instance rotate the element around an imaginary fix point outside the element itself: 
+        </p>
+    </section><!-- /Widget -->      
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting11.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Origin</strong> outside of the borders of the element</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->            
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting24.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Element with applied <strong>rotation</strong> of -30° around the shifted origin.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->       
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      The best way here is to use basic shapes and play a bit around with the different options to get a feeling for how transformations work.  
+    </section>
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_n63otxd2t9">Clipping</h2>  
+        <p>
+          Another way to modify elements in Edge Animate is <i>clipping</i>. As the name already indicates, it is used to hide parts of the element, just like applying a mask. In order to use this feature, you first need to activate it with the switch on the right hand side of the Clip section in the property inspector 
+        </p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting13.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Clipping</strong> being disabled and enabled.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Once clipping is enabled, you can use the four values to set the borders for the clipping mask. As usual, the values are related to the top left corner of the element and the dimensions of the mask fit the size of the element. Changing the values changes the size of the blue container although the size of the actual element remains the same. Let's look at an example: 
+        </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting14.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Clipping</strong> applied to a circular shape.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Here we have to circles of the same size. On the right circle, the clipping is enabled and the bottom value reduced to its half (in this case 100px instead of 200px). As you can see, only half of the element is visible, and although the element itself is 200px high, the actual representation on the stage has only half the height. This allows you to create shapes like this semi circle, and it can be quite useful when working with images and for creating animation effects.
+        </p>
+    </section><!-- /Widget -->      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_pr4s0l1h5mi">Shadows</h2>  
+        <p>
+          The <i>shadow</i> property allows you to add a box shadow to your element. This can create spatial effects or even some primitive 3D looks. As with clipping, the shadow options needs to be activated to work. When activated, a shadow is added to the selected element and the correspondant section in the property inspector becomes available:
+        </p>
+    </section><!-- /Widget -->       
+   
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting15.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Enabled <strong>Shadow</strong> section in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The default setting here is a drop shadow, that is cast downward and to the right, in a slightly transperant dark grey and a light blur. You can use the icons at the top of this section to switch between drop and inset shadow and then tweak the attributes <i>positioning (X and Y)</i>, <i>color</i>, <i>blur</i> and <i>spread</i>. If you click on the color preview for the shadow, the already familiar color selection panel appears, allowing you to choose any kind of color. Especially with shadows, the alpha channel option is interesting, since it allows you to determine the opacity of the shadow.
+         </p>
+         <p>
+           The blur attribute can only be set with positive values, whereas the positioning and spread can be set to negative values as well, for instance to create a shadow that is cast to the top left side of the corresponding element. Here is an overview of different shadow settings together with the result on the stage:
+         </p>
+    </section><!-- /Widget -->         
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting16.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Different kinds of <strong>drop shadow</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting17.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Different kinds of <strong>inset shadow</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->       
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+         <p>
+           <i>Tip:</i> Apparently, you can only apply one shadow to each element at the same time. But there is a workaround for that. Since you can use the alpha channel to make elements transperent, it is possible to stack transparent copies of the same element over another. Each of these copies can then have one shadow, so that you basically just add yet another shadow layer with each copy. The example shown below should help to illustrate this effect:
+         </p>
+    </section><!-- /Widget -->           
+    
+ <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting18.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Stacking elements with different <strong>box shadows</strong> to create a 3D effect.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+         <p>
+           In this case the base element has a simple drop shadow with a blur of 7px. Above that lies a transperent copy with an inset shadow in white (71%), slightly set off down and right (1px in each direction) and with a blur of 21px. Also the spread is increased to 3px. On top of that lies another transparent copy with a grey inset shadow, this time cast in the opposite direction (-3px) and a blur of 8px.
+         </p>
+         <p>
+           Note that you have to use the alpha channel for the background color, to get a transparent element. When you set the oppacity for the element to 0, the shadow will be invisible as well and therefore the effect is lost.
+         </p>
+        <p>
+          Another thing that needs to be mentioned here is that we are dealing with box-shadows. As the name already suggests, this means that it is created by the DIV box. Although it may contain rounded corners (due to border radius settings), you will not be able to create a shadow that corresponds to different shapes or character images.
+        </p>
+    </section><!-- /Widget -->    
+    
+    
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_nc9w94quxr">Filters - and why you should be cautious!</h2>  
+        <p>
+          Edge Animate allows you to apply CSS filter to element. These filters influence the visual appearance of that element, for instance by inverting the color. Tempting as these options might be, you should be aware of the fact that CSS filters are not yet supported by all modern browsers. Firefox for example will simply ignore these settings. It is therefore highly questionable whether using CSS filters at all is a good idea at the moment. As long as they are not absolutely essential for your composition, you should rather avoid them.
+        </p>
+        <p>
+          Here is a list of the available CSS filters. You can find them in the property inspector and activate them by changing one of the values, either with the slider or by entering a new value. In order to deactivate the filter again, click on the "x" button next to it.
+        </p>
+    </section><!-- /Widget --> 
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting19.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The available <strong>CSS Filters</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+       <p>You can find this selection in the property inspector and activate them by changing one of the values, either with the slider or by entering a new value. In order to deactivate the filter again, click on the "x" button next to it. Don't get confused with the shadow option. This is a different kind of shadow then the one discussed in the previous section. You should handle this option with the same care as all the CSS filter options.
+        </p>
+    </section><!-- /Widget -->    
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_svdm36ry66r">Corners - or: Why the cirlce is a square</h2>  
+        <p>
+          Although you have the tools to create three different shapes – rectangles, rectangles with rounded corners and ellipses - all these elements are in fact basically the same: They all are plain DIV elements with a different border radius. The corresponding property is called "Corners" and can be modified as well. Give it a try: Select the rectangle tool and draw a square onto the stage. Now go to the corners section in the property inspector and increase the value. You will notice that it will turn into a rectangle with rounded corners and finally into a circle:
+        </p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting20.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Element with a <strong>border radius</strong> of 0px, 20px and 90px.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          It still makes sense to have the different creation tool options, though, since it is way faster for creating different shapes than having to set the border radius every time you want to create a circular shape. There are also some more options concerning the border radius: Not only can you switch between pixel and percentage based units, you can also define, which part of the element the border radius should be applied to. By default, all four corners are selected. You can use the preview to change the selection. click on the corresponding corner to (de-)select it:
+        </p>
+    </section><!-- /Widget -->   
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting21.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Selection to only apply the <strong>border radius</strong> to two corners.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          With the buttons above the preview, you can choose how many values you want to set for the border radius: One value for all (1), one for each corner (4), or two values for each corner (8). This last option allows you to create asymmetric curved corners like this:  
+        </p>
+    </section><!-- /Widget --> 
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting22.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Using a <strong>border radius</strong> with different values for the single corners.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+   
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+         That was quite a bit. But now you are familiar with the basics of creating and modifying shapes and elements in Edge Animate, congratulations! In the following section we will deal with text and fonts before we come to assets and finally learn to apply the acquired skills.  
+    </p></section><!-- /Widget -->
+    
+</article><article>
+    
+    
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  
+    <!-- Spacer -->
+    <div style="height: 50px"></div>
+    
+    <header>
+      <hgroup>
+        <h1 id="anchor_l1pr69od2t9">Property Inspector</h1>
+        <p class="subtitle">The complete overview</p>
+      </hgroup>
+    </header>    
+    
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_vkquevu0udi">Stage Properties</h2>  
+      <p>As the containing element for the entire composition, the stage plays a special role in Edge Animate. Therefore the property inspector is slightly different than with regular elements (Note that symbols have a sort of stage within themselves. Read more about it in the symbols section).
+      </p>
+    </section>
+  <!--/ Widget: Text -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage01.png" alt="" width="100%" style="display: inline; max-width: 300px">        <figcaption style="max-width: 80%"><strong>The Property Inspector </strong>provides you with options for the composition and the stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_zpm8f979zfr">Title</h3>
+        <p>The input field at the top allows you to set a title for the Animate composition, or to be more precise: To set a title that will be included in the HEAD section of the HTML file that Animate produces. You might want to do so for instance in regards to search engine optimization, screen readers and better code in general.</p>
+      <h3 id="anchor_l3q6ijatt9">Open Actions</h3>
+        <p>The curly braces next to the input field allow you to implement code snippets for stage events. You will find more on that topic in the chapter about <i>interactivity</i>.</p>
+    </section>
+  <!--/ Widget: Text -->
+    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage02.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>The title of a composition </strong>can be set in the stage properties.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_13496hia4i">Size</h3>
+        <p>You can set the dimensions of your animate composition by defining the size of the stage. The first option here is to set width and height. With the icon on the left hand side, you can keep the proportions (aspect ratio) or unlink the two properties. By default, the units are set to pixels. You can change them to percentage by clicking on the toggle switch next to the unit. This allows you to create flexible compositions, e.g. for responsive websites. Additionally you then might want to set a minimum and/or maximum width as well. These options can be found below widht and height.</p>
+      <h3 id="anchor_5q1vzql4n29">Background color and gradient</h3>
+        <p>By default, the stage is an empty div element with a plain white background. You can change the color with the help of a color picker. It allows you to set the color visualy or in RGBa, Hex and HSLa mode. You can also add transparency. The second option is to add a gradient. Here you get access to a slightly different dialogue. You can choose between linear and radial gradients, add, remove or edit color stops, repeat the gradient and save your selection.</p>
+    </section>
+  <!--/ Widget: Text -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage03.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>The main properties for the stage </strong> are width and height (1), background-color and gradients (2), maximum and minimum width (3), overflow (4), autoplay (5) and the Composition Class (6).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_jed9mi5p14i">Overflow</h3>
+        <p>Overflow is a property that defines how the composition should treat elements that are placed outside of the stage boundaries. By default, it is set to hidden. This for instance allows you to create some kind of masked viewport. The option "visible" makes sure that all elements are displayed, even those that are placed outside of the stage. With the option "scroll", such elements are not displayed right away, but can be accessed via scrolling. The same is true for the last option "auto", but here scrollbars are only visible when really needed. So most of the times "auto" is a good choice, if you have overflowing content.</p>
+      <h3 id="anchor_uu5njqbyb9">Autoplay</h3>
+        <p>Your Animate composition can either start right away or wait until being started. You can choose between these two options with the "Autoplay" checkbox. By default, it is set to "true", so that your composition will play automatically when you start it in the browser.</p>
+      <h3 id="anchor_nbyddvx6r">Composition Class</h3>
+        <p>Each Edge Animate composition has a unique class, that allows referencing and which is necessery for the propper loading process. In average Animate projects, this is not of great importance. In advanced projects however, you need to pay attention to the propper referencing, for instance when using more than one Animate composition on one site.</p>
+    </section><!-- /Widget -->
+    
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_xtishiftj4i">Center Stage and Responsive Scaling</h3>
+      <p>By default, your Edge Animate composition will be displayed in the top left corner of the window when run in the browser. The option "center stage" allows you to place it in the horizontal and/or vertical center of the browser window.</p>
+        <p>If you want your composition to cover the available space of the browser window, you can use the option "responsve scaling". Be careful though, since the term is a bit misleading: It is not actually making your composition 'responsive', but merely stretching it to fit the width and/or height of the browser window. This might result in a poor visual experience, especially regarding (not optimized) images.</p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage04.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Additional properties for the stage </strong> allow you to place the stage in the center of the browser and to scale it to full width and/or height.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Better ways to address these issues can be found in the Edge Commons extension library: The centerStage helper function allows you to neatly position the stage – even with negative values and the Adaptive Layouts feature enables you to define independent layouts for specific sizes, so that your composition adapts to the available width. You can read more about the Edge Commons and these specific features in our <i>Must Have Add Ons</i> book and with the links below.
+      </p>
+       </section><!-- /Widget -->  
+    
+    
+  <!-- TEST -->
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300">
+          <h4 id="anchor_q2thwd0a4i">&raquo;Edge Commons Center Stage&laquo;</h4>
+          <strong>More info on the Center Stage feature</strong><br>and how to position your composition can be found right here:
+        <button class="download" onclick="window.open(&quot;http://www.edgedocks.com/edgecommons#anchor_edgecommons_21&quot;, &quot;_blank&quot;)">EC Center Stage</button><br><hr><br>
+      
+        <h4 id="anchor_37m4li0be29">&raquo;Edge Commons Adaptive Layouts&laquo;</h4>
+          <strong>More info on the Adaptive Layout feature</strong><br>and how to create independent layouts can be found right here:
+        <button class="download" onclick="window.open(&quot;http://www.edgedocks.com/edgecommons#anchor_edgecommons_18&quot;, &quot;_blank&quot;)">EC Adaptive Layouts</button>
+        </center>
+      </text>
+    </div>
+    <!--<data>{}</data>-->
+  </section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">      
+      <h3 id="anchor_4e3ybaf9a4i">Downlevel Stage</h3>
+        <p>Since Edge Animate is supported by modern browsers only, you might want to include a fallback solution for older browsers (mostly Microsoft's Internet Explorer 7 or 8). In this case, The down-level stage enables you to create a very reduced version. A good option is to use a poster image. You can also provide a link.</p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Settings for Downlevel Stage, Poster Image and Preloader </strong>are also made on the stage level in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">      
+      <h3 id="anchor_8te3jgaatt9">Poster Image</h3>
+        <p>If you only want to provide a poster image for down-level browsers, you don't have to use the down-level stage. You can simply use the option in the property inspector to create a poster image of the current view. This is also an important feature if you are creating animated assets for digital publications built with InDesign (DPS or EPUB3).</p>
+      <h3 id="anchor_uwag9l766r">Preloader</h3>
+        <p>Your Edge Animate composition uses a preloader before it starts to run in the browser. The preloader option on the stage level defines the behavior of this preloader. You can also edit the preloader style. You can read more about the preloader in the "publishing" section.</p>
+    </section><!-- /Widget -->  
+      
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_nyny6k9y66r">Element Properties</h2>    
+      <title>Element Properties</title>
+    <body>
+      <p>Apart from the stage and symbol root elements, the basic properties of all available element types are much alike in  every context. Here is a summary of the basic properties supported in Edge Animate:</p>
+    </body>
+    <extra>
+    </extra>
+  </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements01.png" alt="" width="100%" style="display: inline; max-width: 300px">        <figcaption style="max-width: 80%"></figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_1zfdlutmx6r">Title</h3>
+        <p>The topmost attribute is the title of the selected element. It can be edited by clicking on the value or by double-clicking on the equivalent name in the elements panel.</p> 
+      <h3 id="anchor_fsbqc6561or">CSS Class</h3>
+        <p>Next to the title value, you have the option to set a CSS class for the selected element. This way you can for instance include external CSS classes and/or reuse styles for similar elements.</p>
+      <h3 id="anchor_zlc0k8adcxr">Open Actions</h3>
+        <p>In Animate curly braces always indicate the option to add actions. In this case, you can add actions for the selected element by clicking on the curly braces. If you want to know more about actions, read the <i>interactions</i> section.</p>
+      <h3 id="anchor_233xe09t3xr">Display</h3>
+        <p>The first property that has influence on the visibility of an element is the display attribute. It refers to the correspondent CSS property "display" and offers three states to choose from:</p>
+        <ul>
+            <li>Always On (default)</li>
+            <li>On</li>
+            <li>Off</li>
+        </ul>
+        <p>When you switch display to "Off", the equivalent area on the timeline becomes shaded. Note that you cannot define keyframes in this area. That means you can only change elements that are displayed (although they may be invisible because of opacity).</p>
+      <h3 id="anchor_2uylatw3ik9">Overflow</h3>
+        <p>Similar to the stage, elements can have overflow as well. While the default for the stage is "hidden", all other elements are initially "visible". It might be a little bit confusing, to have overflow for basic elements on the first look. You have to remember, that we are dealing with div elements here. That means, they can themselves contain other elements. And in that case, it does make sense to be able to have different settings for the overflow attribute. So an element container can be used as a group, where the visible children do not necessarily have to be within the group's boundaries.</p> 
+      <h3 id="anchor_4uucru4ygb9">Opacity</h3>
+        <p>Opacity is a percentage based value, that defines the transparency of an element. You can change the opacity of an element by using the slider or by clicking on the value and typing in a number between 0 and 100. By setting the opacity to 0, the element becomes invisible. In contrast to the display property, the element remains located on the stage, even when it is no longer visible. This way it is still available to serve for interactions and can still be modified. With this property you set the opacity of all children within the element. If you just want the background of the element to be transparent you can use a background color with a lower alpha value instead.</p>
+         <h3 id="anchor_zxkhna8m2t9">Position and Size</h3>
+        <p>Although we will discuss the different kinds of animations at a later stage, you should know that you can find two options here in the property inspector under "Transition mode". It allows you to choose between animations along the X- and Y-axis and animations via motion paths. The "Auto-Orient" option is only available for the latter.</p> 
+     </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Position and size</strong> are values you find in the property inspector for all elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>The four squares in the subsequent section allow you to define the relative position for your element. This is rather advanced and only useful when creating flexible/responsive layouts. It doesn't need to concern you at the beginning. You can choose between relative to top-left, top-right, bottom-right and bottom-left, by clicking on the equivalent square.</p> 
+        <p>Similar advanced is the option to choose between global and applied. It allows you to switch between calculated coordinates relative to the stage (X/Y) or relative to the parent container element (e.g. a group).</p> 
+        <p>Depending on the previous selection, you find the according X/Left and Y/Top property values listed below. By default they are defined in pixels. These values define the exact location of the element. For flexible layouts you can also use percentage based values.</p> 
+        <p>The dimensions of the element are defined by the width and height property. Again, the default setting is pixels. In order to keep the proportions while changing one value, you can use the "link" option. In case you use percentage based units for the width of an element, you might want to add a minimum or maximum width as well. The appropriate option can be found right below.</p> 
+      <h3 id="anchor_22bc87x2yb9">Color</h3>
+        <p>As the name already suggests, this section is about the color options for an element. The first property here is background color, according to the correspondant CSS property. We have already encountered this option within the stage properties, it is exactly the same here. Which is also true for the gradient property next to it. The third option is new. Here you can define a border for the element, with the properties border-color, border-style and border-width.</p>
+      <h3 id="anchor_7upbmvrhpvi">Transform</h3>
+        <p>The appearance of elements can further be modified in the transform section. Here you can scale the element along the X- and/or Y- axis, for instance. Note that you have to unlink the two properties to change only one value here. Other options are scewing and rotation. You can also change the point of origin for the transformation.</p>
+        </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements03.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Transform options</strong> for elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">     
+      <h3 id="anchor_6w3c8skbj4i">Cursor</h3>
+        <p>On some occasions, it is important to use different mouse cursors for certain elements, e.g. to indicate interactive elements with a pointer. You might want to change the cursor manually, if the element is clickable. By clicking on the button you get access to a selection of options. You will see the result when running the composition in the browser.</p>
+      </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements04.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">You can select a <strong>cursor</strong> for each element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_3mhd4o647vi">Corners</h3>
+        <p>The corners section allows you to set a border radius for elements. You can choose between one, four or eight values and select/de-select single corners. You can also toggle between pixel and percentage based values. Note that a rectangle with a border radius of 50% will become an ellipse/circle. The shape's boundaries will however always remain a rectangle (which is the case for every div element).</p>
+      </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Corners </strong>are created by applying the border radius.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_flap9icnmi">Shadow</h3>
+        <p>In order to apply a shadow to an element, you first have to enable the option with the switch on the right-hand side. Once enabled, the shadow can be edited. You can choose between drop shadow and inset shadow, the shadow color and opacity, direction, blur and spread.</p>
+      </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements06.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>The Shadow section</strong> allows you to create an inset or drop shadow for your element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_now1w6ogvi">Filters</h3>
+        <p>In this section you can apply CSS filters to the selected element. Since they are currently still hardly supported by most browsers, you should be very thoughtful using them. In most cases it is better to not use them at all. For the sake of completeness, here is a listing of the available filters:
+            <ul>
+                <li>Invert</li>
+                <li>Hue-Rotate</li>
+                <li>Contrast</li>
+                <li>Saturate</li>
+                <li>Sepia</li>
+                <li>Greyscale</li>
+                <li>Blur</li>
+                <li>Shadow</li>
+            </ul>
+        Note that the CSS filter shadow is different from the average box shadow we discussed in the previous section.
+        </p>
+      <h3 id="anchor_6d0959daemi">Clip</h3>
+        <p>Clipping is again a property thats needs to be activated before it can be applied. Use the switch on the right-hand side to activate clipping. Now you can edit the size of the outer constrains of the element. Making it smaller than its actual content size results in cutting off parts of it. Since the value can be animated, this can be used for nice effects.</p>
+         </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements08.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Clipping</strong> lets you clip an element from top, right, left and bottom.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_xt9baux47vi">Accessibility</h3>
+        <p>In this section you can define a non-visual title for the selected element. This can later be read a machine (e.g. screenreader). Further more you can select the "tab index", which defines the position of the element if the users clicks the TAB key to navigate between active elements.</p>
+    </section><!-- /Widget -->
+      
+
+  <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_dmq63xwp14i">Text Formatting</h2>  
+        <p>When you create or select a text element in Edge Animate, the property inspector changes accordingly. You now get access to further options, which we will briefly walk through in the following section.</p>
+        <h3 id="anchor_9hit7oav2t9">HTML Tag Type</h3>
+          <p>When you create or select a text element in Edge Animate, it is by default a DIV element. When you click on the button next to the title in the property inspector, you can change the HTML tag of this element. This not only results in a better HTML structure, but can be used for styling with external CSS. The available options are shown in the image:
+          </p>
+      </section>
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Text01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>HTML Tag Types</strong> for text elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <h3 id="anchor_6inn05jc3di">Text properties</h3>
+          <p>Regardless of the HTML tag used, there are properties that can be applied to any text element in Animate. Most obviously perhaps is the choice of a <strong>font-family</strong>. You can use the browser default fonts or add further fonts via Edge Web Fonts or Typekit. We will tackle these options more detailed on a later occasion.</p>
+      </section>
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Text02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>HTML Tag Types</strong> for text elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+          <p>Secondly, you can edit the <strong>font-size</strong>. Pixels (px) is the default unit here, but you can also use percentage or em. Another option is the <strong>font-weight</strong>, that can range from 100 (thin) to 900 (black). Keep in mind though, that not every font covers this entire range. With the two buttons next to this property you can add and remove font style and text decoration, i.e. italics and underline.</p>
+          <p>The <strong>color</strong> of the text can be manipulated as well, using the already familiar color selection tool.</p>
+        <p>In order to <strong>align</strong> your text, you can chose between the familiar options "left", "center", "right" and "block".</p>
+          <p>As additional settings you can edit the letter and/or word spacing, change the line height and add a text indent. If these options are not displayed right away, click on the tiny arrows at the bottom of the "Text" property section to unfold the menu.</p>
+    </section>
+  
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_pwrl1tyy14i">Image Properties</h2>  
+        <p>When using images in your Edge Animate compositions, you have two options: Either use the image as background image for a DIV element, which is the default behavior, or within an IMAGE tag. You can find the options next to the title in the top part of the property inspector when an image is selected. Note that like in any web context, it makes a difference whether an image is used in an image tag or as background image. Accordingly, you have different options in the property inspector.</p>
+      </section>
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Image01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Image properties</strong> when an image is used as DIV element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <h3 id="anchor_hl84ejexw29">Background image</h3>
+          <p>When used as a background image, the image itself is a property of the containing div element. In the property inspector you have several options: You can swap the image with a different image in the library, change the positioning and adjust the size of the image. Keep in mind that these properties only refer to the background image, not the containing element.</p>
+        <h3 id="anchor_1j5smoyldi">Using the image tag</h3>
+          <p>In case you use images with the image tag, the image itself becomes the HTML element. The basic properties now refer to the image itself. Consequently, you have no longer additional properties for size or positioning in the image section of the inspector. Instead, you can add an ALT attribute. This will be displayed when the image can not be loaded and is also used by screen readers. You can still swap the image.</p>
+    </section>      
+      
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_eh994wjyvi">Audio Properties</h2>  
+        <p>Audio elements have some unique properties that become available as soon as an audio file is selected. In the according section you can set the volume level and several presets, such as Autoplay, Loop and whether the audio file is to be preloaded. These are the options that come with HTML5 audio implementation.</p>
+        <p>By default, the display property for audio files is set to "off". This refers to the audio controls. When switched to "on", further options become available for customizing the control bar, such as positioning, size and opacity.</p>
+    </section>    
+ 
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Audio01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Audio properties</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_inw4xab57b9">Video Properties</h2>  
+        <p>When you include videos into your Animate composition, they will be placed as HTML5 video elements. As with audio files, there are special options available in the property inspector, when video elements are selected:</p>
+        <p>You can select a poster image that will be displayed as long as the video is not playing. Either choose an image from the library or create a poster image from the video source. As with audio, you can set the volume level of the video. You also have the option to enable autoplay and loop for the video. Last but not least you can decide whether controls should be visible or hidden for the user.</p>
+    </section><!-- /Widget -->        
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Video01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Video properties</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_b5kqlfbhuxr">Symbol Properties</h2>  
+        <p>Symbols are a very integral part of Edge Animate, especially because of their independent timeline. They can be seen as some kind of composition within the composition. Therefore, a symbol has two different scopes: From the outer composition and from within the symbol itself. Since the property inspector is context-sensitiv, it changes depending on the scope.</p>
+        <h3 id="anchor_i9k6rwqxgvi">Symbol properties in the outer scope</h3>
+          <p>On this level, symbols have similar properties to average elements, except for color and corners. Instead, they have a playback section, which allows you to add playback commands for the symbol on the current timeline. You also have the option "Scrub", which includes the position of the playhead from the current timeline to the symbols timeline, when accessing the symbol. Note that this has no effect on the playback behavior in the final composition at runtime.</p>
+       </section><!-- /Widget -->  
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Symbol properties (outer scope)</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <h3 id="anchor_3gc4y3hxgvi">Symbol propertites on symbol level</h3>
+          <p>When going into a symbol, the property inspector changes and gives you access to different options. As mentioned before, a symbol is like a composition in itself. Thus on symbol level, the property inspector resembles the one from the main stage, only with fewer options. Here you can set the size of the symbol as well as minimum and maximum width. In contrast to the stage, the default setting for overflow within symbols is visible. If you want to use a symbol for creating a mask for example, you need to change the overflow to hidden. Furthermore, you can define whether the timeline of the symbol should play automatically and whether symbol instances should scale or resize.</p>
+    </section><!-- /Widget -->    
+
+    
+    <extra>
+    </extra>
+            
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Symbol properties (inner scope)</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_91d7lj714i">Working with Text</h1>
+      <h3 id="anchor_rp8boiuow29">More than words</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <p>
+      In this section you will learn how to add text to your animate composition and how you can edit the text to fit to your needs. You will also learn how to import and use additional fonts and how to set fallbacks. To round this section up, we will tackle the different HTML tags you can use for your text elements in Animate.<br>Let's get started...
+    </p>
+  </section><!-- /Section -->
+        
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_tkv6jmgf1or">Working with text</h2>  
+        <p>
+          Although web content is covered more and more by multi-media elements like images and video, text still remains one of the key components. Therefore we want to spend some time discovering what Edge Animate has to offer and explore how we can use this knowledge to get creative. So first of all, how do we create text in Edge Animate? 
+        </p>
+    </section><!-- /Widget -->
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_bfaesjug14i">Creating text elements</h2>  
+        <p>
+          Since text can not exist for itself in a web environment, we have to place it into a container. In order to create such a container, we can use the Text Tool in the tool panel: 
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool01.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Text Tool  </strong>in the tools panel (short cut: T).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          When you have the text tool selected, you can draw a container on the stage, just like you did with basic shapes in the previews section. This determines the size and position of our newly created text element, which is yet to be filled with text. As soon as you release the mouse button, the text element is created on the stage and an input field opens up. Here you can type or paste in your text, for example the classic "Hello World!"
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool02.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Using the <strong>text input field </strong>to enter "Hello World!" into the text element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          You can exit the input field by clicking on the close button or using the "escape" key. You don't have to confirm your entry! Note that hitting the enter key will create a new paragraph and not confirm the input (yes, this is a bit unusual and still happens a lot).
+        </p>
+        <p>
+          To open the text input field again, double-click on the text field on the stage or use a right click to select "Edit Text". Now you can make changes to the content of the text field, i.e. the text itself.
+        </p>
+        <p>
+          You might also have noticed, that a new entry in the elements panel appears as soon as you create a text field on the stage. The letter indicates that it is a text field, and by default it is called "Text". If you take a look at the tag behind the name of the element, you see that it is yet another DIV element (at least for now). 
+        </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool03.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">The text element appears in the <strong>Elements panel </strong>as DIV by default.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          A huge advantage of the text input field in Animate is that you don't have to worry about reserved characters and HTML entities. For example you can savely use "&amp;", "&lt;" and "&gt;" instead of having to use the corresponding entity names (&amp;amp;, &amp;lt; and &amp;gt). They will be transformed automatically to work in the HTML environment. The same is true for special characters like &euro;, &copy; and diacritical marks, such as a&#771; or i&#769;.
+        </p>
+        <p>
+          This is very convenient when you want to paste text passages from a different source like a text editor, since you don't have to convert them first. Even bullet points can be included. You still have to be carefull regarding text formatting, though, since you can not use tab and several empty spaces here. Look at the following example, which helps to illustrate this: 
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool04.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Text formatting </strong>is not transferred to the text element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_90ph18gds4i">Text properties: Fonts</h2>  
+        <p>
+          Text elements can be formatted using the property inspector. When you select a text element, the correspondent section becomes available. Here you can edit the style and appearance of the entire text element. It is therefore not possible to use different styles within one single text element. Let's take a look at the options here:
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Text formatting options in the <strong>Property inspector</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          <i>Tipp:</i> If you don't see the bottom part of the options (underneath the alignment options), click on the small arrows on the left to expand the panel.
+        </p>
+        <p>
+          The options here are pretty obvious. You can for instance choose between different fonts. The selections offered right away contains all the browser default fonts. You can add further fonts by selecting the option on the bottom or by clicking on the "+" button on the right. This opens up the option to search and add <i>Edge Web Fonts</i>, a huge library of fonts free to use in your projects. They are delivered via <i>Typekit</i>. Keep in mind though that you have to have access to the internet to use web fonts!
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool06.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Adding more fonts with the <strong>Edge Web Fonts</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Click on the desired font and you can immediately see the result on the stage. Click on "Add Font" to include the font into your selection. It is not only applied to the selected text element, but from now on becomes part of the selection of available fonts for the project. This way you can quickly apply it to other text elements as well.  
+        </p>
+        <p>
+          In case you want to or have to use custom fonts, you can switch over to the second tab. Here you can (and always should!) enter a fallback list in case the custom font can not be loaded successfully. Then you can use the second input field to paste in an embed code, for instance when you host a special font on your own server or when you want to use a web font apart from the edge web fonts.
+        </p>
+    </section><!-- /Widget -->        
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool07.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Panel to add <strong>custom fonts</strong> and a <strong>Fallback List</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+   
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_szmhhugnwmi">Text properties: Formatting</h2>  
+        <p>
+          Besides changing the font, there are a couple of options that allow you to customize your text. First of all, you can set the font size to your likes. Usually it is indicated in pixels, but you can change the unit to % or em as well. 
+        </p>
+        <p>
+          The <i>text color</i> can be selected with the color picker, that we have already encountered in the previous chapter.
+        </p>
+        <p>
+          Another option is to change the <i>font weight</i>, i.e. the thickness of the letters. You can choose between 100 (Thin) and 900 (Black), but keep in mind that not all fonts feature that entire range. In these cases the next appropriate font weight will be displayed.
+        </p>
+        <p>
+          <i>Font-style and text decoration</i> are the properties to add or remove underlines and italics. They can be selected with the corresponding buttons next to the font weight.
+        </p>
+        <p>
+          The section for <i>font alignment</i> offers the four common settings: left, center, right and block. They allow you to align the text within the containing text element.
+        </p>
+        <p>
+          In the <i>additional text property section</i> you can change the values to increase letter spacing, word spacing, change the line height or add a text indent.
+        </p>
+    </section><!-- /Widget -->     
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_wn5fcn5ewmi">HTML Tags for text elements</h2>  
+        <p>
+          We have already indicated that the containing text element does not necessarily have to be a DIV tag. Especially regarding search engine optimization or for using external CSS scripts it might be a good idea to use a different tag for your text element. This might also make the structure of your composition easier to understand. 
+        </p>
+        <p>
+          You can change the HTML tag next to the title in the property inspector:
+        </p>
+    </section><!-- /Widget -->         
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working-Tags.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Selection of available <strong>HTML Tags</strong> for text elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->      
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The most commonly used tags are certainly "p" for paragraphs and the different headlines, "h1 - h6". For the average Animate project however it is fully sufficiant to only use DIV tags.
+        </p>
+    </section><!-- /Widget -->    
+
+    
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_mtinmwy7gb9">Positioning, Alignment and Groups</h1>
+      <h3 id="anchor_2v2k9fnu3di">Compose like an artist</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This part will teach you about positioning, aligning and grouping elements in Edge Animate. Learn about helpful features like snapping lines and how the hierarchy in the Elements Panel effects the display. Most importantly: Understand the importance and power of groups and nested elements. Here we go...
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_5i9vf8byb9">Positioning and snapping lines</h2>  
+        <p>
+          We have already learned that we can change the position of an element with the values in the property inspector or by moving it around on the stage. The advantage of working with values is that you can enter accurate numbers right away. Working visually on the stage on the other hand has an advantage on its own: Here you can make use of <i>guide lines</i> to assist you, for example to position an element in the exact center of the stage.  
+        </p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Position010.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Guide lines</strong> assist you while positioning on elements on the stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          You may notice that the element actually snaps to the guide lines, which makes it easier to place it into the right spot. The guide lines are "smart", which means they change according to the environment or context and try to provide the ideal reference. This reference can be the stage as well as another element, so that you can position both elements at the same height, for example.  
+        </p>    
+        <p><i>Tipp:</i> When there are too many elements placed on the stage, the guide lines and snapping may become more distracting than helpful. In this case you might want to deactivate the according option: Go to <i>View</i> and deactivate <i>Smart Guides</i>. 
+        </p>
+    </section><!-- /Widget -->       
+  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_vyeye7sc3di">Align and Distribute</h2>  
+        <p>
+          Apart from using the smart guide lines to improve the positioning of your elements on the stage, you can also use presets to align or distriubte several elements in a certain way. A good example here is to align elements vertically: 
+        </p>
+        <p>
+            Select the according elements and go to Modify > Align. If you choose <i>Top</i>, all selected elements will be aligned according to the topmost element. Using  <i>Vertical Center</i> will position the elements in the averaged middle and <i>Bottom</i> will align the elements according to the lowest element.
+        </p>
+    </section><!-- /Widget -->
+  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ac110639pb9">Rearranging the hierarchy</h2>  
+        <p>
+          When you place elements onto the stage, they are displayed according to a certain order or hierarchy. This order is represented in the <i>Elements panel</i>: Elements that are placed at the top of the list are also closer to the front, elements that are lower in the list are placed further in the back. This means that elements at the top of the Elements panel overlap those at the bottom. Look at this simple example: 
+        </p>
+    </section><!-- /Widget -->    
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Arrange010.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%"><strong>Hierarchy</strong> of elements depends on their position in the Elements panel.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          As you can see here, element_A overlaps element_B. You can change this order by using <i>Arrange</i>. Either go to Modify > Arrange or right click on the element and select <i>Arrange</i> in the pop-up menu. When you have element_A selected, you can use the option <i>Send to Back</i> to move the element behind all other elements of the composition.
+        </p>
+    </section><!-- /Widget -->     
+ 
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Arrange020.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Arrange</strong> allows you to move elements to the back and front.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Arrange030.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Rearranged elements result in switched overlapping.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The same result can be achieved by moving the element further down in the Elements panel. Simply click and drag to rearrange the order of the elements here. Both ways have its perks: While you can place an element right to the desired position by dragging it in the elements panel, it might be way faster and more convenient to use the <i>Arrange</i> menu when you want to move it exactly one step or entirely to the front and back respectively.
+        </p>
+        <p>
+          <strong>Exceptions</strong><br>
+           The two exceptions here are the <i>stage and nested elements</i>. The stage is the root element and although it appears at the very top of the Elements panel, it is always placed in the back. With nested elements it is similar: The containing element has a higher position on the Elements panel, yet the elements it contains appear on top of it in the preview area. We will take a closer look at nested elements further below.
+        </p>
+    </section><!-- /Widget -->     
+    
+ 
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_bz4c6iozuxr">Locking and hiding elements</h2>  
+        <p>
+          When your project grows and there is more and more stuff going on on the stage, it might happen that some of these elements get in your way. There is a chance that they might overlap parts of the stage that you intend on working on or get selected by accident. This is where the options to <i>lock</i> and to <i>hide</i> elements in the Elements panel come in quite handy.
+        </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Lock010.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Lock and hide</strong> elements in the Elements panel.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          In order to <i>hide</i> an element during design time you simply click on the eye icon next to the appropriate element in the Elements panel. This will set its visibilty to none, but only for the representation in Animate. It has no consequences for the final composition during runtime.
+        </p>
+        <p>
+          Especially for backgrounds and elements that shall remain at a fix position it is useful to <i>lock</i> them. In order to do so, click on the circle next to the eye symbol in the Elements panel. When the element is locked, a lock icon appears and the element can no longer be selected. This also prevents its properties from being changed. To unlock the element, click on the lock icon and the element can be modified again.
+        </p>
+    </section><!-- /Widget -->    
+  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_zz8ivu6jemi">Using nested Elements and Groups</h2>  
+        <p>
+          We have already learned in a previous section that you can nest elements. This means that the nested element is placed within the containing element regarding the HTML structure. As a result, the nested element adopts certain aspects from the containing element, like positioning, visibility or transformations. This allows you to work faster, since you don't have to apply changes to all the elements that belong together. Also note that the contained elements are displayed in front of the containing element. You would for instance place a text field inside of the corresponding base element, e.g. to create a button:
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Nested010.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Nested elements</strong> forming a simple button.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Not only can you then go ahead and move the entire button around as one element, you can also duplicate it as a whole and it will also behave as one element in terms of interactivity (e.g. change of mouse cursor, mouseenter events and so on).
+      </p>
+      <p>
+        Apart from nesting elements, you can also use <i>groups</i> to serve this purpose. This is important because you can only nest elements into basic shapes. For instance you can not place text elements inside of each other. Here you might want to use a group instead. In order to create one, you can simply select the elements at stake, for example three text elements, use a right click to open the menu and then select <i>Group Elements in DIV</i>.  
+      </p>
+    </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Nested020.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Group Elements in DIV</strong> for a better handling.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        A new DIV element is then being created in which the selected elements are being placed. Now you can use this outer element to move the entire group or apply transformations and so on.
+      </p>
+    </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Nested030.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Grouped Elements</strong> are placed within a new, empty DIV container.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->          
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <i>Tipp:</i> You can rename the group element in the Elements panel. Especially with larger compositions this is very helpful in order to create a clear and understandable structure and to keep an overview of your elements.
+      </p>
+      <p>
+        You can always ungroup the elements with a right click onto the group and selecting <i>Ungroup Elements</i>. You can also find the grouping options in the main menu under <i>Modify</i>.
+      </p>
+    </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Nested040.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Group Elements</strong> option in the main menu.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Grouped elements remain instances of the current timeline. In case you want to encapsulate elements entirely and animate them on a different timeline, you have to use <i>Symbols</i>. This is what we want to look at in the next section. 
+        </p>
+    </section><!-- /Widget -->   
+    
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_6wg2czt1emi">Creating Symbols</h1>
+      <h3 id="anchor_z7vpp41v2t9">A powerful weapon.</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This section will introduce you to the concept of Symbols in Edge Animate. This is a very important part, especially for more complex compositions. We will also come back to Symbols in the chapters on animation and interaction again, since they play an important part there as well. Here we will first of all explain what symbols are and how they can be created. In order to access the full potential of symbols, also make sure to check out the upcoming advanced edition!
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_dwio0spp66r">Understanding Symbols</h2>  
+    </section><!-- /Widget --> 
+  
+  <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/card_knowledge.jpg" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+        </p><p>
+          A symbol can be compared to a small composition within the Edge Animate composition itself: It has an independent timeline and its own scope. In so far it is similar to a movie clip in Flash. It is probably the most powerful aspects of creating with Edge Animate. 
+        </p>
+        <p>
+          One of the benefits of using symbols is that elements and actions used in these symbols are <i>encapsulated</i>. Symbols themselves are reusable, so that you can use the same symbol several times in the same composition. Symbols can also be exported and used throughout different Animate projects, which makes them very handy and versatile.
+        </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_io4p9t138fr">How do I create a symbol?</h2>  
+        <p>
+          Symbols are created by converting one or several elements into a symbol. There are three ways to do so: You can either use the right-click on a selection of elements on the stage and then opt for <i>Convert to Symbol...</i> in the pop up menu, use the "+" icon in the Library or select the <i>Convert to Symbol...</i> option in the main menu under <i>Modify</i>.
+        </p>
+        <p>
+          Either way, a dialog opens up that allows you to name the symbol and set the autoplay. Don't worry too much though, you can still change both options later as well. 
+        </p>
+    </section><!-- /Widget -->   
+  
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Symbol010.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Creating a Symbol</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Once you confirm your settings, a new symbol is created and appears in the <i>Library</i> in the <i>Symbols</i> section. It now also appears as a symbol in the <i>Elements panel</i> as well, replacing the former element. Symbols are represented by a special icon, that looks like a part of a gear wheel. The former element has not disappeared, but it is now encapsulated within the symbol. You can access the symbol with a double click to get to the element. Note that in contrast to groups, there is no option to convert a symbol back into its former parts.
+      </p>
+    </section><!-- /Widget -->     
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Symbol020.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">The new <strong>Symbol</strong> appears in the Elements panel and in the Library.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->         
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The symbol can be regarded as a container, in which elements and assets can be arranged and animated. Since the symbol is an encapsulated environment, you have to work in the symbol scope to make changes here. Besides using a double click, you can also enter a symbol with a right click and the option <i>Edit Symbol...</i>, but a double click is usually the more convenient way.
+      </p>
+      <p>
+        Notice that once you are in the symbol scope, you have the symbol instance as your new stage with its own properties. Everything outside the symbols borders is shaded. To give you an indication of your current scope, you can always check the breadcrump navigation at the top. You can literally use it to navigate into a different scope, for instance back to the stage.
+      </p>
+    </section><!-- /Widget -->     
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00240_Symbol030.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The <strong>Navigation</strong> allows you to keep track of your current scope.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You can also double click on the shaded space on the design view to get back to the stage. We will come back to using symbols in the <i>Animation</i> section, where you will recognize more of their true potential. For now it is good to know how to create and work with them in a composition. 
+      </p>
+      <p>
+        It is also worth mentioning, that since symbols are encapsulated entities, they are also powerful in terms of writing and placing actions as well as creating asynchronous animations. We will enlarge upon that in the <i>Interactivity</i> chapter. Since symbols can be rather complex entities and this edition is focusing on the very basics, you will find a larger chapter on <i>symbols</i> in the upcoming <i>advanced edition</i>. So stay tuned!
+      </p>
+    </section><!-- /Widget -->    
+    
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_xm05hwu3di">Working with assets in Edge Animate</h1>
+      <h3 id="anchor_1q3nz4wvcxr">The real deal</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this section you will learn how to work with assets in Edge Animate. The full potential of Animate as a creative tool becomes obvious when combining different types of media to create really engaging content. We will show you how you can import these different media types and how you can use Animate to modify and use them for your compositions.<br>Ready, set, go...
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_omat4oswcdi">Images</h2>  
+        <p>
+          So far we have only been working with "native" elements in Edge Animate, that is basic shapes and text. Of course your creative output becomes much richer when using other assets like images as well. There are several ways of importing images into your Animate composition. One option is to use the "import" dialog box. You'll get it when you go to <i>File > Import...</i> or click on the "+" button on the images section in the Library panel.
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Importdialog.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Dialog box for importing images.</strong></figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Here you can browse your file system and select one or more images to open them in your project, i.e. importing them into your library. They will then be placed in the images folder of your current project automatically.
+        </p>
+        <p>
+          A faster and often more convenient way is to <i>drag</i> images out of your file system right onto the stage. This will also automatically store them in the images folder, so you can go ahead and remove images from the stage again. They will be available in your Library from now on.
+        </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_ImagesLib.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Images in the Library.</strong></figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Once the images are imported into your project, you can go ahead and drag and place them on the stage. As with other elements, you can move them around, change the hierarchy in the Elements panel and apply properties like transformations or clipping. Especially the last option can create nice effects within animations.<br> <i>Tipp:</i> It is not a good idea to use clipping just to crop images, since the entire image will be loaded and cause more traffic then probably necessary. 
+        </p>
+    </section><!-- /Widget -->    
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_flznh6hto6r">Sprite sheets</h2>  
+      <p>
+        A sprite sheet is a series of images that displays the single steps of a movement or animation. Like in a flip book, the fast succession of the image series results in the illusion of that very movement. Edge Animate enables you to import <i>sprite sheets</i> as a special kind of symbol. That means that the sprite sheet image will automatically be encapsulated in a symbol and according to the presets selected for the sprite sheet, keyframes will be set automatically to create an animation. We will cover that last bit later on and for now focus on how to import sprite sheets in the first place and explain the corresponding options.
+      </p><br>
+      <p>
+        <h3 id="anchor_q6y4c0afw29">Import</h3>You can import sprite sheets through the <i>Library</i> within the <i>Symbols</i> section or through the main menu under File > Import Sprite Sheet. This will open up the import dialog for sprite sheet images. Here you can browse your local file system for an appropriate image. Once you confirm your selection, you will be redirected to the <i>Define Sprite Tiles</i> dialog.
+      </p>
+    </section><!-- /Widget -->      
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Sprite010.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Define the sprite sheet tiles </strong>when importing sprite sheets as a symbol.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In this dialog you can define the settings for the sprite sheet animation. That is, to seperate the sprite sheet image into the single parts and set the tempo. You can use sprite sheets with several rows and columns. You might need to use the additional <i>Trimming Options</i> at the bottom to get the trimming right. You can use the <i>Preview Animation</i> option to check if the animation runs smooth.
+      </p>
+      <p>
+        When you are content with the result, hit <i>Import</i> to finally create the symbol and import the sprite sheet into your project. It now will appear in the Library in the Symbols section and can be placed onto the stage from there via drag and drop.  
+      </p><br>
+      <p>
+        <h3 id="anchor_ztlbu0rizfr">Editing</h3>Since the sprite sheet is actually a symbol, you can still make adjustments to it. In order to do so, you have to go into the symbol (double click on the symbol icon) to get to the corresponging symbol scope. Here you can see that the single tiles are stored as keyframes on the timeline. You will learn more about that in the animation chapter soon. Keep in mind that you can define settings for autoplay within the symbol scope. 
+      </p>
+    </section><!-- /Widget -->  
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_8t25ut0529">Audio and video</h2>  
+      In order to create even more engaging, interactive compositions, Edge Animate allows you to include audio and video files as well. This way your composition may become truly rich, multi-media experiences. Here's how:
+      <p>
+        <h3 id="anchor_9mx3whfr">Import</h3>As we have already learned in the <i>User Interface</i> chapter, you can import audio and video files by using the "+" button in the corresponding section of the Library panel or via drag and drop in the design view. When you choose the second option, a corresponding element is placed right into the composition. 
+      </p><br>
+      <p>
+        <h3 id="anchor_gzv8s8xgvi">Placing audio and video files</h3>When you want to create a new instance of your audio or video file on the stage, you can use drag and drop from out of the Library. You can also use a right click on the file and then use <i>Add to Composition</i>. It is, however, usually smarter to use drag and drop, since you can place it at the exact location right away. 
+      </p><br>
+      <p>
+        <h3 id="anchor_79a9xf4unmi">Visibility and controls</h3>You might have already noticed a slight difference between working with audio and video files: By default, audio elements are not visible when placed on the stage, video elements on the other hand are. Note that with audio elements, the display is set to none by default. This only affects the visual representation, not the audio as such. The visual representation is simply the controls panel. So if you want to give your user the opportunity to modify the audio playback, switch the display property to "On".
+      </p>
+    </section><!-- /Widget -->     
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Audio010.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The display property reveals or hides the <strong>Audio control bar </strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The audio element as such is now visible and can be moved around, transformed and animated. Note that the audio specific settings like volume and autoplay are available regardless of the display property settings.
+      </p>
+      <p>
+        Switching the property to "Off" will hide the controls again. Keep in mind, though, that automatically playing audio can be quite a nuissance, so it might be a good idea to at least allow the user to hit pause and adjust the volume. If you don't like the default controls, you can build audio controls yourself using <i>actions</i>.
+      </p>
+      <p>
+        With <i>videos files</i>, the corresponding element is visible by default. This makes sense, since the visibility in this case does not only apply to the controls but the entire element and therefore the video itself. In order to activate or deactivate the controls for video files, you can select the appropriate option in the property panel in the video section (when a video element is selected).
+      </p>
+    </section><!-- /Widget -->     
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Video010.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The visibility of the<strong> control bar for video elements  </strong> can be set directly in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_glnllyp66r">Autoplay</h3>This option is similar for both audio and video files. It is available in the <i>Property Inspector</i> in the specific section. As the name suggests, it determines whether the playback should start automatically at the beginning of the composition.
+      </p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Video020.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Enable or disable <strong> Autoplay </strong> for an audio or video file in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Tempting as this might be, you should be aware that some users might be annoyed by automatically playing sounds and videos, especially when they don't have the option to pause the playback. Thus you should decide carefully if autoplay really is the best option.
+      </p>
+    </section><!-- /Widget -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_taj28hhncdi">Symbols</h2>  
+      <p>
+        We have already encountered <i>Symbols</i> several times by now, so it is time to get to know them a little better and see how we can work with them for creating compositions. To get a symbol, you can either create one, as we have learned in the previous section. Or you can also <i>import</i> symbols from other projects or templates and work with these symbols. You can import symbols through the Library. Whether you create or import a symbol, it will end up in the appropriate section of the library panel and can be placed on to the stage from there.
+      </p><br>
+      <p>
+        <h3 id="anchor_g2b1q6ywrk9">Instances and inheritance</h3>Note that you can place the same symbol several times. This will create a new instance of the same symbol. It is important to understand that this is not the same as creating a duplicate. Every instance of a symbol inherits its properties and settings. When you make any changes within the symbol they will automatically be applied to all instances of that symbol.
+      </p>
+      <p>
+        If you want to create different appearances, you have to duplicate the symbol in the library (right click > Duplicate). This creates a new symbol that can be modified without affecting the previous symbol. This might seem a bit complicated at first, but it actually is quite powerful once you get used to it. It might become a bit easier to understand with the following paragraph.
+      </p><br>
+      <p>
+        <h3 id="anchor_mr5g6d5nrk9">Modifying Symbols</h3>As we have learned, symbols are entities that encapsulate other elements and serve as some kind of inner composition within the composition. This is important to keep in mind when working with them. So first of all, we have two perspectives with each symbol, as we have already heard before: We can target symbols from the outside or make adjustments within the symbol scope.
+      </p>
+      <p>
+        Let's look at the first option. For example, you take a symbol from the library and place it onto the stage. Now your scope is still on the stage level. Every change or modification you apply here – for instance positioning, transformations, opacity and so on – refer to the outer representation of the symbol, which means the containing DIV (also known as the <i>symbol element</i>). 
+      </p>
+  </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong> Outer scope </strong>of a symbol.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In order to modify the content of the symbol, you have to shift the scope and get into the symbol. You can do so by double clicking on a symbol instance on the stage or with a double click on the symbol icon in the Elements panel as well as the Library. Note that you don't have to have a symbol instance placed on the stage to modify it.
+      </p>
+      </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong> Inner scope </strong>of a symbol.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Once you are <i>in the symbol scope</i>, you can edit the symbol itself, which is similar to the stage element of the main composition. You have now also access to the elements and assets that are contained within the symbol. Here you can make changes and add or remove elements.
+      </p>
+      <p>
+        It takes some time to fully understand the concept of symbols and their scope. But it is really powerful once you've got the hang of it. And it is definitely worth the effort.
+      </p>
+    </section><!-- /Widget -->     
+    
+    
+</article>
+</div>    
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[1];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[1].pages[3];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Composing <strong>Animations</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_1i2b0yynwmi">Controlling Animations</h1>
+      <p class="subtitle">Hands on.</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      You are now familiar with the basics and know about nested animations. This section will build upon that and teach you how to control your animations and how to get the timing right. You will learn how to use triggers and labels, playback commands and how to create animation loops. Once you have full control over the timing and playback on all different levels of nested symbols, you can master really complex animation choreographies.<br>
+      Let's get it on!
+  </p></section><!-- /Section -->
+
+
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_mjvoqxv42t9">Labels</h2>  
+      <p>
+        Labels are very useful for controlling your animations. They serve as <i>marker</i> on the timeline and allow you to indicate important positions. You can then use these markers to refer to them, navigating the Playhead to that exact position - either with <i>actions</i>, for instance within a <i>Trigger</i> or with the help of <i>Playback commands</i> on the timeline, usually in combination with symbols.
+      </p>
+      <p><h3 id="anchor_tn8qf2sm7vi">Setting a label</h3>
+        <i>Labels</i> can be set at any given position on the timeline. In order to set a label, move the Playhead to the intended position, then use the Label option in the control panel or use the short cut "CMD/Ctrl + L" to set a label at that exact position. 
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Label010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The option to insert a <strong>Label</strong> on the Timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    <h3 id="anchor_2t4qmklz0k9">Label names</h3>
+      <p>Once a Label is set, you can type in a name. This name will be used for referencing this particular Label. It is therefore a good idea to use proper names that already indicate the purpose of the Label, for example "start" or "part01".</p>
+    </section><!-- /Widget -->
+   
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Label020.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">A proper name helps understanding the purpose of the <strong>Label</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_2vxyqjb57b9">Label position</h3>
+  The Label will appear as small triangle with the Label name above the animation tracks. You can edit the name by double clicking on it. You can also move the Label to a different location by simply dragging it to the intended point on the timeline.
+      </p>
+    </section><!-- /Widget -->    
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Label030.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The final <strong>Label</strong> on the timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_k24zkja714i">Trigger</h2>  
+      <p>
+        A <i>Trigger</i> is used to execute an <i>action</i> at a certain point in time, i.e. once the Playhead reaches that particular position on the timeline. This position is indicated by the trigger icon: curly braces around a diamond. You can set a Trigger at any point on the timeline to define the moment when your script is to be executed, for example to stop the playback or to play in the opposite direction. A Trigger can therefore be used to create an animation loop by starting the playback again from the beginning.  
+      </p>
+      <p><h3 id="anchor_zkoaecj714i">Setting a Trigger</h3>
+        In order to insert a Trigger, place the Playhead to the intended position on the Timeline, then press "CMD/Ctrl. + T" or use the trigger icon in the timeline control panel.
+      </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Trigger010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Inserting a <strong>Trigger</strong> on the Timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        When you set a Trigger, a <i>code window</i> will instantly open up, in which you can define the action that is going to be triggered at that point in time. We will discuss the different options in the <i>Interactivity</i> chapter. For now it is important to remember that a Trigger allows you to execute actions at a specific point in time.
+      </p>
+    </section><!-- /Widget -->      
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Trigger020.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">A <strong>Trigger</strong> allows you to execute code at a specific point in time.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The position of the Trigger on the Timeline can be changed by simply moving it on the timeline. This allows you to get the right timing for your action, even in complex choreographies. The big advantage is that the animation tracks and the timeline as a whole provide you with a clear indication of what is going to happen when. 
+      </p>
+      <p><h3 id="anchor_hglv94cmcxr">Trigger and the preview in Animate</h3>
+        One last important thing that needs to be mentioned here is that <i>the script within the Trigger is only executed during runtime</i>. That means that you won't see the result when you play your composition in Edge Animate. You have preview it in the browser to see the effect of the Trigger.
+      </p>
+    </section><!-- /Widget -->   
+
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_21uhy03haor">Playback commands</h2>  
+      <p>
+        Another way of controlling your animations is by using <i>Playback Commands</i>. They can be used to control the playback of a symbols' timeline from the outer scope, for example the main timeline. Playback Commands are especially useful in combination with Labels when they are set in the targeted symbol, i.e. on that symbol's timeline. 
+      </p>
+      <p>
+        Whenever you have a symbol on the stage, you can find the option to add Playback Commands as topmost animation track. You can access the options by clicking on the "+" icon.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Playback010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Adding <strong>Playback Commands</strong> to control the Symbol's Timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        These options refer to the playback of the Timeline of that Symbol. When selected, the particular option is stored at the current position of the Playhead on the current Timeline. This leads to the fact that this particular Playback Command is being executed when the Playhead reaches that particular point. As a result, this is allowing you to control and coordinate an asynchronous playback of different Timelines.
+      </p>
+      <p>
+        In general, the Playback Commands can be devided into three types: <i>Play</i>, <i>Play Reverse</i> and <i>Stop</i>. When you insert a Playback Command on the timeline, a corresponding icon is being placed. This icon is already indicating the type, be it Play, Stop or Play Reverse. In case of Play and Play Reverse, the duration of the playback is indicated with shaded arrows.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Playback020.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Different <strong>Playback Commands</strong> on the Timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        All three types can either refer to the current position of the symbol's Playhead or to a specific location. In this case choose <i>Play From</i>, <i>Play Reverse From</i> or <i>Stop At.</i>. This will first move the Playhead in the Symbol to the given location and then execute the command. The location can be provided as a timestamp (in milliseconds) or as a Label.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Controlling_Playback030.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Different <strong>Playback Commands</strong> on the Timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The position of the Playback Commands on the Timeline can be modified in the familiar way: Just grab it with the mouse an put it to the new position. This way you can make sure that the playback of the symbol falls in line with the playback of the main composition.
+      </p>
+    </section><!-- /Widget -->
+
+
+  
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

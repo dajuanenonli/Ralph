@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[6];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[6].pages[5];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Recipe: <strong>Creation</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_6e4xzxs9k9">Publish to Wordpress</h1>
+      <p class="subtitle">Integrating a composition in a Content Management System.</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this recipe you will learn how to publish your Animate composition in Wordpress. This way you can use and publish your project directly in a blog entry to create even more awesome, interactive and animated content. We will be using the Animate Plug-In for Wordpress written by our colleague Timm Jansen.
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_x4wdalqsemi">Background</h2>  
+        <p>
+          In this exercise we want to publish an existing Animate composition in a Wordpress environment. We will be using the <i>Animate Deployment Package</i> for the composition and the <i>Edge Suite template</i> for Wordpress to get this done. Wordpress is a common web content management system for creating and maintain microsites such as blogs. It is less complex than Drupal or Typo3, but at the same time offers a broad variety of templates to choose from. It is a good choice if you want to publish content to the web without having to worry much about backend development (FYI: There is a Drupal solution for Animate available as well).
+        </p>
+        <p>    
+          <i>Note:</i> Wordpress requires a webserver to be installed on. If you don’t have access to one yourself, you can use one of the numerous offers on the web for free webspace or run a local webserver on your device. You will also find recommendations in the helpful tutorials about installing Wordpress. Check them out if you run into any trouble. This recipe however is based on the assumption that you already have an existing Wordpress page up and running. So let’s get started...
+        </p>
+        <p>
+      Here's the result:
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_Result.png" alt="" width="100%" style="display: inline; max-width: 700px">        <figcaption style="max-width: 80%">The Google Maps Animate project <strong>integrated into a Wordpress site</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_kybht5oecdi">Steps:</h2>  
+      <p><h3 id="anchor_mqxg92otj4i">Creating an Animate Deployment Package</h3>
+      This recipe works with any kind of Animate project. And as we want to focus on the publishing of the composition, we can simply revert to one of the recent projects we created in the other recipes so far instead of creating a completely new one. So lets get back to our favorite sushi restaurant and the Google Map recipe (if you haven’t done that recipe yet, you can just take any other Animate project of yours – or use the <i>index.oam</i> file provided in the projects folder.</p>
+    </section><!-- /Widget --> 
+    
+    <!-- Widget: DOWNLOAD -->
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/card_desk.jpg" width="200">
+          <h4 id="anchor_mx8rvrc0udi">&raquo;Get the .OAM file&laquo;</h4>
+          <p>You find the corresponding file in the projects folder at<br>
+          <strong>projets/020 Recipes/060 PublishToWordpress</strong></p>
+          <!-- </-><button class="download">DOWNLOAD</button> -->
+        </center>
+      </text>
+    </div>
+    <!--<data>{}</data>-->
+  </section><!-- /Widget -->  
+    
+    
+      <p>
+      When we save a project in Edge Animate, it automatically creates the file structure that we already encountered several times by now. But apart from that, we also have a number of options to generate different types of files with the publish function in Edge Animate. The standard setting here is ‘web’, but in our case we want to create the <i>Animate Deployment Package</i> (*.oam), a generic type of file designated for Animate projects, which contains all the relevant information in one single file. This file can be interpreted later by some other Adobe tools like Dreamweaver, Muse and Indesign or the CMS Plug-In “Edge Suite for Wordpress” which we are going to use in this recipe.<br>
+In order to create this <i>.oam</i> file, you need to open “Publish Settings” in the File menu in Edge Animate first. There you can select “Animate Deployment Package” on the left hand side. You can change the target directory or the name of the .oam file if you want to, but for now we leave everything as it is. We only deselect the option “Web” on the left hand side. 
+      </p>
+    
+    <extra>
+    </extra>
+  <!-- /Widget -->       
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_010.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Export the Animate project as <strong>Animate Deployment Package</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->            
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          <i>Caution:</i> You have to click on the “Publish” button to actually create the file. If you click on “Save” it will only save the settings and you will still have to publish it (“File” > “Publish”).<br>
+If you check your Animate directory, you should now find a new folder called “publish” containing another folder (“animate package”) with the .oam file.
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_020.png" alt="" width="100%" style="display: inline; max-width: 300px">        <figcaption style="max-width: 80%"><strong>Animate Deployment Package</strong> file.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_icfcypvte29">Installing the Edge Suite Plug-In for Wordpress</h3>
+          There are a few preparations that need to made in Wordpress before we can load our Animate composition into a new blog entry. First of all, we need to install a Plug-In called “Edge Suite”, crafted by our colleague and friend Timm Jansen. This extension will be able to handle the *.oam file and allows you to integrate it into your Wordpress site.
+        </p>
+        <p>
+          To install it, you have to open the plug-in section on your Wordpress dashboard, select "Add new" and search for "Edge Suite". Use the "install now" option and follow the instructions.
+        </p>
+    </section><!-- /Widget -->    
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_030.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Installing the Edge Suite Plug-In for Wordpress</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_d537xf20529">Loading the Animate Deployment Package with the Edge Suite</h3>
+          After the installation the Edge Suite will appear as a new item in your Wordpress dashboard, right below the settings. In this section you can browse for the Animate Package to upload it to Wordpress..
+        </p>
+    </section><!-- /Widget -->    
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_040.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Using the Edge Suite</strong> plug-in to upload a composition.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_rci4od8ia4i">Enabling shortcodes</h3>
+          After successfully uploading the Animate Deployment Package, our composition is already integrated within the files structure of our Wordpress site. There are several options to place Animate compositions, but we want to stick to simple blog entries for now. The easiest way to do so is by using <i>shortcodes</i>. These have to be enabled under “Edge Suite settings” first. Therefore we select the checkbox next to “Widget shortcode” to activate them.
+        </p>
+    </section><!-- /Widget -->    
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_050.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Enabling shortcodes</strong> in the Edge Suite settings.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        These shortcodes make it really easy to use uploaded Animate compositions in the content area of your Wordpress site, for instance as a blog post. The shortcode itself looks like this: 
+[edge_animation id=””]<br>
+      </p>
+        <p><h3 id="anchor_jpg5tkv5cdi">Finding out the ID of the Animate composition</h3>
+          As you can see, the shortcode requires an ID from the Animate project. So what is this ID and where can we find it? This is a bit complicated. Wordpress automatically references uploaded Animate packages with a continuous numbering, so that each composition gets its unique number, which can then be used in the shortcode.</p>
+    <p>
+To find out this number, we have to go back to the ‘manage’ page of the Edge Suite. There you will find a drop-down menu under “Delete selected composition”. Opening that menu will show you all the available compositions with the equivalent composition number. But be careful not to accidentally delete the composition! Just remember the number. In this case the composition number is “7”.
+        </p>
+    </section><!-- /Widget -->    
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_060.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Be careful not to accidentally delete</strong> the AN composition.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_z3dcpduz0k9">Using the shortcode in a new post</h3>
+          Now we can edit and existing entry or add a new post to our wordpress page. To implement our composition, we simply add the shortcode with the composition number at the end of our blog text:.
+        </p>
+    </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_070.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Shortcode used in a new post</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>When we are done editing the post we can publish it and take a look at our wordpress page. And there it is, our animate composition in wordpress, neat and running.
+        </p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00600_Wordpress_Result.png" alt="" width="100%" style="display: inline; max-width: 700px">        <figcaption style="max-width: 80%">The Google Maps Animate project <strong>integrated into a Wordpress site</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

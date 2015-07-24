@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[0].pages[7];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_xm05hwu3di">Working with assets in Edge Animate</h1>
+      <h3 id="anchor_1q3nz4wvcxr">The real deal</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this section you will learn how to work with assets in Edge Animate. The full potential of Animate as a creative tool becomes obvious when combining different types of media to create really engaging content. We will show you how you can import these different media types and how you can use Animate to modify and use them for your compositions.<br>Ready, set, go...
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_omat4oswcdi">Images</h2>  
+        <p>
+          So far we have only been working with "native" elements in Edge Animate, that is basic shapes and text. Of course your creative output becomes much richer when using other assets like images as well. There are several ways of importing images into your Animate composition. One option is to use the "import" dialog box. You'll get it when you go to <i>File > Import...</i> or click on the "+" button on the images section in the Library panel.
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Importdialog.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Dialog box for importing images.</strong></figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Here you can browse your file system and select one or more images to open them in your project, i.e. importing them into your library. They will then be placed in the images folder of your current project automatically.
+        </p>
+        <p>
+          A faster and often more convenient way is to <i>drag</i> images out of your file system right onto the stage. This will also automatically store them in the images folder, so you can go ahead and remove images from the stage again. They will be available in your Library from now on.
+        </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_ImagesLib.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Images in the Library.</strong></figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Once the images are imported into your project, you can go ahead and drag and place them on the stage. As with other elements, you can move them around, change the hierarchy in the Elements panel and apply properties like transformations or clipping. Especially the last option can create nice effects within animations.<br> <i>Tipp:</i> It is not a good idea to use clipping just to crop images, since the entire image will be loaded and cause more traffic then probably necessary. 
+        </p>
+    </section><!-- /Widget -->    
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_flznh6hto6r">Sprite sheets</h2>  
+      <p>
+        A sprite sheet is a series of images that displays the single steps of a movement or animation. Like in a flip book, the fast succession of the image series results in the illusion of that very movement. Edge Animate enables you to import <i>sprite sheets</i> as a special kind of symbol. That means that the sprite sheet image will automatically be encapsulated in a symbol and according to the presets selected for the sprite sheet, keyframes will be set automatically to create an animation. We will cover that last bit later on and for now focus on how to import sprite sheets in the first place and explain the corresponding options.
+      </p><br>
+      <p>
+        <h3 id="anchor_q6y4c0afw29">Import</h3>You can import sprite sheets through the <i>Library</i> within the <i>Symbols</i> section or through the main menu under File > Import Sprite Sheet. This will open up the import dialog for sprite sheet images. Here you can browse your local file system for an appropriate image. Once you confirm your selection, you will be redirected to the <i>Define Sprite Tiles</i> dialog.
+      </p>
+    </section><!-- /Widget -->      
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Sprite010.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Define the sprite sheet tiles </strong>when importing sprite sheets as a symbol.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In this dialog you can define the settings for the sprite sheet animation. That is, to seperate the sprite sheet image into the single parts and set the tempo. You can use sprite sheets with several rows and columns. You might need to use the additional <i>Trimming Options</i> at the bottom to get the trimming right. You can use the <i>Preview Animation</i> option to check if the animation runs smooth.
+      </p>
+      <p>
+        When you are content with the result, hit <i>Import</i> to finally create the symbol and import the sprite sheet into your project. It now will appear in the Library in the Symbols section and can be placed onto the stage from there via drag and drop.  
+      </p><br>
+      <p>
+        <h3 id="anchor_ztlbu0rizfr">Editing</h3>Since the sprite sheet is actually a symbol, you can still make adjustments to it. In order to do so, you have to go into the symbol (double click on the symbol icon) to get to the corresponging symbol scope. Here you can see that the single tiles are stored as keyframes on the timeline. You will learn more about that in the animation chapter soon. Keep in mind that you can define settings for autoplay within the symbol scope. 
+      </p>
+    </section><!-- /Widget -->  
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_8t25ut0529">Audio and video</h2>  
+      In order to create even more engaging, interactive compositions, Edge Animate allows you to include audio and video files as well. This way your composition may become truly rich, multi-media experiences. Here's how:
+      <p>
+        <h3 id="anchor_9mx3whfr">Import</h3>As we have already learned in the <i>User Interface</i> chapter, you can import audio and video files by using the "+" button in the corresponding section of the Library panel or via drag and drop in the design view. When you choose the second option, a corresponding element is placed right into the composition. 
+      </p><br>
+      <p>
+        <h3 id="anchor_gzv8s8xgvi">Placing audio and video files</h3>When you want to create a new instance of your audio or video file on the stage, you can use drag and drop from out of the Library. You can also use a right click on the file and then use <i>Add to Composition</i>. It is, however, usually smarter to use drag and drop, since you can place it at the exact location right away. 
+      </p><br>
+      <p>
+        <h3 id="anchor_79a9xf4unmi">Visibility and controls</h3>You might have already noticed a slight difference between working with audio and video files: By default, audio elements are not visible when placed on the stage, video elements on the other hand are. Note that with audio elements, the display is set to none by default. This only affects the visual representation, not the audio as such. The visual representation is simply the controls panel. So if you want to give your user the opportunity to modify the audio playback, switch the display property to "On".
+      </p>
+    </section><!-- /Widget -->     
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Audio010.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The display property reveals or hides the <strong>Audio control bar </strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The audio element as such is now visible and can be moved around, transformed and animated. Note that the audio specific settings like volume and autoplay are available regardless of the display property settings.
+      </p>
+      <p>
+        Switching the property to "Off" will hide the controls again. Keep in mind, though, that automatically playing audio can be quite a nuissance, so it might be a good idea to at least allow the user to hit pause and adjust the volume. If you don't like the default controls, you can build audio controls yourself using <i>actions</i>.
+      </p>
+      <p>
+        With <i>videos files</i>, the corresponding element is visible by default. This makes sense, since the visibility in this case does not only apply to the controls but the entire element and therefore the video itself. In order to activate or deactivate the controls for video files, you can select the appropriate option in the property panel in the video section (when a video element is selected).
+      </p>
+    </section><!-- /Widget -->     
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Video010.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The visibility of the<strong> control bar for video elements  </strong> can be set directly in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_glnllyp66r">Autoplay</h3>This option is similar for both audio and video files. It is available in the <i>Property Inspector</i> in the specific section. As the name suggests, it determines whether the playback should start automatically at the beginning of the composition.
+      </p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_WorkingAssets_Video020.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Enable or disable <strong> Autoplay </strong> for an audio or video file in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Tempting as this might be, you should be aware that some users might be annoyed by automatically playing sounds and videos, especially when they don't have the option to pause the playback. Thus you should decide carefully if autoplay really is the best option.
+      </p>
+    </section><!-- /Widget -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_taj28hhncdi">Symbols</h2>  
+      <p>
+        We have already encountered <i>Symbols</i> several times by now, so it is time to get to know them a little better and see how we can work with them for creating compositions. To get a symbol, you can either create one, as we have learned in the previous section. Or you can also <i>import</i> symbols from other projects or templates and work with these symbols. You can import symbols through the Library. Whether you create or import a symbol, it will end up in the appropriate section of the library panel and can be placed on to the stage from there.
+      </p><br>
+      <p>
+        <h3 id="anchor_g2b1q6ywrk9">Instances and inheritance</h3>Note that you can place the same symbol several times. This will create a new instance of the same symbol. It is important to understand that this is not the same as creating a duplicate. Every instance of a symbol inherits its properties and settings. When you make any changes within the symbol they will automatically be applied to all instances of that symbol.
+      </p>
+      <p>
+        If you want to create different appearances, you have to duplicate the symbol in the library (right click > Duplicate). This creates a new symbol that can be modified without affecting the previous symbol. This might seem a bit complicated at first, but it actually is quite powerful once you get used to it. It might become a bit easier to understand with the following paragraph.
+      </p><br>
+      <p>
+        <h3 id="anchor_mr5g6d5nrk9">Modifying Symbols</h3>As we have learned, symbols are entities that encapsulate other elements and serve as some kind of inner composition within the composition. This is important to keep in mind when working with them. So first of all, we have two perspectives with each symbol, as we have already heard before: We can target symbols from the outside or make adjustments within the symbol scope.
+      </p>
+      <p>
+        Let's look at the first option. For example, you take a symbol from the library and place it onto the stage. Now your scope is still on the stage level. Every change or modification you apply here – for instance positioning, transformations, opacity and so on – refer to the outer representation of the symbol, which means the containing DIV (also known as the <i>symbol element</i>). 
+      </p>
+  </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong> Outer scope </strong>of a symbol.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In order to modify the content of the symbol, you have to shift the scope and get into the symbol. You can do so by double clicking on a symbol instance on the stage or with a double click on the symbol icon in the Elements panel as well as the Library. Note that you don't have to have a symbol instance placed on the stage to modify it.
+      </p>
+      </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong> Inner scope </strong>of a symbol.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Once you are <i>in the symbol scope</i>, you can edit the symbol itself, which is similar to the stage element of the main composition. You have now also access to the elements and assets that are contained within the symbol. Here you can make changes and add or remove elements.
+      </p>
+      <p>
+        It takes some time to fully understand the concept of symbols and their scope. But it is really powerful once you've got the hang of it. And it is definitely worth the effort.
+      </p>
+    </section><!-- /Widget -->     
+    
+    
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

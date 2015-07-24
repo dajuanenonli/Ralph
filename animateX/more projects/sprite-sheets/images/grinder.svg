@@ -1,0 +1,39 @@
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="141.799px" height="270.986px" viewBox="0 0 141.799 270.986"
+	 style="enable-background:new 0 0 141.799 270.986;" xml:space="preserve">
+<defs>
+</defs>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-2.0253" y1="227.7494" x2="130.0047" y2="179.6944">
+	<stop  offset="0" style="stop-color:#3F1915"/>
+	<stop  offset="0.2795" style="stop-color:#662415"/>
+	<stop  offset="0.4914" style="stop-color:#802B14"/>
+	<stop  offset="1" style="stop-color:#3F1915"/>
+</linearGradient>
+<path style="fill:url(#SVGID_1_);" d="M72.989,270.986h51.441c6.959,0,12.085-6.511,10.451-13.276l-1.122-4.645
+	c-0.511-2.118-1.654-4.03-3.277-5.484l-2.541-2.276c-2.024-1.813-3.286-4.325-3.533-7.03l-11.47-98.892
+	c-0.187-2.045-0.953-10.668-2.182-12.268c-0.798-1.039-1.839-1.866-2.958-2.547l-7.696-4.68c-1.302,1.459-5.832,6.521-8.435,6.643
+	l-22.385-0.164l-15.802,0.164c-2.603-0.122-7.572-2.989-10.279-5.2l-5.325,3.238c-1.119,0.681-2.16,1.508-2.958,2.547
+	c-1.23,1.6-1.995,10.223-2.182,12.268l-11.47,98.892c-0.247,2.706-1.509,5.217-3.533,7.03l-2.541,2.276
+	c-1.623,1.454-2.766,3.366-3.277,5.484l-1.122,4.645c-1.634,6.765,3.492,13.276,10.451,13.276h51.441"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="24.2294" y1="235.044" x2="118.6835" y2="155.7876">
+	<stop  offset="0" style="stop-color:#0075BC"/>
+	<stop  offset="0.5061" style="stop-color:#55EBFF"/>
+	<stop  offset="0.5795" style="stop-color:#50E4FB"/>
+	<stop  offset="0.6848" style="stop-color:#42D1F0"/>
+	<stop  offset="0.8092" style="stop-color:#2CB2DF"/>
+	<stop  offset="0.9473" style="stop-color:#0D87C6"/>
+	<stop  offset="1" style="stop-color:#0075BC"/>
+</linearGradient>
+<polygon style="fill:url(#SVGID_2_);" points="42.169,136.509 102.506,136.509 116.465,241.132 29.337,241.132 "/>
+<circle style="fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;" cx="72.837" cy="163.132" r="8.999"/>
+<path style="fill:#646464;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;" d="M58.287,190.511
+	c4.949,0,30.591-0.115,30.591-0.115l-5.496,24.147l-18.881,0.018L58.287,190.511z"/>
+<path style="fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M8.516,11.703h124.766L99.757,120.805c-1.737,3.556-5.374,5.787-9.331,5.724l-38.745-0.299c-3.761-0.06-7.175-2.211-8.852-5.578
+	L8.516,11.703z"/>
+<path style="fill:#3F1915;" d="M137.443,7.719c0,0-45.93-0.03-45.915-0.052l0.037-5.202C91.565,1.11,90.508,0,89.217,0H52.581
+	c-1.291,0-2.347,1.11-2.347,2.466l0.006,5.202C50.256,7.69,4.356,7.719,4.356,7.719c-2.172,0-4.133,1.655-4.337,3.926
+	c-0.231,2.573,1.71,4.758,4.114,4.758h133.533c2.404,0,4.346-2.185,4.114-4.758C141.576,9.374,139.614,7.719,137.443,7.719z"/>
+</svg>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <!-- PRINT -->
+    <link href="../../../_internals/css/print.css" rel="stylesheet" type="text/css" />
+    <style>
+      @page {
+        margin: 3cm;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Adding <strong>Interactivity</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_vp5h95xko6r">Making compositions interactive</h1>
+      <p class="subtitle">Get ready for Action</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This chapter will lead you the way into adding interactivity to your compositions. You will learn how to add actions, how to listen and react to events and how to use the code wizzard. Don't be affraid, it won't hurt. I promise!
+    </p>
+  </section><!-- /Section -->
+
+    
+  <!-- Section: Text -->
+  <section class="text">
+    <h2 id="anchor_68tltur3sor">A few remarks on the sideline</h2>
+    <p>
+      Edge Animate is not only a tool for creating motion and animations, but creating <i>interactive content</i> as well. In order to do that, you can use <i>Actions</i> and the <i>Edge Animate API</i>. The underlying language here is JavaScript. Fortunately, you don't have to be able to write code yourself (although it might in fact prove to be helpful). Edge Animate comes with a code wizzard, that provides you with predefined code snippets you can use for adding interactivity. We will show you how this is done later in this chapter.
+    </p>
+    <p>
+      These code snippets can be inserted at several points in Edge Animate. In order to give you a little help, the interface of Edge Animate shows these curly braces "{}" whenever you can enter actions.
+    </p>
+    <p>
+      When starting to work with Edge Animate, the provided code snippets should cover pretty much everything you need. Nevertheless, it might be a good idea to practice writing short scripts yourself and get used to the language. You might want to take a look at the <i>Cheat Sheet</i> we have included here, which features the most important actions and events. Also stay tuned in for the <i>advanced addition</i>, in which we will tackle a lot more possibilities of working with code. Also make sure to check out the recommended sources in the introductory chapter, they will also help you with getting to know more JavaScript.
+    </p>
+    <p>
+      If you are already fit at using JavaScript, you can bring in all your knowledge here and build rich applications with Edge Animate. <br>The sky is the limit.  
+    </p>
+  </section><!-- /Section -->
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_3autc2chaor">Section Overview</h2>  
+      <p>This is what this chapter contains:</p>
+        <ul>
+            <li>Events</li>
+                <ul>
+                    <li>Introduction</li>
+                    <li>Handling Events</li>
+                    <li>User Events</li>
+                    <li>Timeline Events</li>
+                    <li>Composition Events</li>
+                    <li>Symbols and Elements</li>
+                </ul>
+            <li>Actions</li>
+                <ul>
+                    <li>Introduction</li>
+                    <li>Code snippets</li>
+                    <li>Calling a URL</li>
+                    <li>The sym argument</li>
+                    <li>Accessing Symbols</li>
+                    <li>Accessing Elements</li>
+                    <li>Modifying Elements</li>
+                    <li>Creating and deleting Symbols</li>
+                    <li>Working with variables</li>
+                    <li>Controlling the timeline</li>
+                </ul>
+            <li>Finding errors</li>
+        </ul>
+    </section><!-- /Widget -->
+    
+    
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Adding <strong>Interactivity</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_pk4cytfyldi">Listening to Events</h1>
+      <p class="subtitle">Wait for it...</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+       In this section you will learn about events and how to respond to them in order to introduce interactivity. You will get to know the different types of events you may encounter in the Edge Animate context and learn about their specifics.
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_786mpvcayvi">Introduction</h2>  
+      <p>
+        An important aspect of interactivity is the ability to <i>listen and respond</i> to <i>Events</i>. Whenever a certain event occurs, corresponding code is being executed. In Edge Animate, such code snippets are called <i>Actions</i>. Events can be triggered for several reasons and by different parties. An obvious example is the <i>click event</i>, that is triggered when the user clicks on an element. Other events can be triggered by the composition itself, the superior system or through trigger on the Timeline. Here is a quick overview of relevant event types you may encounter in Edge Animate and which will be discussed in detail further below:
+      </p>
+      <ul>
+        <li>User Events</li>
+        <li>Timeline Events</li>
+        <li>Composition Events</li>
+        <li>Symbol and Element Events</li>
+      </ul>
+    </section><!-- /Widget -->
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_lw32rlwstt9">Handling Events</h2>  
+      <p>
+        Now that we have an idea of what events are, let's take a look at what we can do and how we can respond to them. We have already learned that Edge Animate indicates the option to respond to events with curly braces. When you click on these braces, the <i>Actions window</i> opens up. Note that this window always relates to the context and/or the currently selected element. In this regard, the stage is an element on its own. Depending on the context and element, you have different events you can respond to. By selecting one of the given options, you can add an action to this event.
+      </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Handling010.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Action window</strong> with options for <strong>user events</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You can add actions to several events for the same element. Use the "+" and "-" buttons to add and remove events. Each event will be displayed as a tab. Once you've selected an event, you can define the actions in the code panel by writing your own custom script or with the help of the code wizzard. Note that all the actions relating to the same event are being placed in the same tab in the code panel.
+      </p>
+    </section><!-- /Widget -->   
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Handling020.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Actions for <strong>different events</strong> are defined <strong>in separate tabs</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The Actions you define in this code view have to be valid JavaScript. If you are not familiar with this language, you should use the provided scripts we will explain in more detail in the following <i>Actions section</i>.
+      </p>
+      <p>For now let's first take a closer look at the different kind of events and see what they have to offer.</p>
+    </section><!-- /Widget -->   
+  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_9tbuvdkj4i">User Events</h2>  
+      <p>
+        <i>User Events</i> play an important role in terms of interactivity. These events are triggered by the user with a mouse, keyboard or through touchscreen. Most of these events are available for every element as well as symbols and the stage. There are a few exceptions, though, that relate only to the composition as such and are therefore only available for the stage.    
+      </p>
+      <p>
+        But first we will look at the user events that can be applied everywhere. The first group of user events are <i>mouse events</i>:
+      </p>
+    <extra>
+    </extra>
+  </section><!-- /Widget -->  
+  
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_User010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Click on the curly braces in the <strong>Elements panel</strong> to define <strong>Events</strong> for that element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_4ls6buo9a4i">click</h3>
+        Click events are triggered as soon as the user clicks on the selected element.
+      </p>
+      <p><h3 id="anchor_066nu9s5rk9">dblclick</h3>
+        Similar to the click event, only this time the event is triggered by a double click on the element.
+      </p>
+      <p><h3 id="anchor_4fvbopyzaor">mouseover</h3>
+        This event is triggered when the mouse cursor touches the element. This effect is also known as "hover". Be careful, though, since this event is triggered every time the cursor touches the element, which means it will be triggered again when passing through a nested element within. This could lead to unintended behavior, so in those cases it is better to use <i>mouseenter</i>.
+      </p>
+       <p><h3 id="anchor_gdbi83vunmi">mouseout</h3>
+         As opposite of <i>mouseover</i>, this event is triggered when the mouse cursor leaves the element. Since the same issues may occur as with <i>mouseover</i>, it is better to use <i>mouseleave</i> instead.
+      </p>
+      <p><h3 id="anchor_12nwx00y66r">mousedown and mouseup</h3>
+        Sometimes a click event as a whole is not sufficiant. This might be the case when you want to react to the pressing and releasing of the mouse button seperately. Then you can use <i>mousedown</i> for this first phase of a click, and accordingly <i>mouseup</i> for releasing the mouse button. The actual <i>click</i> event is triggered after <i>mouseup</i>.
+      </p> 
+      <p><h3 id="anchor_xkvw9gujtt9">mousemove</h3>
+        When applied, this event is triggered permanently as long as the mouse cursor moves over the particular element. This can be useful for example when you want to respond to the current position of the mouse cursor.
+      </p>
+      <p><h3 id="anchor_578foopf1or">mouseenter</h3>
+        As mentioned above, <i>mouseenter</i> is similar to <i>mouseover</i>, only that in this case, the event is only triggered again when the cursor actually left the boundaries of the element. This makes it usually a better choice for creating hover effects.
+      </p>
+      <p><h3 id="anchor_c7asxqx5hfr">mouseleave</h3>
+        Correspondend to <i>mouseenter</i> is this event the alternative for <i>mouseout</i>. It is only triggered once when the cursor leaves the area of the element, ignoring child elements.
+      </p>
+      <p><h3 id="anchor_n6bv5vlhaor">focus</h3>
+        The focus event is fired when an element has received focus. An element can gain focus via keyboard commands, such as the Tab key, or by mouse clicks on the element.
+      </p>
+    <h3 id="anchor_88gjccmobt9">Here's an overview of available user events:</h3>
+    <extra>
+    </extra>
+  </section><!-- /Widget -->  
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_User020.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Selection of <strong>user events</strong> available for elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Apart from the abovementioned <i>mouse events</i>, there are also a couple of events specific for <i>touchdevices</i>. You have to be a bit careful here, when you want to apply mouse events and touch events at the same time. This might result in the action being executed twice. There are some workarounds, but they are a bit more advanced. These will be included in the advanced edition. 
+      </p>
+      <p><h3 id="anchor_jyveso47vi">touchstart</h3>
+        As soon as the user touches the element on the screen, this event is triggered.
+      </p>
+      <p><h3 id="anchor_dzz5h5s714i">touchmove</h3>
+        This event is triggered permanently when the user moves the finger across the screen after a <i>touchstart</i>. It is useful to realize drag and drop features, for example.
+      </p>
+      <p><h3 id="anchor_gsff3ymbo6r">touchend</h3>
+        Corresponding to <i>touchstart</i>, the <i>touchend</i> event is triggered when the user removes the finger from the surface.
+      </p>
+      <p><h3 id="anchor_j6su5vwvcxr">swipeleft/swiperight</h3>
+        This event is triggered when a swipe gesture is used on the element, to the left or to the right side, respectively.
+      </p><br>
+      <h2 id="anchor_dswocdw8kt9">User Events on stage level</h2>
+      <p>In the following part we will quickly walk through the <i>user events on page level</i>. As mentioned earlier, they can be accessed through the stage.</p>
+      <p><h3 id="anchor_myu7ewpcik9">scroll</h3>
+        The <i>scroll</i> event is triggered when the user uses scrolling inside the composition.
+      </p>
+      <p><h3 id="anchor_lgfvwdk7qfr">keydown and keyup</h3>
+        This event is triggered whenever a key is pressed (down) or released (up). You can also listen to specific keys, but this is again a bit advanced and will be a topic in a different edition. 
+      </p>
+      <p><h3 id="anchor_pfwespjh5mi">resize</h3>
+        When the size of the browser window is changed, this event is being triggered. Therefore it might be useful in the context of responsive compositions.
+      </p>
+      <p><h3 id="anchor_o3smvq2gldi">orientationChange</h3>
+        Specific to mobile devices, this event is triggered when the devices is turned. This allows your composition to adopt to landscape or portrait mode for example.
+      </p>
+      </section><!-- /Widget -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_cnfbb3gnwmi">Timeline Events</h2>  
+      <p>
+        Not only user interaction can trigger events. The timeline can trigger events as well, in addition to the triggers we have already encountered. These events relate to the position of the Playhead. 
+      </p>
+    </section><!-- /Widget -->      
+   
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Timeline010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Symbol events</strong> can be accessed on the Symbol stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_cxvckr9t3xr">play</h3>
+        As you have probably guessed, this event is triggered when the Playhead starts playing, e.g. when it was stopped before.
+      </p>
+      <p><h3 id="anchor_45j7dl07ldi">stop</h3>
+        Accordingly, this event is being triggered when the Playhead is being stopped.
+      </p>
+      <p><h3 id="anchor_of5pw3cv7vi">update</h3>
+        The <i>update</i> event is triggered the entire time the Playhead moves on that particular Timeline. Keep in mind, that this results in quite a lot of events being triggered, so it might affect your performance.
+      </p>
+      <p><h3 id="anchor_a8x9o09hpvi">complete</h3>
+        The <i>complete</i> event is triggered once when the playback of that Timeline has been completed and the Playhead has reached the end of the Timeline.
+      </p>
+    </section><!-- /Widget -->          
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_jjjhziwwmi">Composition Events</h2>  
+      <p>There are two events that relate to the entire composition, <i>compositionReady</i> and <i>onError</i>. You can respond to these events through the stage. There are of course other events as well that can be applied to the stage, such as <i>user events</i> and <i>symbol events</i>.</p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Composition010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Event options</strong> that are available for the Stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Here we want to focus on the two composition events:</p>
+      <p><h3 id="anchor_434h207wrk9">compositionReady</h3>
+        <i>compositionReady</i> is an event that gets triggered when the composition is initialized. Responding to this event allows you to insert code that is required for the further preparations of the composition. This would be the right place for the initial definition of variables or implementing the general application logic. 
+      </p>
+      <p><h3 id="anchor_nkgymu6jemi">onError</h3>
+        This event relates to the entire page in which the composition is placed. Whenever an even on that page causes an error, the <i>onError</i> event is triggered. It therefore serves for error recovery.
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_pihcyz4zpvi">Symbol events</h2>  
+      <p>
+        In regards to symbols, you have several options for events. Regarded from the outside, a symbol is like an element (it in fact has a containing symbol element). Therefore you can apply all the above mentioned <i>user events</i> here as well and in the same way. Inside the symbol instance, you have the symbol timeline, where you can of course relate to the <i>timeline events</i>. In addition to that, there are two events that relate to the creation process and which can only be found with symbols and the stage: <i>creationComplete</i> and <i>beforeDeletion</i>. In order to listen to these events, you have to use the curly braces at the top of the Property Inspector on the symbol scope itself - or on the stage, respectively.
+      </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Symbol010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Symbol events</strong> can be accessed on the Symbol stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Let's have a look at these two options:</p>
+      <p><h3 id="anchor_7u3zkhuxr">creationComplete</h3>
+        The <i>creationComplete</i> event gets triggered when the symbol gets instantiated, so whenever the symbol gets placed in the composition. Therefore this event allows you to implement instructions that shall be executed when the symbol get initialized, e.g. sending a notification, triggering other events or retrieving informations and setting variables. 
+      </p>
+      <p><h3 id="anchor_1lnt32fbt9">beforeDeletion</h3>
+        This event on the other hand can be used to "clean up" before the symbol is finally removed from the stage.
+      </p>
+    </section><!-- /Widget -->
+
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Adding <strong>Interactivity</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_56644o647vi">Introducing Actions</h1>
+      <p class="subtitle">Getting things done.</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This section will give you an introduction into the topic of using <i>actions</i> in Edge Animate. You will learn about the different options, how to add and remove actions and which actions you will most frequently use. 
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ob8kk68byb9">Introduction</h2>  
+      <p>
+        <i>Actions</i> are the code snippets that contain the information of how the element, symbol, timeline or composition should respond to a certain <i>Event</i>, which we have got to know a little better in the previous section. Actions are written in <i>JavaScript</i> and are in fact functions. If you are already familiar with the language, you can apply your entire skills here. But even if you don't have any clue, you can use Animate to add actions with ease, thanks to the <i>code wizzard</i>, which offers presets for code snippets. This way, you just have to make some adjustments to get the intended effect.
+      </p><br>
+      <p><h3 id="anchor_cf455sfko6r">Where can I add actions?</h3>
+        You can add actions in the <i>code view</i>, which opens up when you click on the curly braces we have already seen in the last section. You can also right click on elements on the stage and select "Open Actions for...". Remember that these code views always relate to a specific context, for example an element or the stage. Another option is to use the general <i>code window</i>, which contains all events and actions of your composition. This general code window is definitely the better option when you deal with more complex interactions, since you have everything at hand, but at the same time it is more complicated for beginners. So it is rather recommended for advanced users. To open this code window go through Window > Code in the main menu bar.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Code010.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">The <strong>Code window</strong> gives you access to the entire actions of your composition.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        With the navigation bar on the right hand side you can jump to every location where actions are applied, which makes it easier to keep an overview and to find specific actions in your composition. Be careful, though, as you can accidentaly create errors by adding code at the wrong place and crash your entire composition. Also, the code wizzard is not available in the code window. And we would suggest to stick to using this until you are fit enough using JavaScript.
+      </p>
+      <p>We will therefore focus on using the code wizzard for now. If you prefer typing in actions manually, you should check out the <i>Cheat sheet</i> with the most frequently used actions we have provided. This will also give you a good overview and short descriptions to get you started right away.</p>
+    </section><!-- /Widget -->
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_s1ydh9nqaor">Using the code wizzard</h2>  
+      <p>The code wizzard is a helping feature for adding actions to events. It offers you predefined code snippets for different purposes, that can easily be adopted to create valid actions. You simply pick an action and where necessary a target to add the appropriate code for the current event.</p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Code020.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">The <strong>Code wizzard</strong> provides you with ready-made actions.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <i>Tip:</i> In case you are not going to use the code wizzard, you can collide and expand the panel with button underneath the code view, giving you a better view on the code.</p><br>
+      <p>
+        <h3 id="anchor_gbj4eso47vi">How to work with the code wizzard</h3>
+        First of all, keep in mind that the code view above the wizzard is in fact an <i>editor</i>, which allows you to type in and edit the code. Using the code wizzard simply inserts <i>presets</i> into the editor, which can then be modified for the task at hand.
+      </p>
+      <p>
+        In order to insert such a preset into the code editor, first select the appropriate action with the selection on the left hand side. You can use the search field if you already have a specific action in mind or rifle through the menu. Selecting one of the options will reveal the available presets for each case. For example <i>Links</i> let's you choose between <i>Link in Same Window</i> and <i>Link in New Window</i>.
+      </p>
+    </section><!-- /Widget --> 
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Code030.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Selecting <strong>code presets</strong> for adding a link.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        As soon as you click on one of the options in the right column, the equivalent code preset is inserted in the code editor above, along with comments that help you understand the code and explain possible modifications. Comments are displayed in green letters and follow a double slash: "//". These lines are not being executed as code. They are only there to make the code easier to understand for other human beings.
+      </p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Code040.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The <strong>code preset</strong> gets pasted automatically.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In order to make changes to the code, click into the code editor and alter the code where necessary. In our example here we could for instance exchange the URL for the link so that it now directs to the Edge Docks homepage:
+      </p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Code050.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Changing the URL in the <strong>code editor</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The action is now applied to the click event for that particular element. In short: When a user clicks on that particular element in the final composition, the Edge Docks homepage will open up in the same window.  
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_tc59sru23xr">Controlling the timeline</h2>  
+      <p>
+        Adding a link is a pretty simple use case. More often, you want to introduce actions in order to control the playback of the various animations of your composition. There are presets for those cases in the code wizzard as well. The first group of presets is called <i>Playback</i> and has all the options for controlling the Timeline, e.g. <i>play</i>, <i>stop</i> and so on.
+      </p>
+      <p>
+        Using these presets is a little bit more tricky, since you also have to determine the target for the action. That is, because you can use the playback actions not only for the current timeline, but control the playback of symbols as well. Let's have a look at how that works:
+      </p>
+      <p><h3 id="anchor_hyzdpo80k9">User Interaction</h3>
+        Assuming we have an element on the stage, with which the user can start the playback of the main composition (autoplay should therefore be deactivated!). We use <i>Open Actions</i> for this element (curly braces or right click) and select an appropriate event, e.g. click. Now the code view opens up and we can select the "Playback" options and opt for <i>Play</i> as appropriate action.  
+      </p>
+    </section><!-- /Widget -->   
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Controlling010.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Using the <strong>Playback actions</strong> in the code wizzard.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        When you take a closer look at the code, you will recognize that it is yet not completed and the code is not implemented. Hence it appears in grey and between the actual code line enumeration. You are asked to confirm with "Enter", but the script still won't work yet. This is unfortunately a bit misleading. You have to set a <i>target</i> first, in this case, the stage, in the <i>Pick a target</i> panel on the right hand side.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Controlling020.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Selecting the stage as <strong>target</strong> for the <strong>Playback action</strong> removes the place holder in the code.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Notice that the preset in the code view changes as soon as you make a selection: The initial "target-object" is only a place holder and therefore removed (the initial <i>sym</i> already refers to the stage object).
+      </p>
+      <p>
+        Now you have to confirm the selection by pressing "Enter" or using a double click on the target. As a result, the code actually gets inserted and is stored for this event.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Controlling030.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The final <strong>Play action</strong> for the <strong>stage</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_rsecb6pf1or">Trigger</h3>
+        All the cases above were responding to user events. But we have already learned that there are other events as well for which we can apply actions, especially for controlling the timeline. This is where <i>Trigger</i> play an important role: They are set on the timeline to store an action that is then executed when the Playhead reaches this point. Very useful, indeed.
+      </p>
+      <p>
+        The basic principle here is the same as before, only that you don't need an extra event, the trigger iself serves as event. You can enter any (valid JavaScript) code you want here, but most likely you are opting for playback actions, for instance <i>Play Reverse</i> (reversing the animation) or <i>Play From</i> a label or certain point in time. The latter is for example useful for creating loops.
+      </p>
+      <p>
+        In order to create a loop, you only have to set a trigger at the end position of your animation and then select <i>Play From</i>. As a target you have to pick the same timeline, e.g. the stage. By default, the timer is set to 1000 milliseconds. Type in the correct time in milliseconds for the starting point of your loop, e.g. 0 to start from the very beginning.
+      </p>
+    </section><!-- /Widget -->
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Controlling040.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Using a <strong>Trigger</strong> and <strong>Play From</strong> action to create a loop.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_7pwx19ssjor">Actions for Elements and Symbols</h2>  
+      <p>
+        Actions can not only refer to the main timeline but can target elements and symbols as well. Actions can also target the timeline within a symbol in order to control its playback. The target option depends on the nature of the action. Elements for example can be the target of the <i>Hide / Show</i> actions, but they can not be targeted for playback actions.
+      </p>
+      <p>
+        <h3 id="anchor_w4l2m3ac3di">Action applied to an Element</h3>
+        If you want to apply an action to an Element, you have look for that element in the Target panel. Note that it is subject to the context, meaning the stage or the containing symbol. That means you first have to select the appropriate context and then the element itself: 
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Elements010.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Action targeting an <strong>Element</strong> in order to hide it on click.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You again have to confirm the selection first before it is really applied to the event. Note that you don't have to select a subordinate element here. If you just select the container (in this case the stage) and then confirm, the action applies to this element, which allows you for example to hide and show entire symbols.
+      </p>
+      <p>
+        <h3 id="anchor_5280cyaxlxr">Action applied to Symbol Timeline</h3>
+        With the <i>Playback Actions</i>, you can control the timeline of any symbol that is placed in the composition. Select the appropriate action, e.g. <i>Play</i> or <i>Stop</i> for any event and then pick the according symbol as the target. You can even target a symbol within a symbol and so on. Use the Target panel to navigate to the destination. Let's say you have a trigger on the main timeline and want it to trigger the playback of a symbol (innerSymbol), that is nested inside of another symbol (outerSymbol) on the stage.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Symbols010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Playback Actions</strong> can be applied to a <strong>nested Symbol</strong> in order to control the playback.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In order to get to the target you first have to select the Stage, then the outer symbol and finally the targeted inner symbol. When you take a look at the code preset here, you can find the same kind of navigation: sym is the current symbol, i.e. the Stage, then the outer symbol gets referenced, afterwards the inner symbol and finally the action is called. Again, confirm with enter to insert the code, which then looks like this:
+      </p>
+    </section><!-- /Widget -->
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Actions_Symbols020.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Final code to play the timeline of a <strong>nested Symbol</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This was only a brief introduction into the topic of Actions in Edge Animate, but it should get you ready for the first projects and most of the use cases at the beginning. You can practice your skills with the <i>workshops</i> and <i>recipes</i>. We will deep dive into this area in the <i>edition for advanced users</i>.
+      </p>
+    </section><!-- /Widget -->
+
+
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <title>The sym argument{{advanced}}</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget>--><!-- /Widget -->
+    
+    
+    
+  <!-- Widget: Text 
+  <widget type="Text">
+    <title>Accessing Elements {{advanced}}</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget>--><!-- /Widget -->  
+    
+    
+  <!-- Widget: Text 
+  <widget type="Text">
+    <title>Modifying Elements {{optional?!?}}</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget><!-- /Widget -->    
+    -->
+    
+  <!-- Widget: Text
+  <widget type="Text">
+    <title>Creating and deleting Symbols{{advanced}}</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget> --><!-- /Widget -->
+    
+    
+  <!-- Widget: Text 
+  <widget type="Text">
+    <title>Working with variables{{advanced}}</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget>--><!-- /Widget -->    
+    
+    
+  
+    
+    
+    
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Adding <strong>Interactivity</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <!-- Widget: Title -->
+  
+
+<!-- Widget: Title -->
+    <header class="widget title">      <hgroup>        <p class="breadcrumb">          <a href="../../../Animate_Essentials/Essentials/index.html">Essentials</a>           &nbsp;/&nbsp;           <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>         <h1 id="anchor_9htc1gfzuxr">Finding errors</h1>        </p><p class="subtitle">Error Messages, Debugging and Logging</p>      </hgroup>    </header>
+  <!-- /Widget: Title -->
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this section we will discuss the topic of potentiall errors and how to deal with them. Working with code and in a web environment has a high potential of things going wrong. JavaScript in particular is a language that is very likely to cause errors and doesn't do much to help avoiding them. We want to introduce you to the error notifications and warnings within Edge Animate itself. You will also get a quick preview on a more advanced error handling with debugging and logging.  
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_vhu6ypn9udi">Notifications in Edge Animate</h2>  
+      <p>
+        Even when you stick to using the code wizzard for adding actions in Edge Animate, it is still likely that sooner or later, something in the code is not working properly. This might be a missing hyphen, a misplaced semicolon or a spelling mistake. This will result in code that can not be executed and therefore produce an error.
+      </p>
+      <p>
+        When this kind of error occurs, Edge Animate will notify you with a red error sign at the bottom right corner of the stage. By clicking on the error sign, you will get information on where the error is located and what caused the error.
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Logging_010.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Error Icon</strong> indicates a problem in the code.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The arrow at the end of the error notification will take you right to the place in your code where the error occured. It will therefore open up the code window and indicate the according line with a red dot. Also a notification at the bottom of the code window will provide more information on what has caused the error.
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Logging_020.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The error is indicated in the <strong>Code Window</strong> with a red dot.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Don't get your hopes up to high, though. This error messaging is not suggesting solutions and you will have to look for the exact mistake yourself. Also note that only syntax errors are indicated. If you use a wrong reference or misspell the name of a variable or something like that, there will be no error message, since the code is technically not wrong.
+      </p>
+      <p>
+        Apart from this red error warning, Edge Animate also has a <i>Warning notification</i>, which indicates potential problems with browser compatibility. This is for example the case when you decide to use Filters. In case of a warning, a yellow warning sign appears at the bottom right corner of the stage. Again, a click on the sign will provide you with further information. Note that a warning means that your project will still work, whereas an error means that the corresponding code will not be executed.
+      </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00400_Logging_030.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Warning notification</strong> because CSS filters is not supported by all browsers.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ftwpuo3l3di">The console in the browser</h2>  
+      <p>
+        As we have just learned, the error notifications in Edge Animate are not helping in all the cases and there are more advanced ways to make sure your code will work properly. One of the basic assets here is the <i>console</i> of the browser, which can list information and notifications. Apparently, Edge Animate doesn't feature console notifications out of the box. You can learn more about this topic and how to use <i>logging and debugging</i> in the advanced edition of this publication.
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Text
+  <widget type="Text">
+    <title>{{Advanced}}Setting a console.log</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget> --><!-- /Widget -->
+    
+  <!-- Widget: Text
+  <widget type="Text">
+    <title>{{Advanced}}Using Edge Commons for advanced logging</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget> --><!-- /Widget -->
+    
+</article>
+</div>    
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+Teen Boy Pack (12 movements).
+
+To insert animation into your project just copy/paste desired movieclip from stage or library.
+If you enter main movieclip, there you can see several layers, each layer - some part of teen:
+- Phones
+- Clock  
+- Hair
+- Eyes
+- Skin
+- Pants
+- Shirt
+- Shoes
+- Shadow
+To change color of some part - just select desired part and use tint blend mode and/or some filters like adjust colors.
+I include in pack file "Color Variations.fla" - there you can see some examples of colorizing. You can use my or create your own effects variation for your own style.
+Also I include WAV-file with sound loop for teenagers in headphones.
+
+
+Feel free to email me at: kontrastock@gmail.com
+  

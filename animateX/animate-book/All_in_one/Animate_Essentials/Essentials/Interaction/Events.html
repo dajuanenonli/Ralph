@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[2];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[2].pages[1];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Adding <strong>Interactivity</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_pk4cytfyldi">Listening to Events</h1>
+      <p class="subtitle">Wait for it...</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+       In this section you will learn about events and how to respond to them in order to introduce interactivity. You will get to know the different types of events you may encounter in the Edge Animate context and learn about their specifics.
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_786mpvcayvi">Introduction</h2>  
+      <p>
+        An important aspect of interactivity is the ability to <i>listen and respond</i> to <i>Events</i>. Whenever a certain event occurs, corresponding code is being executed. In Edge Animate, such code snippets are called <i>Actions</i>. Events can be triggered for several reasons and by different parties. An obvious example is the <i>click event</i>, that is triggered when the user clicks on an element. Other events can be triggered by the composition itself, the superior system or through trigger on the Timeline. Here is a quick overview of relevant event types you may encounter in Edge Animate and which will be discussed in detail further below:
+      </p>
+      <ul>
+        <li>User Events</li>
+        <li>Timeline Events</li>
+        <li>Composition Events</li>
+        <li>Symbol and Element Events</li>
+      </ul>
+    </section><!-- /Widget -->
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_lw32rlwstt9">Handling Events</h2>  
+      <p>
+        Now that we have an idea of what events are, let's take a look at what we can do and how we can respond to them. We have already learned that Edge Animate indicates the option to respond to events with curly braces. When you click on these braces, the <i>Actions window</i> opens up. Note that this window always relates to the context and/or the currently selected element. In this regard, the stage is an element on its own. Depending on the context and element, you have different events you can respond to. By selecting one of the given options, you can add an action to this event.
+      </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Handling010.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Action window</strong> with options for <strong>user events</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You can add actions to several events for the same element. Use the "+" and "-" buttons to add and remove events. Each event will be displayed as a tab. Once you've selected an event, you can define the actions in the code panel by writing your own custom script or with the help of the code wizzard. Note that all the actions relating to the same event are being placed in the same tab in the code panel.
+      </p>
+    </section><!-- /Widget -->   
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Handling020.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Actions for <strong>different events</strong> are defined <strong>in separate tabs</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The Actions you define in this code view have to be valid JavaScript. If you are not familiar with this language, you should use the provided scripts we will explain in more detail in the following <i>Actions section</i>.
+      </p>
+      <p>For now let's first take a closer look at the different kind of events and see what they have to offer.</p>
+    </section><!-- /Widget -->   
+  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_9tbuvdkj4i">User Events</h2>  
+      <p>
+        <i>User Events</i> play an important role in terms of interactivity. These events are triggered by the user with a mouse, keyboard or through touchscreen. Most of these events are available for every element as well as symbols and the stage. There are a few exceptions, though, that relate only to the composition as such and are therefore only available for the stage.    
+      </p>
+      <p>
+        But first we will look at the user events that can be applied everywhere. The first group of user events are <i>mouse events</i>:
+      </p>
+    <extra>
+    </extra>
+  </section><!-- /Widget -->  
+  
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_User010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Click on the curly braces in the <strong>Elements panel</strong> to define <strong>Events</strong> for that element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_4ls6buo9a4i">click</h3>
+        Click events are triggered as soon as the user clicks on the selected element.
+      </p>
+      <p><h3 id="anchor_066nu9s5rk9">dblclick</h3>
+        Similar to the click event, only this time the event is triggered by a double click on the element.
+      </p>
+      <p><h3 id="anchor_4fvbopyzaor">mouseover</h3>
+        This event is triggered when the mouse cursor touches the element. This effect is also known as "hover". Be careful, though, since this event is triggered every time the cursor touches the element, which means it will be triggered again when passing through a nested element within. This could lead to unintended behavior, so in those cases it is better to use <i>mouseenter</i>.
+      </p>
+       <p><h3 id="anchor_gdbi83vunmi">mouseout</h3>
+         As opposite of <i>mouseover</i>, this event is triggered when the mouse cursor leaves the element. Since the same issues may occur as with <i>mouseover</i>, it is better to use <i>mouseleave</i> instead.
+      </p>
+      <p><h3 id="anchor_12nwx00y66r">mousedown and mouseup</h3>
+        Sometimes a click event as a whole is not sufficiant. This might be the case when you want to react to the pressing and releasing of the mouse button seperately. Then you can use <i>mousedown</i> for this first phase of a click, and accordingly <i>mouseup</i> for releasing the mouse button. The actual <i>click</i> event is triggered after <i>mouseup</i>.
+      </p> 
+      <p><h3 id="anchor_xkvw9gujtt9">mousemove</h3>
+        When applied, this event is triggered permanently as long as the mouse cursor moves over the particular element. This can be useful for example when you want to respond to the current position of the mouse cursor.
+      </p>
+      <p><h3 id="anchor_578foopf1or">mouseenter</h3>
+        As mentioned above, <i>mouseenter</i> is similar to <i>mouseover</i>, only that in this case, the event is only triggered again when the cursor actually left the boundaries of the element. This makes it usually a better choice for creating hover effects.
+      </p>
+      <p><h3 id="anchor_c7asxqx5hfr">mouseleave</h3>
+        Correspondend to <i>mouseenter</i> is this event the alternative for <i>mouseout</i>. It is only triggered once when the cursor leaves the area of the element, ignoring child elements.
+      </p>
+      <p><h3 id="anchor_n6bv5vlhaor">focus</h3>
+        The focus event is fired when an element has received focus. An element can gain focus via keyboard commands, such as the Tab key, or by mouse clicks on the element.
+      </p>
+    <h3 id="anchor_88gjccmobt9">Here's an overview of available user events:</h3>
+    <extra>
+    </extra>
+  </section><!-- /Widget -->  
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_User020.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Selection of <strong>user events</strong> available for elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Apart from the abovementioned <i>mouse events</i>, there are also a couple of events specific for <i>touchdevices</i>. You have to be a bit careful here, when you want to apply mouse events and touch events at the same time. This might result in the action being executed twice. There are some workarounds, but they are a bit more advanced. These will be included in the advanced edition. 
+      </p>
+      <p><h3 id="anchor_jyveso47vi">touchstart</h3>
+        As soon as the user touches the element on the screen, this event is triggered.
+      </p>
+      <p><h3 id="anchor_dzz5h5s714i">touchmove</h3>
+        This event is triggered permanently when the user moves the finger across the screen after a <i>touchstart</i>. It is useful to realize drag and drop features, for example.
+      </p>
+      <p><h3 id="anchor_gsff3ymbo6r">touchend</h3>
+        Corresponding to <i>touchstart</i>, the <i>touchend</i> event is triggered when the user removes the finger from the surface.
+      </p>
+      <p><h3 id="anchor_j6su5vwvcxr">swipeleft/swiperight</h3>
+        This event is triggered when a swipe gesture is used on the element, to the left or to the right side, respectively.
+      </p><br>
+      <h2 id="anchor_dswocdw8kt9">User Events on stage level</h2>
+      <p>In the following part we will quickly walk through the <i>user events on page level</i>. As mentioned earlier, they can be accessed through the stage.</p>
+      <p><h3 id="anchor_myu7ewpcik9">scroll</h3>
+        The <i>scroll</i> event is triggered when the user uses scrolling inside the composition.
+      </p>
+      <p><h3 id="anchor_lgfvwdk7qfr">keydown and keyup</h3>
+        This event is triggered whenever a key is pressed (down) or released (up). You can also listen to specific keys, but this is again a bit advanced and will be a topic in a different edition. 
+      </p>
+      <p><h3 id="anchor_pfwespjh5mi">resize</h3>
+        When the size of the browser window is changed, this event is being triggered. Therefore it might be useful in the context of responsive compositions.
+      </p>
+      <p><h3 id="anchor_o3smvq2gldi">orientationChange</h3>
+        Specific to mobile devices, this event is triggered when the devices is turned. This allows your composition to adopt to landscape or portrait mode for example.
+      </p>
+      </section><!-- /Widget -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_cnfbb3gnwmi">Timeline Events</h2>  
+      <p>
+        Not only user interaction can trigger events. The timeline can trigger events as well, in addition to the triggers we have already encountered. These events relate to the position of the Playhead. 
+      </p>
+    </section><!-- /Widget -->      
+   
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Timeline010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Symbol events</strong> can be accessed on the Symbol stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_cxvckr9t3xr">play</h3>
+        As you have probably guessed, this event is triggered when the Playhead starts playing, e.g. when it was stopped before.
+      </p>
+      <p><h3 id="anchor_45j7dl07ldi">stop</h3>
+        Accordingly, this event is being triggered when the Playhead is being stopped.
+      </p>
+      <p><h3 id="anchor_of5pw3cv7vi">update</h3>
+        The <i>update</i> event is triggered the entire time the Playhead moves on that particular Timeline. Keep in mind, that this results in quite a lot of events being triggered, so it might affect your performance.
+      </p>
+      <p><h3 id="anchor_a8x9o09hpvi">complete</h3>
+        The <i>complete</i> event is triggered once when the playback of that Timeline has been completed and the Playhead has reached the end of the Timeline.
+      </p>
+    </section><!-- /Widget -->          
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_jjjhziwwmi">Composition Events</h2>  
+      <p>There are two events that relate to the entire composition, <i>compositionReady</i> and <i>onError</i>. You can respond to these events through the stage. There are of course other events as well that can be applied to the stage, such as <i>user events</i> and <i>symbol events</i>.</p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Composition010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Event options</strong> that are available for the Stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Here we want to focus on the two composition events:</p>
+      <p><h3 id="anchor_434h207wrk9">compositionReady</h3>
+        <i>compositionReady</i> is an event that gets triggered when the composition is initialized. Responding to this event allows you to insert code that is required for the further preparations of the composition. This would be the right place for the initial definition of variables or implementing the general application logic. 
+      </p>
+      <p><h3 id="anchor_nkgymu6jemi">onError</h3>
+        This event relates to the entire page in which the composition is placed. Whenever an even on that page causes an error, the <i>onError</i> event is triggered. It therefore serves for error recovery.
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_pihcyz4zpvi">Symbol events</h2>  
+      <p>
+        In regards to symbols, you have several options for events. Regarded from the outside, a symbol is like an element (it in fact has a containing symbol element). Therefore you can apply all the above mentioned <i>user events</i> here as well and in the same way. Inside the symbol instance, you have the symbol timeline, where you can of course relate to the <i>timeline events</i>. In addition to that, there are two events that relate to the creation process and which can only be found with symbols and the stage: <i>creationComplete</i> and <i>beforeDeletion</i>. In order to listen to these events, you have to use the curly braces at the top of the Property Inspector on the symbol scope itself - or on the stage, respectively.
+      </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Events_Symbol010.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Symbol events</strong> can be accessed on the Symbol stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Let's have a look at these two options:</p>
+      <p><h3 id="anchor_7u3zkhuxr">creationComplete</h3>
+        The <i>creationComplete</i> event gets triggered when the symbol gets instantiated, so whenever the symbol gets placed in the composition. Therefore this event allows you to implement instructions that shall be executed when the symbol get initialized, e.g. sending a notification, triggering other events or retrieving informations and setting variables. 
+      </p>
+      <p><h3 id="anchor_1lnt32fbt9">beforeDeletion</h3>
+        This event on the other hand can be used to "clean up" before the symbol is finally removed from the stage.
+      </p>
+    </section><!-- /Widget -->
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

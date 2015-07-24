@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[0].pages[2];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_e2ix7axlxr">Creating with shapes</h1>
+      <h3 id="anchor_tx357j2x1or">Options and features</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this section you will learn how to use Edge Animate as a creation tool. You will learn the basics of how to create and modify elements in Edge Animate. Although you will most likely use a bunch of assets like images to create your compositions, it is good to know what Edge Animate itself has to offer. So let's see what we can do here...
+    </p>
+  </section><!-- /Section -->
+
+
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_zxjienj0pb9">Creating elements</h2>  
+        <p>
+          The most basic way to create something in Animate is by using elements. You can create new elements by using the according tool bar right above the property inspector. You can use them for example to create basic shapes and text elements.
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_tools010.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>The tool bar</strong> in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Let's first have a look at these shapes. There are three options here you can choose from: <i>rectangles, rectangles with rounded corners and ellipses</i> – represented by the according icons in the tool bar. If you click on one of these icons, your cursor turns into a crosshair when entering the stage, allowing you to create a shape. To actually draw the shape onto the canvas, you have to click and drag. The shape is drawn between the point where you start the click and the point where you release the mouse button...as you have most likely already figured out yourself.
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting02.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The three basic shapes </strong>created in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          <i>Tip</i>: You can create symmetrical shapes like squares and circles when holding the shift key while drawing a shape.
+        </p>
+        <p>
+          Notice that you can also draw shapes into the empty space around the stage element as well. This way they are positioned <i>outside</i> of the stage. Keep in mind, that only those elements are visible in the browser later, which are placed within the constraints of the stage element (unless the overflow setting is changed to 'visible').
+        </p>
+        <p>
+          Every time you draw a shape, the new element appears in the elements panel and is selected automatically. Selected elements are highlighted on the stage by being surrounded with blue lines including handles in each corner and along each side. These handles can be used to visually change the dimensions of the element. Your mouse cursor indicates these options when you hover over the lines or handles. The filled blue square in the middle indicates the <i>origin</i> of the element (i.e. its logical "point of reference"), which is important for transformations, for example. If you click anywhere within the blue lines, you can reposition the element while holding the mouse button pressed.
+        </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting03.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The selected element </strong>is indicated by blue lines.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/00200_Starting04.png" width="200">    </div>  <div style="padding-left: 270px">    <h2></h2>    <p>
+        </p><p>
+          If you take a look at the property inspector, you will notice that changes when an element is selected: It is now displaying the options for the element and no longer those for the stage. All properties shown here apply to the element that is selected. In order to deselect an element, click anywhere outside the blue lines. This will automatically change the scope back to the stage (unless you click on a different element, which is then selected instead).
+        </p>
+        <p>
+          The <i>property inspector</i> not only provides you with information about the currently selected element, it also allows you to change it. We have already got to know the property inspector in the "Understanding the User Interface" chapter. Now it's time to understand how it works in the creation process.
+        </p>
+        <p>
+          We already got to know how to position and resize an element visually on the stage. With the property inspector, you can make changes to the values immediately and even type in precise measures. Notice that the element on the stage changes accordingly.
+        </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget -->
+    
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_py7tkl6jemi">Adding Background color and Gradients</h2>  
+        <p>
+          When you draw shapes on the stage, the default color is a light grey. You can change the color by clicking on the left area in the color section of the property inspector. This opens up the color selection panel. Here you can adjust the color with the selector on the left and the bars for hue, lightness and alpha channel on the right or use the input field to set the color in RGBa, Hex or HSLa.  
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting05.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The color selection panel</strong> allows you to change the color of the selected element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+           If you want to use a color that already exists somewhere on the stage, you can select a sample with the pipette tool. The corresponding color will then be calculated automatically. Note that when you start making changes, the preview in the top left corner shows both the new and the previous color. This way you can switch back to the original real quick by simply clicking on the old color.</p> 
+        <p>Also quite helpful is the option to save the current color selection by clicking on the "+" button on the right hand side. This allows you to create color swatches and reuse the same colors throughout your composition. Note that the selected color becomes the new default for the next shape you draw.
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Similar to the background color is the option to add a <i>gradient</i> to your element. By default, this option is set to "none" (the preview area being crossed with a red line). When you click on this field, the corresponding menu opens up, which is pretty similar to the color selection panel:
+        </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting06.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>The gradient selection panel</strong> enables you to add gradients to the selected element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          To activate a gradient, select linear or radial gradient in the top left bar. With linear gradients you have the option to set the radius, i.e. the direction in which the gradient shall occur. With radial gradients, you can define the point of origin from which the gradient spreads.
+        </p>
+    </section><!-- /Widget -->            
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting07.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Linear and radial gradient</strong> applied on a rounded rectangle.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->         
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          For both options, you have the preview bar with the color stops. These color stops indicate the colors used for the gradient, their position determines the percentage (start and end point). To change their color, select one of the color stops and use the color selection panel on the right hand side. You can add furhter color stops by clicking on the preview bar itself. To remove color stops again, drag them out of the preview bar.  
+        </p>
+    </section><!-- /Widget -->        
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting08.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Additional <strong>color stop</strong> on the gradient preview bar.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->         
+    
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Just like with the color selection, you can also save your gradient settings to use them for other elements as well. Simply click on the "+" button and the gradient settings will be stored as a swatch.
+        </p>
+        <p>
+           The gradient lies ontop of the background image, therefore the background color is only visible if you use an alpha channel for the gradient. 
+        </p>
+        <p>
+          <i>Hint:</i> Gradients are not fully supported by all browsers. A safe bet is to apply a plain background color as well, so that the element will at least be displayed in that color in the corresponding browsers.
+       </p>
+    </section><!-- /Widget -->          
+  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ymvkzus1yvi">Borders</h2>  
+        <p>
+          The third option in the color section of the property inspector deals with borders. These borders can have a color, size and style. The default setting for style is none, so that the new element doesn't show a border yet, although it already has a border color: 
+        </p>
+    </section><!-- /Widget -->       
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting23.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Border settings</strong> can be found in the color section of the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          In order to make the border visible, you have to change the border style to either solid, dotted or dashed. Lastly you can define the thickness of the border with the value on the right. You should keep in mind though that the size of the border will increase the size of the element as a whole. 
+        </p>
+    </section><!-- /Widget -->       
+      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_0xbdwdk7qfr">Transforming elements</h2>  
+        <p>
+          Your shapes and elements can further be tweaked and edited with the options in the "Transform" section of the property inspector. You can use <i>scaling</i>, <i>skew</i> elements and <i>rotate</i> them. Lastly you can determine the origin where the transformation relates to.
+        </p>
+    </section><!-- /Widget -->   
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting09.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Transform section</strong> in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The first option here is <i>scaling</i> the selected element. This can have effects on the properties for positioning and width or height respectively as well. You can use negative values here as well. So if you set the scaling value to -100% the element is flipped around. Note that by default, both axis are linked. You can unlink the properties by clicking on the link symbol left to the values.
+        </p>
+        <p>
+          Scaling might not seem to be so powerful on the first look, but it can create better results when applied to images or texts instead of plain shapes. Also keep in mind that you can animate the scaling property as well to create interesting effects.
+        </p>
+        <p>
+          <i>Skewing</i> shifts two sides of the element according to the value in degrees. Applied to a rectangle, this creates a parallelogram.
+        </p>
+        <p>
+          As a third option, <i>rotation</i> enables you to rotate the element around the point of origin. The value is presented in degree and defines, how much the element is being rotated. A positive value rotates clockwise, a negative value counter-clockwise. Here is an example of applied transformations:
+        </p>
+    </section><!-- /Widget --> 
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting10.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Element before and after <strong>transformation</strong> applied.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          With the <i>origin</i> property, you can define the point around which the transformation should take place. It is represented by the filled blue square within the selected element. By default it is located in the center of the element. Since the value is relative to the top left corner, this default is 50% on both axis. Note that you can have negative and values greater than 100% as well. This lets you for instance rotate the element around an imaginary fix point outside the element itself: 
+        </p>
+    </section><!-- /Widget -->      
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting11.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Origin</strong> outside of the borders of the element</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->            
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting24.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Element with applied <strong>rotation</strong> of -30° around the shifted origin.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->       
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      The best way here is to use basic shapes and play a bit around with the different options to get a feeling for how transformations work.  
+    </section>
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_n63otxd2t9">Clipping</h2>  
+        <p>
+          Another way to modify elements in Edge Animate is <i>clipping</i>. As the name already indicates, it is used to hide parts of the element, just like applying a mask. In order to use this feature, you first need to activate it with the switch on the right hand side of the Clip section in the property inspector 
+        </p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting13.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Clipping</strong> being disabled and enabled.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Once clipping is enabled, you can use the four values to set the borders for the clipping mask. As usual, the values are related to the top left corner of the element and the dimensions of the mask fit the size of the element. Changing the values changes the size of the blue container although the size of the actual element remains the same. Let's look at an example: 
+        </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting14.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%"><strong>Clipping</strong> applied to a circular shape.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Here we have to circles of the same size. On the right circle, the clipping is enabled and the bottom value reduced to its half (in this case 100px instead of 200px). As you can see, only half of the element is visible, and although the element itself is 200px high, the actual representation on the stage has only half the height. This allows you to create shapes like this semi circle, and it can be quite useful when working with images and for creating animation effects.
+        </p>
+    </section><!-- /Widget -->      
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_pr4s0l1h5mi">Shadows</h2>  
+        <p>
+          The <i>shadow</i> property allows you to add a box shadow to your element. This can create spatial effects or even some primitive 3D looks. As with clipping, the shadow options needs to be activated to work. When activated, a shadow is added to the selected element and the correspondant section in the property inspector becomes available:
+        </p>
+    </section><!-- /Widget -->       
+   
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting15.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Enabled <strong>Shadow</strong> section in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The default setting here is a drop shadow, that is cast downward and to the right, in a slightly transperant dark grey and a light blur. You can use the icons at the top of this section to switch between drop and inset shadow and then tweak the attributes <i>positioning (X and Y)</i>, <i>color</i>, <i>blur</i> and <i>spread</i>. If you click on the color preview for the shadow, the already familiar color selection panel appears, allowing you to choose any kind of color. Especially with shadows, the alpha channel option is interesting, since it allows you to determine the opacity of the shadow.
+         </p>
+         <p>
+           The blur attribute can only be set with positive values, whereas the positioning and spread can be set to negative values as well, for instance to create a shadow that is cast to the top left side of the corresponding element. Here is an overview of different shadow settings together with the result on the stage:
+         </p>
+    </section><!-- /Widget -->         
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting16.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Different kinds of <strong>drop shadow</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting17.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Different kinds of <strong>inset shadow</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->       
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+         <p>
+           <i>Tip:</i> Apparently, you can only apply one shadow to each element at the same time. But there is a workaround for that. Since you can use the alpha channel to make elements transperent, it is possible to stack transparent copies of the same element over another. Each of these copies can then have one shadow, so that you basically just add yet another shadow layer with each copy. The example shown below should help to illustrate this effect:
+         </p>
+    </section><!-- /Widget -->           
+    
+ <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting18.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Stacking elements with different <strong>box shadows</strong> to create a 3D effect.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+         <p>
+           In this case the base element has a simple drop shadow with a blur of 7px. Above that lies a transperent copy with an inset shadow in white (71%), slightly set off down and right (1px in each direction) and with a blur of 21px. Also the spread is increased to 3px. On top of that lies another transparent copy with a grey inset shadow, this time cast in the opposite direction (-3px) and a blur of 8px.
+         </p>
+         <p>
+           Note that you have to use the alpha channel for the background color, to get a transparent element. When you set the oppacity for the element to 0, the shadow will be invisible as well and therefore the effect is lost.
+         </p>
+        <p>
+          Another thing that needs to be mentioned here is that we are dealing with box-shadows. As the name already suggests, this means that it is created by the DIV box. Although it may contain rounded corners (due to border radius settings), you will not be able to create a shadow that corresponds to different shapes or character images.
+        </p>
+    </section><!-- /Widget -->    
+    
+    
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_nc9w94quxr">Filters - and why you should be cautious!</h2>  
+        <p>
+          Edge Animate allows you to apply CSS filter to element. These filters influence the visual appearance of that element, for instance by inverting the color. Tempting as these options might be, you should be aware of the fact that CSS filters are not yet supported by all modern browsers. Firefox for example will simply ignore these settings. It is therefore highly questionable whether using CSS filters at all is a good idea at the moment. As long as they are not absolutely essential for your composition, you should rather avoid them.
+        </p>
+        <p>
+          Here is a list of the available CSS filters. You can find them in the property inspector and activate them by changing one of the values, either with the slider or by entering a new value. In order to deactivate the filter again, click on the "x" button next to it.
+        </p>
+    </section><!-- /Widget --> 
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting19.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The available <strong>CSS Filters</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+       <p>You can find this selection in the property inspector and activate them by changing one of the values, either with the slider or by entering a new value. In order to deactivate the filter again, click on the "x" button next to it. Don't get confused with the shadow option. This is a different kind of shadow then the one discussed in the previous section. You should handle this option with the same care as all the CSS filter options.
+        </p>
+    </section><!-- /Widget -->    
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_svdm36ry66r">Corners - or: Why the cirlce is a square</h2>  
+        <p>
+          Although you have the tools to create three different shapes – rectangles, rectangles with rounded corners and ellipses - all these elements are in fact basically the same: They all are plain DIV elements with a different border radius. The corresponding property is called "Corners" and can be modified as well. Give it a try: Select the rectangle tool and draw a square onto the stage. Now go to the corners section in the property inspector and increase the value. You will notice that it will turn into a rectangle with rounded corners and finally into a circle:
+        </p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting20.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Element with a <strong>border radius</strong> of 0px, 20px and 90px.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          It still makes sense to have the different creation tool options, though, since it is way faster for creating different shapes than having to set the border radius every time you want to create a circular shape. There are also some more options concerning the border radius: Not only can you switch between pixel and percentage based units, you can also define, which part of the element the border radius should be applied to. By default, all four corners are selected. You can use the preview to change the selection. click on the corresponding corner to (de-)select it:
+        </p>
+    </section><!-- /Widget -->   
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting21.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Selection to only apply the <strong>border radius</strong> to two corners.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          With the buttons above the preview, you can choose how many values you want to set for the border radius: One value for all (1), one for each corner (4), or two values for each corner (8). This last option allows you to create asymmetric curved corners like this:  
+        </p>
+    </section><!-- /Widget --> 
+    
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Starting22.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Using a <strong>border radius</strong> with different values for the single corners.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+   
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+         That was quite a bit. But now you are familiar with the basics of creating and modifying shapes and elements in Edge Animate, congratulations! In the following section we will deal with text and fonts before we come to assets and finally learn to apply the acquired skills.  
+    </p></section><!-- /Widget -->
+    
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

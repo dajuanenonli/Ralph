@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[0].pages[3];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+  <!-- Page -->
+  <article>
+    
+    
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  
+    <!-- Spacer -->
+    <div style="height: 50px"></div>
+    
+    <header>
+      <hgroup>
+        <h1 id="anchor_l1pr69od2t9">Property Inspector</h1>
+        <p class="subtitle">The complete overview</p>
+      </hgroup>
+    </header>    
+    
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_vkquevu0udi">Stage Properties</h2>  
+      <p>As the containing element for the entire composition, the stage plays a special role in Edge Animate. Therefore the property inspector is slightly different than with regular elements (Note that symbols have a sort of stage within themselves. Read more about it in the symbols section).
+      </p>
+    </section>
+  <!--/ Widget: Text -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage01.png" alt="" width="100%" style="display: inline; max-width: 300px">        <figcaption style="max-width: 80%"><strong>The Property Inspector </strong>provides you with options for the composition and the stage.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_zpm8f979zfr">Title</h3>
+        <p>The input field at the top allows you to set a title for the Animate composition, or to be more precise: To set a title that will be included in the HEAD section of the HTML file that Animate produces. You might want to do so for instance in regards to search engine optimization, screen readers and better code in general.</p>
+      <h3 id="anchor_l3q6ijatt9">Open Actions</h3>
+        <p>The curly braces next to the input field allow you to implement code snippets for stage events. You will find more on that topic in the chapter about <i>interactivity</i>.</p>
+    </section>
+  <!--/ Widget: Text -->
+    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage02.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>The title of a composition </strong>can be set in the stage properties.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_13496hia4i">Size</h3>
+        <p>You can set the dimensions of your animate composition by defining the size of the stage. The first option here is to set width and height. With the icon on the left hand side, you can keep the proportions (aspect ratio) or unlink the two properties. By default, the units are set to pixels. You can change them to percentage by clicking on the toggle switch next to the unit. This allows you to create flexible compositions, e.g. for responsive websites. Additionally you then might want to set a minimum and/or maximum width as well. These options can be found below widht and height.</p>
+      <h3 id="anchor_5q1vzql4n29">Background color and gradient</h3>
+        <p>By default, the stage is an empty div element with a plain white background. You can change the color with the help of a color picker. It allows you to set the color visualy or in RGBa, Hex and HSLa mode. You can also add transparency. The second option is to add a gradient. Here you get access to a slightly different dialogue. You can choose between linear and radial gradients, add, remove or edit color stops, repeat the gradient and save your selection.</p>
+    </section>
+  <!--/ Widget: Text -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage03.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>The main properties for the stage </strong> are width and height (1), background-color and gradients (2), maximum and minimum width (3), overflow (4), autoplay (5) and the Composition Class (6).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_jed9mi5p14i">Overflow</h3>
+        <p>Overflow is a property that defines how the composition should treat elements that are placed outside of the stage boundaries. By default, it is set to hidden. This for instance allows you to create some kind of masked viewport. The option "visible" makes sure that all elements are displayed, even those that are placed outside of the stage. With the option "scroll", such elements are not displayed right away, but can be accessed via scrolling. The same is true for the last option "auto", but here scrollbars are only visible when really needed. So most of the times "auto" is a good choice, if you have overflowing content.</p>
+      <h3 id="anchor_uu5njqbyb9">Autoplay</h3>
+        <p>Your Animate composition can either start right away or wait until being started. You can choose between these two options with the "Autoplay" checkbox. By default, it is set to "true", so that your composition will play automatically when you start it in the browser.</p>
+      <h3 id="anchor_nbyddvx6r">Composition Class</h3>
+        <p>Each Edge Animate composition has a unique class, that allows referencing and which is necessery for the propper loading process. In average Animate projects, this is not of great importance. In advanced projects however, you need to pay attention to the propper referencing, for instance when using more than one Animate composition on one site.</p>
+    </section><!-- /Widget -->
+    
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_xtishiftj4i">Center Stage and Responsive Scaling</h3>
+      <p>By default, your Edge Animate composition will be displayed in the top left corner of the window when run in the browser. The option "center stage" allows you to place it in the horizontal and/or vertical center of the browser window.</p>
+        <p>If you want your composition to cover the available space of the browser window, you can use the option "responsve scaling". Be careful though, since the term is a bit misleading: It is not actually making your composition 'responsive', but merely stretching it to fit the width and/or height of the browser window. This might result in a poor visual experience, especially regarding (not optimized) images.</p>
+    </section><!-- /Widget -->   
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage04.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Additional properties for the stage </strong> allow you to place the stage in the center of the browser and to scale it to full width and/or height.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Better ways to address these issues can be found in the Edge Commons extension library: The centerStage helper function allows you to neatly position the stage – even with negative values and the Adaptive Layouts feature enables you to define independent layouts for specific sizes, so that your composition adapts to the available width. You can read more about the Edge Commons and these specific features in our <i>Must Have Add Ons</i> book and with the links below.
+      </p>
+       </section><!-- /Widget -->  
+    
+    
+  <!-- TEST -->
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300">
+          <h4 id="anchor_q2thwd0a4i">&raquo;Edge Commons Center Stage&laquo;</h4>
+          <strong>More info on the Center Stage feature</strong><br>and how to position your composition can be found right here:
+        <button class="download" onclick="window.open(&quot;http://www.edgedocks.com/edgecommons#anchor_edgecommons_21&quot;, &quot;_blank&quot;)">EC Center Stage</button><br><hr><br>
+      
+        <h4 id="anchor_37m4li0be29">&raquo;Edge Commons Adaptive Layouts&laquo;</h4>
+          <strong>More info on the Adaptive Layout feature</strong><br>and how to create independent layouts can be found right here:
+        <button class="download" onclick="window.open(&quot;http://www.edgedocks.com/edgecommons#anchor_edgecommons_18&quot;, &quot;_blank&quot;)">EC Adaptive Layouts</button>
+        </center>
+      </text>
+    </div>
+    <!--<data>{}</data>-->
+  </section><!-- /Widget -->  
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">      
+      <h3 id="anchor_4e3ybaf9a4i">Downlevel Stage</h3>
+        <p>Since Edge Animate is supported by modern browsers only, you might want to include a fallback solution for older browsers (mostly Microsoft's Internet Explorer 7 or 8). In this case, The down-level stage enables you to create a very reduced version. A good option is to use a poster image. You can also provide a link.</p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Stage05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Settings for Downlevel Stage, Poster Image and Preloader </strong>are also made on the stage level in the property inspector.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">      
+      <h3 id="anchor_8te3jgaatt9">Poster Image</h3>
+        <p>If you only want to provide a poster image for down-level browsers, you don't have to use the down-level stage. You can simply use the option in the property inspector to create a poster image of the current view. This is also an important feature if you are creating animated assets for digital publications built with InDesign (DPS or EPUB3).</p>
+      <h3 id="anchor_uwag9l766r">Preloader</h3>
+        <p>Your Edge Animate composition uses a preloader before it starts to run in the browser. The preloader option on the stage level defines the behavior of this preloader. You can also edit the preloader style. You can read more about the preloader in the "publishing" section.</p>
+    </section><!-- /Widget -->  
+      
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_nyny6k9y66r">Element Properties</h2>    
+      <title>Element Properties</title>
+    <body>
+      <p>Apart from the stage and symbol root elements, the basic properties of all available element types are much alike in  every context. Here is a summary of the basic properties supported in Edge Animate:</p>
+    </body>
+    <extra>
+    </extra>
+  </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements01.png" alt="" width="100%" style="display: inline; max-width: 300px">        <figcaption style="max-width: 80%"></figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_1zfdlutmx6r">Title</h3>
+        <p>The topmost attribute is the title of the selected element. It can be edited by clicking on the value or by double-clicking on the equivalent name in the elements panel.</p> 
+      <h3 id="anchor_fsbqc6561or">CSS Class</h3>
+        <p>Next to the title value, you have the option to set a CSS class for the selected element. This way you can for instance include external CSS classes and/or reuse styles for similar elements.</p>
+      <h3 id="anchor_zlc0k8adcxr">Open Actions</h3>
+        <p>In Animate curly braces always indicate the option to add actions. In this case, you can add actions for the selected element by clicking on the curly braces. If you want to know more about actions, read the <i>interactions</i> section.</p>
+      <h3 id="anchor_233xe09t3xr">Display</h3>
+        <p>The first property that has influence on the visibility of an element is the display attribute. It refers to the correspondent CSS property "display" and offers three states to choose from:</p>
+        <ul>
+            <li>Always On (default)</li>
+            <li>On</li>
+            <li>Off</li>
+        </ul>
+        <p>When you switch display to "Off", the equivalent area on the timeline becomes shaded. Note that you cannot define keyframes in this area. That means you can only change elements that are displayed (although they may be invisible because of opacity).</p>
+      <h3 id="anchor_2uylatw3ik9">Overflow</h3>
+        <p>Similar to the stage, elements can have overflow as well. While the default for the stage is "hidden", all other elements are initially "visible". It might be a little bit confusing, to have overflow for basic elements on the first look. You have to remember, that we are dealing with div elements here. That means, they can themselves contain other elements. And in that case, it does make sense to be able to have different settings for the overflow attribute. So an element container can be used as a group, where the visible children do not necessarily have to be within the group's boundaries.</p> 
+      <h3 id="anchor_4uucru4ygb9">Opacity</h3>
+        <p>Opacity is a percentage based value, that defines the transparency of an element. You can change the opacity of an element by using the slider or by clicking on the value and typing in a number between 0 and 100. By setting the opacity to 0, the element becomes invisible. In contrast to the display property, the element remains located on the stage, even when it is no longer visible. This way it is still available to serve for interactions and can still be modified. With this property you set the opacity of all children within the element. If you just want the background of the element to be transparent you can use a background color with a lower alpha value instead.</p>
+         <h3 id="anchor_zxkhna8m2t9">Position and Size</h3>
+        <p>Although we will discuss the different kinds of animations at a later stage, you should know that you can find two options here in the property inspector under "Transition mode". It allows you to choose between animations along the X- and Y-axis and animations via motion paths. The "Auto-Orient" option is only available for the latter.</p> 
+     </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Position and size</strong> are values you find in the property inspector for all elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>The four squares in the subsequent section allow you to define the relative position for your element. This is rather advanced and only useful when creating flexible/responsive layouts. It doesn't need to concern you at the beginning. You can choose between relative to top-left, top-right, bottom-right and bottom-left, by clicking on the equivalent square.</p> 
+        <p>Similar advanced is the option to choose between global and applied. It allows you to switch between calculated coordinates relative to the stage (X/Y) or relative to the parent container element (e.g. a group).</p> 
+        <p>Depending on the previous selection, you find the according X/Left and Y/Top property values listed below. By default they are defined in pixels. These values define the exact location of the element. For flexible layouts you can also use percentage based values.</p> 
+        <p>The dimensions of the element are defined by the width and height property. Again, the default setting is pixels. In order to keep the proportions while changing one value, you can use the "link" option. In case you use percentage based units for the width of an element, you might want to add a minimum or maximum width as well. The appropriate option can be found right below.</p> 
+      <h3 id="anchor_22bc87x2yb9">Color</h3>
+        <p>As the name already suggests, this section is about the color options for an element. The first property here is background color, according to the correspondant CSS property. We have already encountered this option within the stage properties, it is exactly the same here. Which is also true for the gradient property next to it. The third option is new. Here you can define a border for the element, with the properties border-color, border-style and border-width.</p>
+      <h3 id="anchor_7upbmvrhpvi">Transform</h3>
+        <p>The appearance of elements can further be modified in the transform section. Here you can scale the element along the X- and/or Y- axis, for instance. Note that you have to unlink the two properties to change only one value here. Other options are scewing and rotation. You can also change the point of origin for the transformation.</p>
+        </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements03.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Transform options</strong> for elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">     
+      <h3 id="anchor_6w3c8skbj4i">Cursor</h3>
+        <p>On some occasions, it is important to use different mouse cursors for certain elements, e.g. to indicate interactive elements with a pointer. You might want to change the cursor manually, if the element is clickable. By clicking on the button you get access to a selection of options. You will see the result when running the composition in the browser.</p>
+      </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements04.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">You can select a <strong>cursor</strong> for each element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_3mhd4o647vi">Corners</h3>
+        <p>The corners section allows you to set a border radius for elements. You can choose between one, four or eight values and select/de-select single corners. You can also toggle between pixel and percentage based values. Note that a rectangle with a border radius of 50% will become an ellipse/circle. The shape's boundaries will however always remain a rectangle (which is the case for every div element).</p>
+      </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Corners </strong>are created by applying the border radius.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_flap9icnmi">Shadow</h3>
+        <p>In order to apply a shadow to an element, you first have to enable the option with the switch on the right-hand side. Once enabled, the shadow can be edited. You can choose between drop shadow and inset shadow, the shadow color and opacity, direction, blur and spread.</p>
+      </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements06.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>The Shadow section</strong> allows you to create an inset or drop shadow for your element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_now1w6ogvi">Filters</h3>
+        <p>In this section you can apply CSS filters to the selected element. Since they are currently still hardly supported by most browsers, you should be very thoughtful using them. In most cases it is better to not use them at all. For the sake of completeness, here is a listing of the available filters:
+            <ul>
+                <li>Invert</li>
+                <li>Hue-Rotate</li>
+                <li>Contrast</li>
+                <li>Saturate</li>
+                <li>Sepia</li>
+                <li>Greyscale</li>
+                <li>Blur</li>
+                <li>Shadow</li>
+            </ul>
+        Note that the CSS filter shadow is different from the average box shadow we discussed in the previous section.
+        </p>
+      <h3 id="anchor_6d0959daemi">Clip</h3>
+        <p>Clipping is again a property thats needs to be activated before it can be applied. Use the switch on the right-hand side to activate clipping. Now you can edit the size of the outer constrains of the element. Making it smaller than its actual content size results in cutting off parts of it. Since the value can be animated, this can be used for nice effects.</p>
+         </section><!-- /Widget -->
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Elements08.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Clipping</strong> lets you clip an element from top, right, left and bottom.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+    
+  <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_xt9baux47vi">Accessibility</h3>
+        <p>In this section you can define a non-visual title for the selected element. This can later be read a machine (e.g. screenreader). Further more you can select the "tab index", which defines the position of the element if the users clicks the TAB key to navigate between active elements.</p>
+    </section><!-- /Widget -->
+      
+
+  <!-- Widget: Text with image left -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_dmq63xwp14i">Text Formatting</h2>  
+        <p>When you create or select a text element in Edge Animate, the property inspector changes accordingly. You now get access to further options, which we will briefly walk through in the following section.</p>
+        <h3 id="anchor_9hit7oav2t9">HTML Tag Type</h3>
+          <p>When you create or select a text element in Edge Animate, it is by default a DIV element. When you click on the button next to the title in the property inspector, you can change the HTML tag of this element. This not only results in a better HTML structure, but can be used for styling with external CSS. The available options are shown in the image:
+          </p>
+      </section>
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Text01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>HTML Tag Types</strong> for text elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <h3 id="anchor_6inn05jc3di">Text properties</h3>
+          <p>Regardless of the HTML tag used, there are properties that can be applied to any text element in Animate. Most obviously perhaps is the choice of a <strong>font-family</strong>. You can use the browser default fonts or add further fonts via Edge Web Fonts or Typekit. We will tackle these options more detailed on a later occasion.</p>
+      </section>
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Text02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>HTML Tag Types</strong> for text elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+          <p>Secondly, you can edit the <strong>font-size</strong>. Pixels (px) is the default unit here, but you can also use percentage or em. Another option is the <strong>font-weight</strong>, that can range from 100 (thin) to 900 (black). Keep in mind though, that not every font covers this entire range. With the two buttons next to this property you can add and remove font style and text decoration, i.e. italics and underline.</p>
+          <p>The <strong>color</strong> of the text can be manipulated as well, using the already familiar color selection tool.</p>
+        <p>In order to <strong>align</strong> your text, you can chose between the familiar options "left", "center", "right" and "block".</p>
+          <p>As additional settings you can edit the letter and/or word spacing, change the line height and add a text indent. If these options are not displayed right away, click on the tiny arrows at the bottom of the "Text" property section to unfold the menu.</p>
+    </section>
+  
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_pwrl1tyy14i">Image Properties</h2>  
+        <p>When using images in your Edge Animate compositions, you have two options: Either use the image as background image for a DIV element, which is the default behavior, or within an IMAGE tag. You can find the options next to the title in the top part of the property inspector when an image is selected. Note that like in any web context, it makes a difference whether an image is used in an image tag or as background image. Accordingly, you have different options in the property inspector.</p>
+      </section>
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Image01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Image properties</strong> when an image is used as DIV element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <h3 id="anchor_hl84ejexw29">Background image</h3>
+          <p>When used as a background image, the image itself is a property of the containing div element. In the property inspector you have several options: You can swap the image with a different image in the library, change the positioning and adjust the size of the image. Keep in mind that these properties only refer to the background image, not the containing element.</p>
+        <h3 id="anchor_1j5smoyldi">Using the image tag</h3>
+          <p>In case you use images with the image tag, the image itself becomes the HTML element. The basic properties now refer to the image itself. Consequently, you have no longer additional properties for size or positioning in the image section of the inspector. Instead, you can add an ALT attribute. This will be displayed when the image can not be loaded and is also used by screen readers. You can still swap the image.</p>
+    </section>      
+      
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_eh994wjyvi">Audio Properties</h2>  
+        <p>Audio elements have some unique properties that become available as soon as an audio file is selected. In the according section you can set the volume level and several presets, such as Autoplay, Loop and whether the audio file is to be preloaded. These are the options that come with HTML5 audio implementation.</p>
+        <p>By default, the display property for audio files is set to "off". This refers to the audio controls. When switched to "on", further options become available for customizing the control bar, such as positioning, size and opacity.</p>
+    </section>    
+ 
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Audio01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Audio properties</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_inw4xab57b9">Video Properties</h2>  
+        <p>When you include videos into your Animate composition, they will be placed as HTML5 video elements. As with audio files, there are special options available in the property inspector, when video elements are selected:</p>
+        <p>You can select a poster image that will be displayed as long as the video is not playing. Either choose an image from the library or create a poster image from the video source. As with audio, you can set the volume level of the video. You also have the option to enable autoplay and loop for the video. Last but not least you can decide whether controls should be visible or hidden for the user.</p>
+    </section><!-- /Widget -->        
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Video01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Video properties</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_b5kqlfbhuxr">Symbol Properties</h2>  
+        <p>Symbols are a very integral part of Edge Animate, especially because of their independent timeline. They can be seen as some kind of composition within the composition. Therefore, a symbol has two different scopes: From the outer composition and from within the symbol itself. Since the property inspector is context-sensitiv, it changes depending on the scope.</p>
+        <h3 id="anchor_i9k6rwqxgvi">Symbol properties in the outer scope</h3>
+          <p>On this level, symbols have similar properties to average elements, except for color and corners. Instead, they have a playback section, which allows you to add playback commands for the symbol on the current timeline. You also have the option "Scrub", which includes the position of the playhead from the current timeline to the symbols timeline, when accessing the symbol. Note that this has no effect on the playback behavior in the final composition at runtime.</p>
+       </section><!-- /Widget -->  
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol01.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Symbol properties (outer scope)</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+
+    <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <h3 id="anchor_3gc4y3hxgvi">Symbol propertites on symbol level</h3>
+          <p>When going into a symbol, the property inspector changes and gives you access to different options. As mentioned before, a symbol is like a composition in itself. Thus on symbol level, the property inspector resembles the one from the main stage, only with fewer options. Here you can set the size of the symbol as well as minimum and maximum width. In contrast to the stage, the default setting for overflow within symbols is visible. If you want to use a symbol for creating a mask for example, you need to change the overflow to hidden. Furthermore, you can define whether the timeline of the symbol should play automatically and whether symbol instances should scale or resize.</p>
+    </section><!-- /Widget -->    
+
+    
+    <extra>
+    </extra>
+            
+      
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Property_Symbol02.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Symbol properties (inner scope)</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+ 
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

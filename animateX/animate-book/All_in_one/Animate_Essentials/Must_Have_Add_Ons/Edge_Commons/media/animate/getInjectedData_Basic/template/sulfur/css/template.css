@@ -1,0 +1,8 @@
+.label-blue {
+  width: auto !important;
+  height: auto !important;
+  padding: 10px 14px 12px 14px;
+  background-color: #0072c2;
+  color: white !important;
+  font-family: LatoLatin, Arial !important; 
+}

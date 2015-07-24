@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[6];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[6].pages[4];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Recipe: <strong>Creation</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_2rhm85gsyvi">Google Maps</h1>
+      <p class="subtitle">Integration of an external source</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      In this recipe you will learn how to integrate Google Maps into your Animate composition. So if you want to integrate a customized map into your project, e.g. to point out a specific location or route, this recipe will lead you the way. 
+    </p>
+    <p>
+    <strong>This is the result:</strong>
+    </p>
+  </section><!-- /Section -->
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/GoogleMaps/index.html" style="width: 100%; height: 400px; border: 1px solid white;"></iframe></section><!-- /Widget --> 
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_svpc5xc4n29">Background</h2>  
+        <p>
+          Integrating a generic map into your website really is not big of a deal thanks to Google Maps and the embed code it provides. You see it all the time. Sometimes however you would prefer to customize the map and point out a specific location, route or add further information. Now Google came up with a new option here, called “Maps Engine Lite”, which at the time of writing is still in its beta stage, so there might be some changes in the future. Still, since it already has some nice aspects to it, it’s worth taking a closer look.<br> 
+So let’s see how we can use it to built a custom map into an Animate project, to point out the location of our favorite sample restaurant “Murasaki Sushi”.
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00500_GoogleMaps_Result.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The integrated custom map with the location of our restaurant.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_db4wd7eewmi">Steps:</h2>  
+      <p><h3 id="anchor_h9qn7qwu3di">Designing the Animate project</h3>
+      We use Edge Animate to create a nice little surrounding page for our map. Basically, it simply consists of three artworks, a background with gradient and two white rectangles with rounded corners. Of course you can design it any way you want or integrate the map into an existing project.
+      </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00500_GoogleMaps_010.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Several elements form the design for our project.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_75mte29">Creating the container for the map</h3>
+      Now we draw a rectangle on top of the white rectangle to create a container for the map. Rectangles in Edge Animate are basically divs in the DOM, so that we will be able to inject any html code with a simple JavaScript function. As you will see, Google will provide us with an IFrame later on, which we then can inject into this div. Make sure to rename this rectangle with “map”, so we can refer to it on code level with this ID.
+      </p>
+      <p>
+    Another advantage here is, that we can determine the size of the contained map with the measurement of the rectangle. We don’t need to worry about the color, since the rectangle itself will be replaced by the map. If you drag this container rectangle onto the other rectangle in the elements panel, you can group them together, which makes it easier for animations or repositioning.
+      </p>
+    </section><!-- /Widget -->        
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_qnia517zaor">Customizing the map</h3>
+          We can now move on to customizing the map for our purposes. Therefore we go to <a href="mapsengine.google.com">mapsengine.google.com</a> and start editing the map by adding markers and labels as well as changing the color scheme  
+        </p>
+        <p>
+          We can also paste in details and additional information for the location here.
+        </p>
+    </section><!-- /Widget -->    
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00500_GoogleMaps_020.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Customizing the map.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_u489ndhd7vi">Making the map publicly accessible</h3>
+     We can only embed the map into a website if we make it public first. Therefore we have to use the ‘share’ button on the upper right corner to access the sharing settings for the map. Change the visibility options to “Public on the web” and save the settings.
+      </p>
+      <p><h3 id="anchor_ak5i2vxtj4i">Getting the embed code for the map</h3>
+    Now that we have made the map accessible, we get access to the embed code in the map menu (the folder icon on the upper left) via the option “Embed on my site”.
+      </p>
+      <p>
+We copy the entire code-snipped, i.e. the iframe that contains the link to our custom map so that we can use it within our Animate project.
+      </p>
+    </section><!-- /Widget -->     
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00500_GoogleMaps_030.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Retrieving the embed code.</figcaption>      </figure>    </center>  </div></section><!-- /Widget --> 
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_o53weetrzfr">Embedding the map into Animate</h3>
+     So let’s get back to Edge Animate and our project. We need to implement a few lines of code now to get the map loaded into our DIV container, so we add an action for <i>creationComplete</i> for the stage. Again, what we want to achieve now is to get a reference to the target element, which is the DIV with the ID ‘map’, and inject it with the IFrame of our custom map. We set and use the variables “map” and “mapCode” to make it easier to follow here. But let’s take it step by step:
+      </p>
+      <p>
+First we define a variable that saves the jQuery reference to the target element:
+      </p>
+    </section><!-- /Widget -->     
+  
+
+ <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-javascript">      <code>
+.var map = sym.$(“map”);
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Then we use another variable to save the IFrame code that we copied from our map. Since we want the map to adapt to the size of the containing div element, we need to make some minor adjustments concerning the width and the height within the iframe itself. So we exchange the according properties with ‘+map.width()+’ and ‘+map.height()+’ respectively. Note that we have to use both single and double quotation marks so that they don’t interfere each other. The code looks like this: 
+        </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-javascript">      <code>
+var mapCode = '&lt;iframe src="http://mapsengine.google.com/map/embed?mid=zsKqVOZ51FEQ.kupWm_JOuHgo" ' +'width="'+map.width()+'" height="'+map.height()+'" style="border: none;">&lt;/iframe>';
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Now that we have both variables defined, we can use them to add the generated map code into the map container, using the JavaScript method <i>.html()</i>:
+        </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-javascript">      <code>
+map.html(mapCode);
+    </code>    </code>  </pre>  </section>
+
+<!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          So combined the code block reads as follows:
+        </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// (1) Get the target element for the map
+var map = sym.$("map");
+// (2) Use '' to not get a conflict with the provided code that includes ""
+// (3) Modify the width and height to be more flexible and add style to get rid of the ugly border
+var mapCode = '&lt;iframe src="http://mapsengine.google.com/map/embed?mid=zsKqVOZ51FEQ.kupWm_JOuHgo" '
+	 +'width="'+map.width()+'" height="'+map.height()+'" style="border: none;">&lt;/iframe>';
+// (4) Add generated map code to the map container
+map.html(mapCode);
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+         That’s it. When you open the project in the browser, you will now see that the custom map gets loaded into the div container and can be used just like any other integration of Google Maps.
+        </p>
+    </section><!-- /Widget -->   
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

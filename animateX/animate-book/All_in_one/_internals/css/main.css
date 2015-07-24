@@ -1,0 +1,489 @@
+body {
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'league-gothic', sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 4em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2.6em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: 1em;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1em;
+}
+
+header {
+  margin: 40px 80px 40px 60px;
+}
+
+section {
+  clear: both;
+  margin: 40px 80px 40px 60px;
+}
+
+section.widget {
+  margin: 40px 80px 40px 60px;
+  margin-top: 0px;
+}
+section.widget.text-image-left img {
+  display: block;
+  margin-top: 8px;
+}
+section.widget.hero {
+  position: relative;
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+  margin: 0;
+}
+section.widget.hero .title {
+  clear: both;
+  display: inline-block;
+  margin: 0 10%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 4em;
+  color: white;
+  border: 3px solid white;
+  padding: 10px 20px;
+  line-height: normal;
+}
+section.widget.hero .subtitle {
+  margin: auto;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: white;
+  border-top: 0;
+  padding: 10px 20px;
+}
+section.widget.code :not(pre) > code[class*="language-"], section.widget.code pre[class*="language-"] {
+  background: #FFF !important;
+  font-size: 0.8em;
+  line-height: 1.8em;
+}
+section.widget.download {
+  padding: 40px 0;
+  margin-bottom: 100px;
+  background-color: #FFF;
+}
+section.widget:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#sidebarRight {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+  position: fixed;
+  z-index: 99;
+  width: 50px;
+  height: 150px;
+  top: 50%;
+  /* Position */
+  right: auto;
+  right: 0;
+}
+@media (min-width: 1200px) {
+  #sidebarRight {
+    left: 1150px;
+    right: auto;
+  }
+}
+#sidebarRight .pagerButtonGroup {
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  right: 0;
+  bottom: 100px;
+  background-color: #333;
+  margin-left: -50px;
+}
+#sidebarRight .pagerButtonGroup .btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: black;
+  opacity: 0.3;
+  border-bottom: 1px solid #444;
+}
+#sidebarRight .pagerButtonGroup .btn .info {
+  position: absolute;
+  width: auto;
+  height: 42px;
+  top: 0;
+  right: 50px;
+  white-space: nowrap;
+  padding: 8px 20px 0 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  opacity: 0;
+}
+#sidebarRight .pagerButtonGroup .btn.active {
+  opacity: 1;
+  cursor: pointer;
+}
+#sidebarRight .pagerButtonGroup .btn.active:hover {
+  background-color: #ff007e;
+}
+#sidebarRight .pagerButtonGroup .btn.active:hover .info {
+  display: block;
+  opacity: 1;
+}
+#sidebarRight .pagerButtonGroup .btn.prevPageButton {
+  background-image: url(../images/ui/SidebarRight_ArrowLeft.svg);
+}
+#sidebarRight .pagerButtonGroup .btn.nextPageButton {
+  background-image: url(../images/ui/SidebarRight_ArrowRight.svg);
+}
+#sidebarRight .pagerButtonGroup .btn.sectionsButton {
+  background-image: url(../images/ui/SidebarRight_Sections.svg);
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#sidebarRight .pagerButtonGroup .btn.bookButton {
+  background-image: url(../images/ui/SidebarRight_Book.svg);
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: none;
+}
+
+@media (min-width: 1600px) {
+  #sidebarRight .sectionsButton {
+    display: none;
+  }
+}
+#sectionsOverlay {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+  position: fixed;
+  display: none;
+  background-color: rgba(10, 10, 10, 0.96);
+  color: white;
+  width: 400px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #sectionsOverlay {
+    left: 750px;
+    right: auto;
+  }
+}
+@media (min-width: 1600px) {
+  #sectionsOverlay {
+    left: 1200px;
+    right: auto;
+    background-color: #333;
+    display: block !important;
+  }
+}
+#sectionsOverlay .sections-content {
+  position: absolute;
+  padding: 30px 60px 20px 30px;
+}
+#sectionsOverlay .sections-content ul {
+  padding: 0;
+}
+#sectionsOverlay .sections-content ul li {
+  color: #BBB;
+  list-style: none;
+  list-style-position: inside;
+  cursor: pointer;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 10px 0 0 0;
+}
+#sectionsOverlay .sections-content ul li:hover {
+  color: white;
+}
+#sectionsOverlay .sections-content ul li ul li {
+  font-size: 0.8em;
+  padding: 10px 0 0 20px;
+}
+#sectionsOverlay .sections-content ul li ul li ul li {
+  font-size: 0.8em;
+  padding: 10px 0 0 40px;
+}
+
+#book-overview-content {
+  display: none;
+}
+
+#bookOverlay {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+  position: fixed;
+  display: none;
+  background-color: #0a0a0a;
+  color: white;
+  width: 100%;
+  min-width: 768px;
+  max-width: 1150px;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  z-index: 11;
+}
+#bookOverlay a, #bookOverlay a:hover, #bookOverlay a:visited {
+  color: white;
+  text-decoration: none;
+}
+#bookOverlay .book-content {
+  padding: 30px 10px 30px 60px;
+}
+#bookOverlay .overview-complete {
+  position: absolute;
+  left: 60px;
+  top: 200px;
+  right: 0;
+  padding-bottom: 100px;
+}
+#bookOverlay .overview-complete .overview-book-cell {
+  float: none;
+  clear: both;
+  padding-top: 100px;
+}
+#bookOverlay .overview-complete .overview-book-cell:first-child {
+  padding-top: 0;
+}
+#bookOverlay .overview-complete .overview-book-cell a {
+  display: block;
+  font-size: 2.5em;
+}
+#bookOverlay .overview-complete .overview-book-cell .overview-chapter-cell {
+  width: 33%;
+  float: left;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+#bookOverlay .overview-complete .overview-book-cell .overview-chapter-cell .overview-chapter-number {
+  width: 60px;
+  float: left;
+  font-size: 3em;
+  text-align: right;
+  padding-top: 8px;
+  padding-right: 10px;
+  color: #ef007e;
+}
+#bookOverlay .overview-complete .overview-book-cell .overview-chapter-cell a {
+  margin-left: 70px;
+  font-size: 1.6em;
+}
+#bookOverlay .overview-complete .overview-book-cell .overview-chapter-cell:nth-child(3n+2) {
+  clear: both;
+}
+#bookOverlay .overview-complete .overview-book-cell .overview-chapter-cell .overview-page-cell a {
+  font-size: 1em;
+  color: #999;
+  line-height: 1.2em;
+  margin-top: 10px;
+}
+#bookOverlay .overview-complete .overview-book-cell .overview-chapter-cell .overview-page-cell a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  text-transform: uppercase;
+  color: #999;
+  font-size: 0.8em;
+}
+.breadcrumb a, .breadcrumb a:hover, .breadcrumb a:visited {
+  text-decoration: none;
+  color: #999;
+}
+
+note {
+  font-family: 'Courier';
+  font-weight: bold;
+  color: red;
+}
+note:before {
+  content: "{{ ";
+}
+note:after {
+  content: " }}";
+}
+
+article > note {
+  margin: 20px 60px 20px 60px;
+  display: block;
+}
+
+.page-content {
+  min-width: 768px;
+  max-width: 1150px;
+  background-color: #f5f7fb;
+}
+
+header p.subtitle {
+  font-family: 'league-gothic', sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 10px 0;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+nav div.overview {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  height: 20px;
+}
+nav div.overview:hover {
+  height: auto;
+}
+nav div.overview li {
+  padding: 5px;
+}
+nav div.overview a {
+  color: #DDD;
+  text-decoration: none;
+}
+nav div.overview a:hover {
+  color: #FFF;
+}
+
+button.download {
+  display: block;
+  clear: both;
+  margin-top: 20px;
+  border: none;
+  background-color: #ff007e;
+  color: white;
+  padding: 10px 20px;
+}
+button.download:hover {
+  background-color: #333;
+}
+
+figure figcaption {
+  padding-top: 20px;
+  font-size: 1em;
+  line-height: 1.4em;
+  font-style: italic;
+}
+
+/*
+Spotlight
+*/
+#spotlight {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  z-index: 199;
+}
+
+#spotlight .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.88);
+  cursor: pointer;
+}
+
+#spotlight .close-button {
+  z-index: 999;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 45%;
+  background: url(images/spotlight/closeButton.png);
+  cursor: pointer;
+  display: none;
+}
+
+#spotlight .base {
+  position: absolute;
+  /*width: 400px;*/
+  /*height: 400px;*/
+  left: 50%;
+  top: 45%;
+  /*margin-left: -200px;*/
+  /* 0.5 * width */
+  /*margin-top: -200px;*/
+  /* 0.5 * height */
+  background-color: white;
+  overflow: hidden;
+  border: solid;
+  cursor: default;
+}
+
+#spotlight .content {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#spotlight .fader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

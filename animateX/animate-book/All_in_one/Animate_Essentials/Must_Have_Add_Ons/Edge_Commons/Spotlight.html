@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[2];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[2].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[2].chapters[0].pages[4];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_syy9b8d7vi">Edge Commons Spotlight Overlay</h1>
+      <h3 id="anchor_ts6w1w6ogvi">Lightbox effect with the Dirty little helpers</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In this section you will learn how to use the Edge Commons Spotlight Feature to to dislplay images, videos and Animate composition in a lightbox like overlay. In all three cases, the basic principle is the same. You only have to modify the configuration object, which we will have a closer look at in this section further below. The spotlight overlay can be used to set media content into the right spot and is an easy to use improvement for all sorts of projects: websites, banners, interactive storytelling... you name it! 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_b3a6ud0wwmi">Spotlight Module</h2>  
+      <p>The Spotlight Overlay is available with the EC.Spotlight module. It is not part of the core features, therefore you have to either use the All-in-one package of the Edge Commons or additionally load this module together with the core. 
+      </p>
+    </section><!-- /Widget -->
+
+   <!-- DOWNLOAD 
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300" />
+          <h4>&raquo;Spotlight Module&laquo;</h4>
+          <strong>Get a local version</strong> of the <strong>EC.Spotlight module</strong> right here:
+        <button class="download">Download</button>
+        </center>
+      </text>
+    </div> -->
+    <!--<data>{}</data>-->
+  <!--/section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_ebs4qd50zfr">Open a spotlight overlay</h2>
+      <strong>EC.Spotlight.open();</strong><br>
+        This function opens the spotlight overlay. It expects the configuration object, which defines the media type, source, size and other settings. Usually you would save this object right before calling the function and use the variable config to hand it in. The second, optional parameter allows you to set the context for the overlay, for example window.document or window.parent.document.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_1wz6fbyy14i"><strong>Example:</strong> Opening an image in a Spotlight Overlay</h3>  <p>    This example illustrates how you can use the Spotlight feature to open an image in an overlay. The config object contains the appropriate settings. Some parameters are mandatory, for example source and type, whereas borderWidth and borderColor are optional.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "image",                                // Media type (image|animate|youtube)
+      source: "images/MyImage.jpg",                 // Source to media
+}
+
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button in the demo project below to see the image being opened in the Spotlight Overlay.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/spotlightOverlay/spotlightImage.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+    
+
+<!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_kfmxp9cnmi"><strong>Example:</strong> Opening a Youtube video in a Spotlight Overlay</h3>  <p>    This example explains how you can use the Spotlight feature to open a Youtube Video in the Spotlight Overlay. The config object contains the appropriate settings. With the param object you can adjust additional parameters, for example autoplay. The source in this case is the Youtube ID for the video.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "youtube",                              // Media type (image|animate|youtube)
+      source: "1woru3cyFiw",                        // Source to media
+      param: {                                      // Additional parameter
+        autoPlay: true
+      }
+}
+
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <body>
+      <p>
+        Click on the button in the demo project below to see the video being opened in the Spotlight Overlay.
+      </p>
+    </body>
+    <extra>
+    </extra>
+    <!--<data>{}</data>
+  </widget><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate 
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/spotlightOverlay/spotlightImage.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->
+
+
+<!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_1gs0qwwxw29"><strong>Example:</strong> Opening an Animate composition in a Spotlight Overlay</h3>  <p>    This example demonstrates how you can use the Spotlight feature to open another Animate composition within the Spotlight Overlay. The config object contains the appropriate settings. Make sure to include this additional composition on file level into your project folder, in this case it is located in a folder called composition. The source in this case is the HTML file of that targeted additional composition.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "animate",                              // Media type (image|animate|youtube)
+      source: "composition/index.html",             // Source to media
+}
+
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <body>
+      <p>
+        Click on the button in the demo project below to see the Animate composition being opened in the Spotlight Overlay.
+      </p>
+    </body>
+    <extra>
+    </extra>
+    <!--<data>{}</data>
+  </widget><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate 
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/spotlightOverlay/spotlightImage.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_v11ytwc23xr">Close an existing spotlight overlay</h2>
+      <strong>EC.Spotlight.close();</strong><br>
+        This function usually gets called internally by the close button of the Spotlight Overlay automatically. You can however define a callback function within the config object to react to the closing of the Overlay. This allows you for example to pause and resume playback of the main composition when the Spotlight is opened.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_e45fktvs4i"><strong>Example:</strong> Resume playback when Spotlight is opened</h3>  <p>    In this example we want to pause our main composition when the Spotlight is being opened and resume playback when it is closed again. Therefore we add a callback to our config object.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "image",                                // Media type (image|animate|youtube)
+      source: "images/MyImage.jpg",                 // Source to media
+      onClose: function(config) {                   // Callback for close button
+        EC.unpause(sym);
+      } 
+}
+
+// Pause Playback for the main composition
+EC.pause(sym);
+      
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <body>
+      <p>
+        Click on the button in the demo project below to pause the animation and open an image in the Spotlight Overlay. When you click on the close button, the animation resumes playing.
+      </p>
+    </body>
+    <extra>
+    </extra>
+    <!--<data>{}</data>
+  </widget><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/spotlightOverlay/spotlightImage.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->  
+
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

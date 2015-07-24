@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[2];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[2].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[2].chapters[0].pages[2];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_qstipddvx6r">Edge Commons Core Features</h1>
+      <h3 id="anchor_fw1cyp66r">Overview of the basic Dirty little helpers</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This section will give you a summary of the currently available features and helper functions of the Edge Commons (2.0.0) release (within the complete All in One package). Remember that you may choose to use only parts of it with the different modules. Consequently, this section is divided in a similar way, starting with the most important Core features here and then moving on to the different modules, i.e. Parallax, Spotlight and SVG throughout the next pages. 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>The subsequent features are all part of the Edge Commons core and therefore always available as soon as you integrate the Edge Commons into your project. Most of these features are useful helper functions that might help you in any given project. 
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_34jii7o80k9">Add custom CSS rules at runtime</h2>
+      <strong>EC.addCSS();</strong><br>
+        This function doesn't add CSS styles inline, but defines global CSS rules like you would have with an externally linked CSS file. You can apply the CSS rules to elements in Animate by added CSS classes in the property inspector.
+Use the !important statement on property level to prevent Animate to override the property.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_gcrztzkt9"><strong>Example:</strong> Adding a CSS class at runtime</h3>  <p>    In this example we define the style for a class "custom-box" that we can assign to any element. The style will then be applied at runtime. The first parameter is the selector (here: .custom-box), followed by the CSS properties as an object in curly braces.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Add CSS rule for class 'custom-box'
+EC.addCSS(".custom-box", {
+ "background-color": "rgba(217,68,148,1.00) !important",
+ "border-radius": "16px"
+});
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button in the demo project below to see how the CSS styles can be applied to the different boxes, for instance both elements on the left and right side ("custom-box"). It is the CSS that we defined in the code above. Note that the click is only for demontration purposes. Usually the styles would be applied as soon as the elements get loaded.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/addCSS_Basic/addCSS_Basic.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+    
+
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_m3yqa8dj9k9">Center an element</h2>
+        The purpose of this helper function is to center an element and keep it centered. This function even works with a flexible stage (percentage-based).
+Known issues:<br>
++ If the affected element resizes you have to call this function again<br>
++ Does not consider rotation/scaling<br>
++ Does currently NOT work with a symbol element (since we are not considering transform/translate).<br>
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_stsjdcxr"><strong>Example:</strong> Centering an element</h3>  <p>    This helper function allows you to center a element (in regard to its parent). See the demo projects below to see it in action.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Center element named "myElement"
+EC.centerElement( sym.$("myElement") );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Here are two demo projects for the centerElement function:<br>The first one shows how the element gets centered in regard to the stage.<br>Click on the button to see the function applied.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/centerElement_Basic/centerElement_Basic.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This second one is a bit more complex: Here the element gets centered within a container. You can even resize the container (using the button on the right). Notice that the element remains centered, once the function is enabled.
+      </p>
+    </section><!-- /Widget -->
+
+ <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/centerElement_Complex/centerElement_Complex.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->
+
+
+
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_2nxjtr442t9">Advanced Logging</h2>
+        Unfortunately, Edge Animate doesn't offer much in regards to finding errors in your code. Especially with more complex projects, it is a good thing to have a variety of advanced logging options at hand. The Edge Commons offer you four different notification types: debug, error, info and warn. They allow you to send a message to the console or a custom target for logging and debugging, each targeting the equivalent mode.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_t22m9veipb9"><strong>Example:</strong> Logging in debug mode</h3>  <p>    Here is an example of how to send a message in debug mode. The first parameter is the logging message that you want to give out, the second the logging group. In this case this group is stored in the variable LOG_GROUP.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Log in debug mode
+var LOG_GROUP = "My Module";
+EC.debug( "Hello logger", LOG_GROUP );
+    </code>    </code>  </pre>  </section>
+
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_7ip9aiqkt9">Get reference to all children of a symbol</h2>
+        The function EC.getChildSymbols(); returns all children of a symbol. You can decide between recursive to return all children or not recursive (= false) to return immediate children only.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_1179kucv7vi"><strong>Example:</strong> Logging all children of the stage and a symbol</h3>  <p>    In this scenario we want to get information about the structure of a composition. Therefore we use console.log(); to display the return value of our helperfunction in the console. We use three different variations to a) get all the children of the stage, b) only the immediate children of the stage and c) get all the children of a symbol on the stage.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Usage
+console.log( "stage: ", getChildSymbols(sym) );
+console.log( "stage: ", getChildSymbols(sym, false) );
+console.log( "MySymbol1: ", getChildSymbols(sym.getSymbol("MySymbol1")) );
+    </code>    </code>  </pre>  </section>
+
+
+
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_jv1esjug14i">Get injected data</h2>
+      <strong>EC.getInjectedData();</strong><br>
+        Use EC.getInjectedData(); to read injected data (JSON formatted) from the HTML wrapper of the stage.
+This is a great helper function for dynamic content and CMS integration.<br>
+<strong>Attention: This feature requires jQuery to be loaded.</strong> Get the latest jQuery library here: <a href=" http://code.jquery.com"> http://code.jquery.com</a>.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_gd29um1jor"><strong>Example:</strong> Getting injected data (title and message)</h3>  <p>    In this case we want to grab the information stored in a data object in the HTML file and render it in our Animate composition, in the corresponding text elements.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// The HTML of the composition with data injection looks like this:
+// &lt;div id="Stage" class="EDGE-145692202">
+//   &lt;script class="data" type="text/text">
+//   { 
+//     "title": "I'm injected", 
+//     "message": "This text was injected from HTML"
+//   }
+//   &lt;/script>
+// &lt;/div>   
+
+// Read injected data from HTML into Animate composition. 
+var data = EC.getInjectedData(sym);
+
+// Render injected data
+sym.$("txtTitle").html( data.title );
+sym.$("txtMessage").html( data.message );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button to see how the injected data gets rendered in the appropriate text fields:
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/getInjectedData_Basic/getInjectedData_Basic.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_eydnritqpvi">Get the name of a symbol</h2>
+      <strong>EC.getSymbolName();</strong><br>
+      Get the full name of a symbol (e.g. Stage_ResponsiveElement). This function is handy if you are working with dynamically created symbols and you don't define the symbol's name yourself.
+(If name should be used in sym.getSymbol(NAME) the preceding "#" is necessary)
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_83z2sc92j4i"><strong>Example:</strong> Getting the name of a dynamically created symbol</h3>  <p>    In this scenario we create a new symbol dynamically with Edge Animate's sym.createChildSymbol(); function. We then need our  Edge Commons helper function to get a reference to this newly created symbol instance in order to e.g. play its timeline:  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Create symbol dynamically
+var newSymbol = sym.createChildSymbol( "MyButton", sym.$("navigation") );
+// Get the name of a symbol
+var name = EC.getSymbolName( sym.getSymbol(newSymbol) );
+// Use symbol name to get reference to a symbol instance 
+//(e.g. to control the timeline)
+sym.getSymbol( name ).play();
+    </code>    </code>  </pre>  </section>
+
+  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_4bt7r5dn29">Find out if full jQuery is used</h2>
+        With <strong>EC.isJQuery();</strong> you can find out if full jQuery is available. In that case, the return value of this function is true.<br>
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_9v9gwbwewmi"><strong>Example:</strong> Logging whether full jQuery is in use</h3>  <p>    Here we use a console log and the Edge Commons helper function to determine whether a full version of jQuery is available:  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Check if full jQuery is in use
+console.log( "jQuery is available: ", EC.isJQuery() );
+    </code>    </code>  </pre>  </section>
+
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_qjeej9yhkt9">Detect a mobile environment</h2>
+      <strong>EC.isMobile();</strong><br> 
+      If you want to find out if the composition is running on a mobile device, you can use this function (e.g. to switch to gestures instead of mouse input). <br>
+Mobile user agents supported: Android, iPhone/iPad/iPod, Opera Mini and IEMobile.<br>
+Also consider using EC.CLICK_OR_TOUCH constant for event handler.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_q2pijc92j4i"><strong>Example:</strong> Checking if composition is running on a mobile device</h3>  <p>    We use a console log and the Edge Commons helper function to determine whether the composition is running on a mobile device. The return value is true when the device is mobile, otherwise false.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Is composition running on a mobile device?
+console.log( "This is a mobile device: ", EC.isMobile() );
+    </code>    </code>  </pre>  </section>
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_oovzba3v7vi">Load external compositions</h2>
+      <strong>EC.loadComposition();</strong><br> 
+      This helper allows you to load an Animate composition into a symbol or element.<br>
+As parameters you have to hand in the path to the HTML file of the external composition as string and the target container (element or symbol). Optional: You can also add a callback function that is called when loading the composition is completed and the external composition is fully built.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_ic1eeb9ms4i"><strong>Example:</strong> Loading an external composition into a symbol</h3>  <p>    In this example we load the external composition "sub2.html" into the symbol "targetContainer". Therefore we first store a reference to that target symbol in a variable and hand in the path and the reference to the helper function. After the composition is loaded we can use the callback to change the inner HTML and append text.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+var targetContainer = sym.getSymbol("targetContainer");
+EC.loadComposition("sub2.html", targetContainer)
+  .done( function(comp) {
+     comp.getStage().$("mytext").html("hello number 2");
+     comp.getStage().$('targetContainer').append("Hello Composition");
+  });
+    </code>    </code>  </pre>  </section>
+  
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_nr7mhjmj9k9">Create animated buttons</h2>
+      <strong>EC.makeAnimatedButton();</strong><br> 
+      Convert any given symbol into an animated button component that will be played forwards and backwards on mouse events. An optional "hotspot" element is supported within the symbol to handle all events (mouseenter etc.).<br> 
+Touch enabled: in mobile environments just a tap/click listener will be attached (no states are supported).<br>
+      The parameters of this function allow you to dynamically set the label, icon and clickHandler for the button, so you only need one symbol for different buttons. You can also add a data object, which will be passed to the button instance and will be available in clickHandler callback as second argument. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_4sl3vh4obt9"><strong>Example:</strong> Creating an animated button</h3>  <p>    In this example we convert a symbol that already contains the animation for the different states into an animated button. The label, icon and clickHandler will be set dynamically, so that we can define all the button instances in one place.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Implement Button logic into target symbols
+// e.g.
+// EC.makeAnimatedButton(sym.getSymbol("MySym"), "Some Label", "images/icon.svg", function() { console.log("CLICKED"); });
+//========================================================================================================================
+// Create Button 
+EC.makeAnimatedButton(sym.getSymbol("MyAnimatedButtonB"), "Button B", "images/icon-01.svg", function() {
+//add code for click action here
+      window.open("http://www.edgedocks.com", "_blank");	
+});
+    </code>    </code>  </pre>  </section>
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Hover over the button to see the animated states (with and without additional hotspot):
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/animatedButton/animatedButton.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_um38yfrbe29">Create static buttons</h2>
+      <strong>EC.makeStaticButton();</strong><br> 
+      Convert any given symbol into a static button component with three states (normal, over and down).<br>
+Implement the three button states (normal, over, down) as labels on the symbol's timeline. An optional "hotspot" element is supported within the symbol to handle all events (click/touch/mouseenter etc.).<br>
+Touch enabled: In mobile environments just a tap/click listener will be attached (no states are supported).<br>
+      The parameters of this function allow you to dynamically set the label, icon and clickHandler for the button, so you only need one symbol for different buttons. You can also add a data object, which will be passed to the button instance and will be available in the clickHandler callback as second argument. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_3eliejyvi"><strong>Example:</strong> Creating a static button</h3>  <p>    In this example we convert a symbol that already contains three button states into a static button. The label, icon and clickHandler will be set dynamically, so that we can define all the button instances in one place.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Implement Button logic into target symbols
+// e.g.
+// EC.makeStaticButton(sym.getSymbol("MySym"), "Some Label", "images/icon.svg", function() { console.log("CLICKED"); });
+//========================================================================================================================
+// Create Button 
+EC.makeStaticButton(sym.getSymbol("MyStaticButtonA"), "Button A", "images/icon-01.svg", function() {
+		// open alert on button click
+        alert("'Button A' was CLICKED");
+}); 
+    </code>    </code>  </pre>  </section>
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button to turn symbols into buttons (with and without additional hotspot):
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/staticButton/staticButton.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_1xwzsrftj4i">Pause and Unpause a symbol</h2>
+      <strong>EC.pause(); | EC.unpause();</strong><br> 
+      With these function you can pause and unpause each and every symbol (timeline) with or without all it's children (optionally recursive). The advantage of EC.pause(...) is that all playback states are stored for proper usage of unpause.
+The stopAll() and playAll() functions from the official Animate API are not really useful (ALL symbols are started, no matter if they were playing or pausing before), therefore we recommend using the Edge Commons function, which also stores the direction of the current playback. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code
+  <widget type="Code">
+    <title><strong>Example:</strong> Pausing and unpausing a symbol</title>
+    <text>TODO.</text>
+    <code>
+// TODO 
+    </code>
+    <data>{"language": "JavaScript"}</data>
+  </widget> -->
+
+
+   <!-- Widget: Animate 
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/pauseUnpause_Complex/pauseUnpause_Complex.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_r7q8wbl0udi">Set adaptive layouts</h2>
+      <strong>EC.setAdaptiveLayouts();</strong><br> 
+      With this feature you can create different symbols that will be displayed on different layout dimensions. Therefore you define an array with the dimensions for alternatvie layouts, hand in a reference to the context (e.g. the stage) and define the (adaptive)container into which the symbols with the different layouts are to be placed. Optional you can add a callback that is being executed on layout switch and/or use the window width as reference. Then the last parameter has to be set to true. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_i7d2rgxecdi"><strong>Example:</strong> Creating an adaptive header</h3>  <p>    This sample shows how to create an adaptive header layout with
+alternative sizes for different devices. That can be easily done
+with Edge Commons.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Adaptive Layouts
+EC.setAdaptiveLayouts([0, 320, 768, 1200], sym, "content", function(evt) {
+	// This code will always be executed whenever the layout changes
+}, true);
+    </code>    </code>  </pre>  </section>
+
+   <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/adaptiveHeader/AdaptiveHeader.html" style="width: 100%; height: 938px; border: 1px solid white;"></iframe></section><!-- /Widget --> 
+
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

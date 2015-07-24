@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[6];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[6].pages[2];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Recipe: <strong>Creation</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_a2ranjkmx6r">Sexy Badges</h1>
+      <p class="subtitle">with CSS</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This recipe will show you a simple way to make use of CSS class selectors to define CSS properties outside of your Animate project. We are going to use three customized text fields to create a colored label and two badges using only text elements and an additional CSS declaration in the head section of the html document of the Animate project.
+    </p>
+  </section><!-- /Section -->
+
+    
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_tpgag611yvi">Background</h2>  
+        <p>
+          Edge Animate is a great tool when it comes to creating, designing and animating with CSS. You can yet achieve even more when you start using class selectors to enhance your design options with additional CSS. This then allows you to build and use CSS templates, rely on existing CSS code from external sources and to use your entire CSS knowledge to create even more awesome Animate compositions.
+        </p>
+        <p>    
+          This is what the final badges look like:
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Sexy010.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The badges are <strong>designed with CSS only and defined through classes</strong> in the html file.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->        
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_rg8aivk7qfr">Steps:</h2>  
+      <p><h3 id="anchor_e2794nasjor">Creating the text fields</h3>
+      We start by creating plain text elements in Edge Animate. We want to create three different badges in this tutorial, so we use the text tool to generate three text fields on the stage. Then we type in the text for each badge accordingly.</p>
+      <p>
+      We can of course use the property panel in Animate to change the text color and font type for the basic settings of the badges, so that we don’t have to define all the CSS properties manually later in the additional style. 
+      </p>
+    </section><!-- /Widget -->    
+    
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_71eu0pe3ik9">Defining the CSS classes</h3>
+      Now we want to define class selectors for the badges, one for each kind. To do this, we select the text field for the appropriate badge and click on the button to set a class selector (the tiny “c” next to the “open actions” braces).
+      </p>
+    </section><!-- /Widget -->     
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Sexy020.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Adding <strong>class selectors</strong> in Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->            
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          We start here with the text field at the top. For CSS classes it is always a good choice to use names that indicate the purpose of the class. So in this case we use ‘color-label’, since we only want to add background color to the text-div to turn it into a label.
+The second text-element that we want to customize gets the class ‘color-badge’ and the third one ‘badge3d’.
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_grvkaxrms4i">Adding custom CSS to the html file</h3>
+          The next part requires a few lines of code. First we open the html file of the Animate project in an editor of our choice. I for my part like to use Brackets for example. We now want to define the CSS styles for the single classes right in the html document. Therefore we add a new &lt;STYLE&gt; tag at the end of the &lt;HEAD&gt; section. Within this new style tag we add the CSS for the single classes .color-label , .color-badge and .badge3d. 
+        </p>
+        <p>
+          In case of the first class we only need to define padding and background-color to create our colored label:
+        </p>
+    </section><!-- /Widget -->    
+
+ <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-css">      <code>
+.color-label {
+      padding: 14px 20px;
+      background-color: rgba(177,226,111,1.00);
+}
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The second class is meant to define a badge with two rounded corners and a gradient. This requires some more properties, so we have to set padding, border-radius, background-color and also background-image for the gradient. Note that we need browser prefixes here: 
+        </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-css">      <code>
+.color-badge {
+      padding: 14px 20px;
+      border-radius: 16px 0 16px 0;
+      background-color: rgba(52,207,194,1.00);
+      background-image: linear-gradient(rgb(0, 216, 203) 0%, rgb(23, 144, 137) 100%);
+      background-image: -webkit-linear-gradient(rgb(0, 216, 203) 0%, rgb(23, 144, 137) 100%);
+ }    
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The third class is meant to create a 3D badge and is inspired by <a href=" http://tympanus.net/codrops/" target="_blank">codrops</a>. It uses a variety of CSS properties to let the badge appear to be three dimensional. So we have to define quite a few properties to get this result. Most of the declarations are due to browser prefixes, however. What we need to define here is background-color, padding, border-left, margin-left, background-image, border-radius and box-shadow:
+        </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-css">      <code>
+.badge3d {
+        background-color:#3bb3e0;
+        padding:10px 20px;
+        border-left:solid 1px #2ab7ec;
+        margin-left:35px;
+        background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(118, 218, 255)));
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+}
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-css">      <code>
+&lt;!-- Custom --&gt;
+&lt;style&gt;
+    
+    /* Simple label with solid color */
+    .color-label {
+      padding: 14px 20px;
+      background-color: rgba(177,226,111,1.00);
+    }
+    
+    /* Badge (with 2 rounded corners and gradient) */
+    .color-badge {
+      padding: 14px 20px;
+      border-radius: 16px 0 16px 0;
+      background-color: rgba(52,207,194,1.00);
+      background-image:         linear-gradient(rgb(0, 216, 203) 0%, rgb(23, 144, 137) 100%);
+      background-image: -webkit-linear-gradient(rgb(0, 216, 203) 0%, rgb(23, 144, 137) 100%);
+    }    
+    
+    /* 3D Badge (inspired by codrops) */
+    .badge3d {
+        background-color:#3bb3e0;
+        padding:10px 20px;
+        border-left:solid 1px #2ab7ec;
+        margin-left:35px;
+        background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(118, 218, 255) 100%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(118, 218, 255)));
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+        box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+    }
+    
+&lt;style&gt;   
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p><h3 id="anchor_5bvigwopqfr">Back to Animate</h3>
+          After saving the altered html file we can return to Edge Animate. Here we get informed that the code was changed outside of Animate and asked if we want to apply those changes. When we agree we see that the text fields now look according to our CSS styles. We can now proceed and create an Animate composition with our badges. We can also use the defined CSS classes to create more badges of the same kinds in the project by creating new text elements and assigning the according class to them - which comes in very handy when you have to use the same kinds over and over again.
+        </p>
+    </section><!-- /Widget -->   
+
+<!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00300_Sexy010.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">The final <strong>text elements designed with CSS</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+<!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          That's all there is to it. The advantage is, that Animate renders the CSS we have included as well, so we see the result in the design preview already. This leaves us in full control over the visual aspects of our composition. Now it is up to you to create awesome projects with it. Enjoy!
+        </p>
+    </section><!-- /Widget -->   
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

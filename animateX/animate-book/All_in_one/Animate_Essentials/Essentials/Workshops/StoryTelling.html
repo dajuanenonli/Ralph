@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[4];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[4].pages[1];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Hands on <strong>Workshops</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_174d14qjjor">Interactive Storytelling</h1>
+      <p class="subtitle">Sprite sheets and scenes</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This workshop is a bit more advanced and will teach you how to use Edge Animate for interactive story telling. It combines several aspects of working with Edge Animate: You will learn how to create and control a sprite sheet animation, how to build an animated scenery with a visual parallax effect and how to add interactions with a spotlight overlay. For this last part, we will rely on the Edge Commons extension library, so you will learn how to integrate and use it in an actual project. Here we go!
+    </p>
+    <p>
+      This is what the final project looks like:  
+    </p>
+  </section><!-- /Section -->
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/InteractiveStorytelling/index.html" style="width: 100%; height: 400px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+  
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <p>
+      It's going to be fun! Now let's get started... <br><strong>First, grab the project files:</strong>  
+    </p>
+  </section><!-- /Section -->
+  
+   <!-- Widget: DOWNLOAD -->
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/card_desk.jpg" width="200">
+          <h4 id="anchor_c8s3wgq4cxr">&raquo;Get the project files&laquo;</h4>
+          <p>You find the corresponding project files in the projects folder at<br>
+          <strong>projets/010 Workshops/020 InteractiveStorytelling</strong></p>
+          <!-- </-><button class="download">DOWNLOAD</button> -->
+        </center>
+      </text>
+    </div>
+    <!--<data>{}</data>-->
+  </section><!-- /Widget -->   
+  
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_54wka35l8fr">Introduction</h2>  
+      <p>
+      This workshop is divided into subsequent steps. When you follow them in the given order, you should have no trouble getting to the final result. You can also watch the video below that takes you through the single steps. You can also find the instructions in written form underneath the video. Enjoy! 
+      </p> 
+    </section><!-- /Widget -->
+
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_01fchgds4i">Step by step tutorial</h2>  
+    </section><!-- /Widget -->
+  
+   <!-- Custom Video -->
+  <section>
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/XybKBqp0tA4" frameborder="0" allowfullscreen=""></iframe>
+    <!--video controls width="100%">
+      <!--<source src="http://temp.trendspurt.com/wingman/TestVideoSimon.webm" type='video/webm;codecs="vp8, vorbis"' /-->
+      <!--source src="media/video/00200_InteractiveStorytelling010.mp4" type="video/mp4" />
+    </video>-->
+  </section>
+  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_1oybwbchaor">Script</h3>
+      <p>Start off your project with a couple of preparations:
+        <ol>
+          <li>First, set the size of the stage to 600px by 400px and save your project in an appropriate folder.</li>
+          <li>Now import the images from the assets folder into your project by copying the subfolders into the images folder of the created project.</li>
+          <li>Place the background image onto the stage, so that it fits the left side. It is supposed to be three times larger, so it reaches out of the stage on the right side.</li>
+          <li>Make sure that overflow is set to “hidden” for the stage, so that this additional background is not visible in the browser.</li>
+          <li>Use the tools to create a rectangle above the stage with the same width and call it “scenes”. This will serve as container for all the assets so that we can move them all at once.</li>
+          <li>Go to the elements panel and place the background image into this scene container.</li>
+        </ol>
+      </p>
+      <p>Now we can take care of our first scene:
+        <ol>
+          <li>Create a simple animation: Let the speech bubble appear from above.
+          <ol>
+            <li>Place the speech bubble image and the first steps text above the stage in the center.</li>
+            <li>Select both assets, right click on them and use “Group Elements into DIV” to merge them. Make sure they are placed in the “scenes” container.</li>
+            <li>Set the playhead to approximately 3 seconds and activate the pin tool.</li>
+            <li>Move the playhead 1 second further.</li>
+            <li>Create an animation by moving the speech bubble down and onto the stage.</li>
+            <li>Select the created animation track and add the easing “Ease Out: Back”.</li>
+          </ol>
+        </li>
+        <li>Create a sprite sheet animation
+          <ol>
+            <li>Use the rectangle tool to create a new element (100px by 133px)</li>
+            <li>Right click on the element and select “Convert to Symbol...”</li>
+            <li>Change the name of the symbol to “character” and remove the rectangle to get an empty container.</li>
+            <li>Now place the sprite sheet image into this container, so that the first image fits its borders.</li>
+            <li>Set a keyframe for the Left position (X-Axis).</li>
+            <li>Disable “Auto-Transition Mode”</li>
+            <li>Activate the grid for the timeline and set it to 10/second.</li>
+            <li>Move the playhead one position further on the grid, move the sprite sheet 100px to the left (-100px on X-Achsis) and create a new keyframe (if not created automatically). Repeat this step for every image of the sprite sheet.</li>
+            <li>Set overflow to hidden for the symbol, so that only one image is visible at a time.</li>
+            <li>Create a walking loop
+              <ol>
+                <li>Set a label with the value “walk” a the second keyframe (first instance of the walking movement).</li>
+                <li>Move the last 4 keyframes one step further on the grid to get an empty space at the end of the walking movement</li>
+                <li>Place a trigger in that very space and enter the action for playing from the label on the timeline: sym.play(“walk”);</li>
+              </ol>
+            </li>
+            <li>Now you can preview the result in the browser. The character should be walking on the spot.</li>
+          </ol>
+        </li>
+        <li>Go back to the stage scope and animate the character onto stage and under the speech bubble, using the pin tool.</li>
+        <li>Letting the character talk:
+          <ol>
+            <li>Go back into the symbol and place a label above the fourth to last keyframe (where the character first faces the front). Enter “talk” as label tag.</li>
+            <li>Move the second last keyframes again one step further on the timeline grid.</li>
+            <li>Place a trigger in the gap, to create another loop: sym.play(“talk”);</li>
+            <li>Now go back to the stage level and add a playback command (“+” icon next to the character symbol in the timeline control panel) at the end of the character animation (when he reaches the speech bubble). Choose “Play from”, then switch to labels and select “talk”.</li>
+          </ol>  
+        </li>
+        <li>Animate the entire scene and resume walking
+          <ol>
+            <li>Move the playhead to the right to determine the duration of the character talking.</li>
+            <li>Activate the pin and move the playhead appr. 6 seconds to the right.</li>
+            <li>Select the “scenes” element and move it 1200px to the left, so that the background now fits the right side of the stage.</li>
+            <li>Move the character to the right so that he remains visible on the stage and ends up in the third scene.</li>
+            <li>Use the playback commands to resume the walking cycle by selecting “Play from” -> “walk” at the beginning of the animation.</li>
+          </ol>  
+        </li>
+      </ol>
+    </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Creating a visual parallax effect and animation loop
+        <ol>
+          <li>To create the second scene, we place all relevant assets (apart from the fish) and distribute them, so that the cloud is in the back and desktop and mobile device are in front of the big screen.</li>
+          <li>Now select the laptop and convert it into a symbol, so that we can animate the fish on the independent timeline and create a loop.
+            <ol>
+              <li>Place the fish image on right side of the desktop screen.</li>
+              <li>Activate the pin and animate the fish to the left side of the screen.</li>
+              <li>Use the same duration to create another animation shortly afterwards to move the fish back to the start position.</li>
+              <li>Select both animation tracks and add the easing “Ease Out: Bounce”</li>
+              <li>Now to turn the fish around, first create a keyframe for the Scale(x) property (top property in the “Transform” section in the property inspector)</li>
+              <li>Unlink the two values by clicking on the chain symbol on the left</li>
+              <li>Move the playhead to the beginning of the second animation track and change orientation by setting Scale(x) to -100%.</li>
+              <li>Go to the end of the the animation track and enter a trigger to play again from the beginning: sym.play(0);</li>
+            </ol>
+          </li>
+          <li>Create a visual parallax:
+            <ol>
+              <li>Use the pin tool and set again the same duration as for moving the “scenes” element</li>
+              <li>now select the laptop and mobile device image and move them a few inches to the left.</li>
+              <li>Select the cloud and move it into the opposite direction. This way the assets closer to the front will move further in the same duration, the cloud in the back less far. You might have to test and tweak the distances a little to achieve the intended effect. Remember to deactivate the pin afterwards.</li>
+            </ol>
+          </li>
+        </ol>
+      </p>
+    </section><!-- /Widget -->
+ 
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Adding interactivity and the Edge Commons Spotlight Overlay
+        <ol>
+          <li>Start by placing the assets for the third scene next to the character onto the stage.</li>
+          <li>Stop the character walking sequence using playback commands, this time selecting “Stop At” -> “talk”, so that he just faces the front.</li>
+          <li>In order to be able to access the spotlight feature, you need to include jQuery and the Edge Commons library into your project. Therefore, copy the libs folder from the assets folder into your project folder.</li>
+          <li>Use the scripts panel in the library to include both script files from disk, starting with jQuery. Therefore click on the “+” icon and search for the appropriate file (jquery-2.0.3.min.js). Then add the EdgeCommons.js file in the same way.</li>
+          <li>The libs folder also includes a CSS file that is necessary for the right display of the overlay. Apparently you cannot use the scripts panel to include style sheets, so you have to do it manually:
+            <ol>
+              <li>Open actions for stage (curly braces next to the stage name) and select compositionReady</li>
+              <li>Here you enter the following code to use yepnope to load the style sheet:<br>yepnope({load: “libs/spotlight.css”});
+</li>
+            </ol>
+          </li>
+          <li>Make sure the images for the spotlight lie in the /images folder of your project, otherwise copy them to this location.</li>
+          <li>Now open actions for the first interactive element (S3_ani.png)
+            <ol>
+              <li>select “click”</li>
+              <li>and enter the following code:</li>
+            </ol>
+          </li>
+        </ol>
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">    <p>      </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Spotlight Overlay with Image
+// Configuration for spotlight overlay
+var config = {
+    width: 800,
+    height: 600,
+    type: "image",
+    source: "images/screenshot_an.jpg"
+};		
+
+// Open the Edge Commons Spotlight Overlay with configuration
+EC.Spotlight.open( config );
+
+    </code>    </code>  </pre>  </section>
+
+<!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>This will create a ‘config’ object, that contains all the relevant properties for the overlay. This way the overlay remains editable for different occasions.
+In the last line, the open function of the Edge Commons Spotlight module gets called with the config object as parameter.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>Last but not least...
+        <ol>
+          <li>You should remember to change the mouse cursor to pointer for the element, so that a user realises that he can interact.</li>
+          <li>Repeat the last steps from open actions on for the other interactive element, choosing the equivalent other image source in the config object (source: "images/screenshot_rf.jpg").</li>
+          <li>Now save the project and run it in the browser to see the result.</li>
+        </ol>
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <strong>Congratulations, you have created an interactive scenery for story telling, featuring a sprite sheet animation and spotlight overlays.</strong>
+      </p>
+    </section><!-- /Widget -->
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

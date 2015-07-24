@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[1];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[1].pages[1];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Composing <strong>Animations</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_qu098n3tyb9">Basic Animations</h1>
+      <p class="subtitle">First steps</p>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <h2></h2>
+    <p>
+      This section will introduce you to the basics of creating animations in Edge Animate. You will learn how to work with keyframes and the timeline, master the pin tool and how to create and edit transitions. You will also learn how to produce more realistic animations with easings and motion paths.<br>
+    </p>
+  </section><!-- /Section -->
+
+  
+  <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/card_coffee.jpg" width="200">    </div>  <div style="padding-left: 270px">    <h2 id="anchor_v9ks36av2t9">Before we start...</h2>    <p>
+      </p><p>
+      <ul>
+        <li>You should again make yourself familiar with the UI, especially the <i>Timeline</i></li>
+        <li>In case you find the terms still a bit confusing, you can use the included <i>cheat sheet</i></li>
+        <li>Grab a cup of coffee</li>
+    </ul>
+    </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget -->
+
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_dr2t9pmn29">Recap: The Timeline</h2>  
+      <p>
+        Animations in Edge Animate are represented on the <i>Timeline</i>. Here you can see all the <i>Keyframes</i>, <i>Transitions</i> and <i>Animation Tracks</i> for animated elements in a chronological order. Chronological means from left to right and everything that is placed underneath one another takes place at the same time. The red line underneath the <i>playhead</i> illustrates this, as it stretches across all tracks while indicating the current position of the playhead.
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Timeline010.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">The <strong>Timeline</strong> displays the animation information in a chronological order.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        A very useful aspect of animating in Edge Animate is the instant preview in the design view. The display is related to the position of the playhead on the timeline, which means you can define the states visually on the stage and move the playhead back and forth to see the result. You can also play the composition to watch the animation already in the design view.
+      </p>
+      <p>
+        This gives you precise control over the choreography of your animations and allows you to adjust timing and duration as well as the arrangement of the single animation tracks. Another great advantage here is that you can edit and tweak the animations right on the timeline, which makes it even faster and easier to get the timing right.
+      </p>
+      <p>
+        One of the greatest features of Edge Animate is the fact that you can have more than one timeline. This is because each symbol has its own, independent timeline. All timelines work in the same way, but you can store different animations on each timeline, allowing you to create asynchronous animations and complex choreographies. We will come back to this a bit later in this chapter.
+      </p>
+    </section><!-- /Widget -->
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_0ipbqmbcsor">Keyframes</h2>  
+      <p>
+        Animations in Edge Animate are realized through <i>Keyframes</i>. These keyframes are used to store a property value at a specific point in time on the timeline. Keyframes are represented by diamond shaped icons. When the playhead reaches the position of a keyframe, the corresponding property is set to the value stored in that particular keyframe. The change of values between two keyframes then creates an animation.
+      </p>
+      <p>
+        This leads to the question which values a keyframe could store. The answer is fairly easy: <i>Almost every property in Animate can be stored in a keyframe and therefore be animated</i>. Obvious examples are changing the position of an element or its size. But also background color, border radius or scaling can be animated. Whenever you see the keyframe diamond next to a property value, you can set a keyframe for this value. This gives quite the options for interesting animations and effects. Some of which will be shown later in examples.
+      </p><br>
+      <p>
+        <h3 id="anchor_uvc6h3bx1or">Animating with keyframes</h3>Now let's see keyframes in action and use them to create a simple animation. For starters, we want to move a plain element from left to right. The corresponding property is the position of the element on the X-axis, or in terms of CSS: <i>left</i>. We select the appropriate element that is to be animated, like in this case a red ellipse. We can then use the Keyframe icon next to the property to store that value as starting point by clicking on it.
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Keyframes010.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">The <strong>Timeline </strong> displays the animation information in a chronological order.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Accordingly, a keyframe is created on the timeline at the current position of the playhead. In our example here it should be set at the very beginning of the timeline. <i>Tip: </i> You can always reposition keyframes on the timeline by simply dragging them to a new location. So if you accidentally set the keyframe someplace else, you can simply move it to the beginning of the timeline.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Keyframes020.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">A <strong>Keyframe </strong> for the Left property being set at the beginning of the timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This is the starting point of our animation. As a next step, define the end position of the animation and store it in another keyframe. In order to do this, move the playhead on the timeline to the favored point in time, e.g. at 1,000 milliseconds. When we now move the element to its final position, a new keyframe is created automatically (as the <i>Auto-Keyframe Mode</i> is activated when setting the first keyframe). As you can see, this second keyframe stores the value of the new left position, and a <i>Transition</i> is created in between.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Keyframes030.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">The second <strong>Keyframe </strong> is set for the end position and a <strong>Transition </strong> is created between the two keyframes (the green bar on the timeline).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This <i>Transition</i> calculates each position between the two keyframes, so that the movement of the object appears to be steady and smooth. You can check the created animation right in the design view by using the play button or by hitting the space bar.
+      </p>
+      <p>Note that you can use more then one keyframe for each animation track and that you can animate multiple properties at the same time. This would be the case when you change the position on the Y-axis as well, for instance. Go ahead and experiment a little with the different options to get a feeling for how these animations work.</p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_ypqd63fecdi">Editing existing keyframes</h3>
+        Now that we have learned how to set keyframes, it is likely that you would also want to know how to change their values and how to remove them as well. We have already learned that we can simply move and re-position them on the timeline. This allows you for example to modify the duration of the animation: The closer two keyframes are to one another, the quicker the animation will be. Note that you can also copy and paste keyframes, for example to apply them to other elements as well.
+      </p>
+      <p>
+        When you want to change the value stored in a keyframe, you have to move the playhead to that location. Then you can either make the change in the design view - e.g. move the element around - or change the value immediately in the Timeline track by clicking on the value and typing in a new one.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Keyframes040.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Changing the <strong>Keyframe value</strong> on the timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_65uup0c0udi">Transitions</h2>  
+      <p>
+        We have already encountered transitions in the previous section. Now let's talk a bit more about their functions and the options they offer us. Transitions are usually created automatically whenever we form a new animation, since in most of the cases, we want to generate the states in between two keyframes as a smooth animation.  
+      </p>
+      <p>
+        There are some occasions, however, where you don't want to have such transitions but rather a rapid change from one state to another. Then you can switch off the <i>Auto-Transition Mode</i> in the <i>Timeline Options</i> (the green bar next to the stop watch icon). Now you only set the keyframes without adding a transition bar in between.
+      </p>
+      <p>
+        But what if you already have a transition bar? Well, that's not a problem at all. You can always add and remove transitions between two keyframes by right clicking on one of the two keyframes or the transition bar and choosing the option in the appearing menu.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Transitions010.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Removing a <strong>Transition </strong> between two keyframes.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Transitions020.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Creating a <strong>Transition </strong> between two keyframes.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <i>Tip:</i> With the last option in this menu, you can also <i>invert</i> the Transition. As a result, the two corresponding keyframes are simply switched, so that the animation now is going in the exact opposite direction as before. This can be very handy, since you are likely to accidentally animate in the wrong direction, especially when working with the <i>Pin Tool</i>.
+      </p>
+    </section><!-- /Widget -->
+
+
+
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_5nnboekx1or">Pin tool</h2>  
+      <p>
+        The <i>Pin Tool</i> is a very useful feature for creating animations in Edge Animate. It might be a bit tricky to get used to at first, but once you've got the hang of it, you most likely don't want to animate without it anymore. We have already learned about activating and deactivating the Pin in the <i>User Interface</i> section. As a reminder: The most convenient way is by double-clicking on the playhead or using the "P" key on your keyboard.   
+      </p>
+      <p>
+        The advantage of using the Pin is that it freezes all properties at its very location. You can then move the playhead to a different point in time to make alterations. All changes then appear as animation tracks between pin and playhead. Notice the "rubber band" that stretches between the pin and the playhead. It is indicating both the direction and duration of the animation. Yes, you can use the pin to animate into both directions: Towards the state fixed with the pin or from that state to the new state (the state created at the current playhead position).
+      </p>
+      <p>
+        Let's take a look at both options and use the pin to animate this basic shape: 
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Pin010.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Creating the <strong>initial state </strong> before the animation takes place.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The more intuitive way (and recommended especially for beginners) is to use the pin to store the initial state and animate towards a new state. Therefore we activate the pin <strong>(1)</strong> and move the playhead to the right <strong>(2)</strong>. In this case, the bar ("rubber band") between pin and pleahead is yellow, with arrows to the right side.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Pin020.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">(1) Setting the <strong>Pin Tool </strong> to the beginning of the timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Pin021.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">(2) Moving the <strong>Playhead </strong> to the right, stretching the "rubber band".</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The changes you make are always referring to the current position of the playhead. Since we have the initial state fixed with the pin, we can now go ahead and create the final state of the animation. For this example move the shape on the design view to the bottom right corner: 
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Pin030.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Using the <strong>Pin Tool</strong> to animate towards a new state.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        As you can see, the animation tracks and keyframes are added automatically, for every property that is affected. This is way more efficient than having to set keyframes yourself. And since you don't have to worry about that, you have more time to focus on the creative part.
+      </p>
+      <p>
+        When you now run the animation (short cut: space bar), you will see that the shape moves from the left hand side to the bottom right.  
+      </p>
+      <p>
+        Let's have a quick look at the second option now as well. Therefore we start all over from the beginning with just a shape on the stage. Again, we activate the Pin, but this time we don't move the Playhead to the right but the Pin. Just like the Playhead, it can be moved by clicking and dragging it to a new position. Notice that the bar between Playhead and Pin now is in a blue color and the arrows are facing to the left.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Pin040.png" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Moving the <strong>Pin Tool </strong> to freeze the final state of the animation.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->     
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Now we again move the shape to a new location in the bottom right of the stage. As before, animation tracks and keyframes are added automatically. This time, however, the animation will go into the opposite direction, as you can see in the preview.   
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Pin050.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Using the <strong>Pin Tool </strong> to animate from a new state.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This is because <i>the Pin now stores the final state of the animation, while the initial state is created at the Playhead position</i>. This can be rather confusing. Therefore we recommend using the former option only, so make sure that the "rubber band" is always yellow when using the Pin.
+      </p>
+    </section><!-- /Widget -->
+
+<!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <h3 id="anchor_jpkrlwstt9">Reusing the duration of an animation</h3>
+      <p>
+        We have already learned that you can move the Playhead and the Pin individually to set the duration of your animation. In some cases you might want to use the exact same duration at a different point in time again. Here's another helpful tip for you: You can <i>move the entire duration by clicking and dragging the "rubber band"</i>. This way, the Playhead and Pin will be moved simultaneously, while the distance between them remains the same. 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ciyx71oflxr">Easings</h2>  
+      <p>
+        We have now learned how to create basic animations in Edge Animate. But as you might have noticed, they appear to be rather unrealistic as they use the same speed throughout the entire movement. This kind of animation is called <i>linear</i>. In the "real world", such linear movements are very rare. Most of the times, movements accelerate and/or slow down. Fortunately, you can adopt such a behavior with the help of <i>Easings</i>.
+      </p>
+      <p>
+        In order to apply an easing function to an animation, you first have to select the according animation track. Then open up the <i>Easings menu</i> in the <i>Timeline options</i> section: 
+      </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Easings010.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">Opening the <strong>Easings menu</strong> to change the behavior of the animation speed.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        There are several options to choose from in order to get the right easing function for your animation. As we have already seen, the default setting is linear. Apart from that, we have the general options <i>Ease In</i>, <i>Ease Out</i>, <i>Ease In Out</i> and <i>Swing</i>. Once you select one of these options, you can set the precise curve, which means the way the easing behaves (not available for linear and swing).
+      </p>
+      <p><strong>Here are some examples: </strong></p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_Easings020.jpg" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%">An overview of <strong>Easing Functions</strong> you can choose from.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        It is quite easy to find the right options thanks to the curve drawn in the preview window. In general, <i>Ease-In</i> means that the animation becomes throughout the animation. This would be the right option for animating something that is falling down, for example. <i>Ease-Out</i> on the other hand results in a slowing down of the animation. A typical example from real life could be an elevator reaching the destination. As you have probably already guessed, <i>Ease-In-Out</i> is a combination of both: Starting slow, gaining speed and then slowing down in the end. The last option, <i>Swing</i>, is basically another <i>Ease-Out</i>.
+      </p>
+      <p>
+        <i>Caution:</i> Once you set Easings for an animation track, this easing becomes the new default for all further animation tracks! Be careful to set it back to <i>linear</i> to avoid unexpected animation behavior. Also note that the visual effect of the easing functions depend on the duration of the animation as well as the difference between the keyframe values.
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_5ttpi9q9f6r">Motion paths</h2>  
+      <p>
+        Another option to create even more realistic animations is by using <i>Motion Paths</i>. The animations wie have covered so far referred to straight transitions from A to B. With Motion Paths, you can define the path along which the animation is to take place. Note that Motion Paths are only available for animating the <i>Position</i> of an element. 
+      </p>
+      <p>
+        In order to create a motion path, select an element that is to be animated and change the <i>Transition Mode</i> in the Property Inspector to <i>Motion Paths</i>.
+      </p>    
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths010.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Changing Transition Mode to <strong>Motion Paths</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Once the Motion Path option is selected, you have only one Keyframe for the <i>Location</i> of the element instead of one for the X and one for the Y position. In order to create an animation, you can set Keyframes manually or use the pin tool. The path that is then being created will stretch from one location to the other in a straight line. This line is indicating the path along which the animation takes place.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths020.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">The <strong>Motion Path</strong> is created between two locations.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You can customize this animation path by adding <i>Anchors</i>, that allow you to tweak the path and add curves. Click on the path to add a new Anchor and then drag this anchor to shape the path in order to create a curve.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths030.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Anchors</strong> allow you to shape the path.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You can then use the <i>handles</i> attached to the Anchor to determine the shape of the curve (so called "Bézier Curves"). Both distance and angle influence the shape of the curve. The good thing is that you see the result right away, so you can tweak around until you've found the right position. 
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths040.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Using the <strong>handles</strong> to determine the shape of the curve.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_fiz3gwg66r">Additional Options</h3>
+        There are some additional options for Motion Paths as well as Anchors and Handles. They are displayed when you hover over the corresponding part with the mouse cursor: 
+      </p>
+    </section><!-- /Widget --> 
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths050.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Additional Options for the <strong>Motion Path</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths051.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Additional Options for <strong>Anchors</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_Basic_MotionPaths052.jpg" alt="" width="100%" style="display: inline; max-width: 500px">        <figcaption style="max-width: 80%">Additional Options for <strong>handles</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h3 id="anchor_ymht8iwwmi">Auto Orient</h3>
+        One last thing to mention regarding Motion Paths is the option to use <i>Auto Orient</i> for the animated element. You can find the corresponding option in the property inspector. When enabled, the orientation of the element changes along with the Motion Path, following its direction. Otherwise it simply moves along the path without changing the orientation.
+      </p>
+    </section><!-- /Widget --> 
+
+
+  <!-- Widget: Text
+  <widget type="Text">
+    <title>{{Optional: Example Project - Auto orientation}}</title>
+    <body>
+    </body>
+    <extra>
+    </extra>
+  </widget>--><!-- /Widget -->        
+    
+  <!-- Widget: Text 
+  <widget type="Text">
+    <title>{{Additional helpful Timeline options}}</title>
+    <body>
+        <ul>
+            <li>Zoom</li>
+            <li>Grid</li>
+            <li>Grid size</li>
+            <li>Audio playback</li>
+            <li>Snapping</li>
+            <li>Filter</li>
+            <li>Expand/Collapse Lanes</li>
+        </ul>
+    </body>
+    <extra>
+    </extra>
+  </widget> --><!-- /Widget -->        
+        
+    
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

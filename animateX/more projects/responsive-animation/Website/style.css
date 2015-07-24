@@ -1,0 +1,52 @@
+/* CSS Document */
+
+body { font-family: Arial; font-size: 16px; margin: 0; padding: 0; color: #333; }
+
+/* style */
+
+h1 { font-size: 2.2em; margin: 0 0 15px 0; font-family: georgia; }
+h2 { font-size: 1.3em; margin: 0 0 5px 0; font-family: georgia; }
+p { margin: 0px 0px 12px 0px; }
+
+
+/* layout */
+
+#page { max-width: 980px; margin: 0px auto; }
+
+header { height: 300px; margin: 0px 0px 35px 0px; background-color: #ddd; }
+header a.logo { display: inline-block; background-color: #602915; padding: 50px 25px 25px 25px; position: absolute; left: 10%; top: 0px; }
+header nav { background-color: rgba(76,29,12,.85); width: 100%; position: absolute; bottom: 0px; left: 0px; padding: 15px 0px;; }
+header nav a { color: #fff; text-decoration: none; padding: 0px 15px 0px 15px; }
+
+section::after { content: ""; display:block; clear: both; }
+
+article { width: 55%; float: left; }
+article p:first-child:first-line { font-weight: bold; }
+
+aside { width: 45%; float: left; font-family: Arial; }
+
+aside .promo { margin: 0px 0px 30px 35px; background: no-repeat 0px 0px; padding: 0px 0px 0px 165px; font-size: .9em; }
+aside .promo.promo1 { background-image: url(images/espresso.jpg); }
+aside .promo.promo2 { background-image: url(images/meeting.jpg); }
+
+footer { border-top: 2px solid #602915; font-size: .85em; text-transform: uppercase; padding: 10px 0px 0px 0px; margin: 15px 0px 20px 0px; }
+
+
+/* responsive */
+
+@media screen and (max-width: 980px) {
+	section, footer { padding-right: 20px; padding-left: 20px; }
+}
+
+@media screen and (max-width: 825px) {
+	aside .promo { background-size: 90px 75px; padding-left: 105px; }	
+}
+
+@media screen and (max-width: 650px) {
+	header { background-size: 600px 184px; }
+	header a.logo { padding: 15px; }
+	header a.logo img { width: 80px; height: 62px; }
+	article, aside { width: 100%; float: none; }
+	aside .promo { margin: 20px 0px 20px 0px; }
+}
+

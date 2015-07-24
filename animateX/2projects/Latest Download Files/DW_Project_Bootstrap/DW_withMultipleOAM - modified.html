@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Multiple OAM</title>
+<!--Adobe Edge Runtime-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script>
+	var custHtmlRoot="EdgeComp1/Assets/"; 
+	var script = document.createElement('script'); 
+	script.type= "text/javascript";
+	script.src = custHtmlRoot+"edge_includes/edge.5.0.1.min.js";
+	var head = document.getElementsByTagName('head')[0], done=false;
+	
+	// Create these variables
+	var compArray = [],
+		compIndex = 0;
+	
+	// Push the 1st composition
+	compArray.push(
+			function() {
+				var custHtmlRoot="EdgeComp1/Assets/";
+				var opts ={
+					scaleToFit: "both",
+					centerStage: "none",
+					minW: "0",
+					maxW: "undefined",
+					width: "550px",
+					height: "400px"
+				};
+				opts.htmlRoot =custHtmlRoot;
+				AdobeEdge.loadComposition('EdgeComp1', 'EDGE-2308149', opts, {"style":{"${symbolSelector}":{"isStage":"true","rect":["undefined","undefined","550px","400px"],"fill":["rgba(255,255,255,1)"]}},"dom":[{"rect":["231","156","auto","auto","auto","auto"],"id":"preloader5","fill":["rgba(0,0,0,0)","images/preloader5.gif?reloadQuery=1417451054","0px","0px"],"type":"image","tag":"img"}]}, {"dom":{}});
+			}
+		);
+	
+	// Push the 2nd composition
+	compArray.push(
+			function() {
+				var custHtmlRoot="EdgeComp2/Assets/";
+				var opts ={
+					scaleToFit: "both",
+					centerStage: "none",
+					minW: "0",
+					maxW: "undefined",
+					width: "550px",
+					height: "400px"
+				};
+				opts.htmlRoot =custHtmlRoot;
+				AdobeEdge.loadComposition('EdgeComp2', 'EDGE-2639752', opts, {"style":{"${symbolSelector}":{"isStage":"true","rect":["undefined","undefined","550px","400px"],"fill":["rgba(255,255,255,1)"]}},"dom":[{"rect":["215","140","120px","120px","auto","auto"],"id":"preloader4","fill":["rgba(0,0,0,0)","images/preloader4.gif","0px","0px"],"type":"image","tag":"img"}]}, {"dom":{}});
+			}
+		);
+	
+	// Create this function
+	function LoadNext() {
+		if (compIndex < compArray.length)
+			compArray[compIndex]();
+		++compIndex;
+	}
+	
+	script.onload = script.onreadystatechange = function(){
+		if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+			done=true;
+			
+			// Call the above created function and pass it to the AdobeEdge.bootstrapCallback
+			// For more info on bootstrapCallback, see http://blogs.adobe.com/edge/2012/05/15/bootstrapping-edge-compositions/
+			LoadNext();
+			AdobeEdge.bootstrapCallback(function() {
+				LoadNext();
+			});
+			
+			script.onload = script.onreadystatechange = null;
+			head.removeChild(script);
+		}
+	};
+	
+	head.appendChild(script);
+</script>
+    
+<style>
+	.edgeLoad-EDGE-2639752 { visibility:hidden; }
+	.edgeLoad-EDGE-2308149 { visibility:hidden; }
+</style>
+<!--Adobe Edge Runtime End-->
+</head>
+
+<body>
+
+	<div id="Stage" class="EDGE-2308149"></div>
+
+	<div id="Stage2" class="EDGE-2639752"></div>
+
+</body>
+</html>

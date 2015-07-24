@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <!-- PRINT -->
+    <link href="../../../_internals/css/print.css" rel="stylesheet" type="text/css" />
+    <style>
+      @page {
+        margin: 3cm;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_1pkiec4ygb9">Edge Commons extension library</h1>
+      <h3 id="anchor_o2veqctmx6r">Dirty little helpers for Edge Animate</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Edge Animate is a very versatile tool. The openness to custom code and external libraries make it even more interesting. Yet there are some occasions where customizing the project requires quite a huge load of code and JavaScript skills. Especially for designers and beginners, this can soon become quite the obstacle.
+      </p>
+    </section><!-- /Widget -->
+
+  
+  <!-- Widget: Text Image Left -->
+  
+
+<!-- Widget: TextImageLeft-->
+<section class="widget text-image-left">  <div style="float: left;">      <img src="media/images/EdgeCommons_DirtyLittleHelper.svg" width="150">    </div>  <div style="padding-left: 220px">    <h2></h2>    <p>
+      </p><p>
+        This is where the Edge Commons come into play: They provide easy-to-use functions and simple solutions for complex problems in the Edge Animate universe. They include a whole range of different features to enhance the potential of Edge Animate – such as parallax scrolling or the spotlight overlay. They also support you with more basic enhancements in form of helper functions, for example to keep elements centered in flexible layouts.<br>
+        No matter if you are using a complex feature or smaller helper functions - these dirty little helpers will boost your performance and bring working with Animate to a whole new level, while keeping the amount of code required to a complete minimum. Awesome, isn't it?!?
+      </p>
+    <p></p>    <p></p>  </div></section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_jq14o893sor">The general concept</h2>  
+      <p>
+        Edge Commons, also known as "Dirty little helpers for Edge Animate", is an open source project that has been initiated in order to enhance the functionality and provide easy solutions for complex problems in Animate projects. There are a couple of useful JavaScript and jQuery libraries out there, but the Edge Commons are dedicated to Edge Animate and the first, largest and most frequently used library in this regard.
+      </p>
+      <p>
+        The content of the Edge Commons has derived from actual problems we have encountered throughout our countless experiments and projects as well as requests from the community. The initial idea was to analyze and collect the most frequent issues as well as the most interesting concepts to create a library with useful solutions, that requires as little effort and knowledge as possible. 
+      </p>
+      <p>
+        The mission is simple: Making Edge Animate better, more accessible for especially for designers and a lot more fun to work with. Since it is an open source project, anybody can join in and contribute. This does not mean that you have to write own features or any code at all (though this would be very much appreciated) - we are also happy about people willing to test new features, create examples or simple hand in more feature requests.
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ghkc13mobt9">About this chapter</h2>  
+      <p>
+        After this short introduction into the idea behind Edge Commons you will find detailed descriptions on how to use this library, which versions are currently available and where to find them. Afterwards, we will go through the different features of the latest release while explaining their purpose and setting options. We will also provide some examples and give useful additional information on some of the most important features. 
+      </p>
+      <p>
+        Note that the main purpose of this publication is to rather provide a more extensive guideline and manual. If you prefer to have a reference sheet for the Edge Commons, you can look up the features and settings in the official <strong>Edge Commons APi documentation</strong>:
+      </p>
+      <p>
+        <a href="http://labs.edgedocks.com/edgecommons_doc_beta/#" target="_blank">Edge Commons API (v.2.0.0) Beta</a>
+      </p>
+      <p>
+        But now let's have a quick look at how to use the Edge Commons extension library...
+      </p>
+    </section><!-- /Widget --> 
+
+  
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_xqrogmygb9">How to use the Edge Commons</h1>
+      <h3 id="anchor_crn3vdkj4i">A quick guideline</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Edge Commons is an extension library for Edge Animate. As such it needs to be integrated into the project in order to provide its functionality. This short section will give you an introduction into where you can find this library, how to add it and which versions are currently available. It will help you get set up and ready with the dirty little helpers, which will then be presented in a detailed way in the subsequent section. But first things first... 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ocx8mgc766r">Where do I find the Edge Commons?</h2>  
+      <p>
+        The Edge Commons project itself is hosted on <a href="https://github.com/simonwidjaja/EdgeCommons" target="_blank">GitHub</a>. If you want to contribute and extend the library you should pay a visit there.<br> For working with the Edge Commons and to get a direct access to the files, you can either <i>download the library</i> – in order to use it as a local version – or use the <i>online version</i> via public server (CDN). You will find both possibilities and links on <a href="http://cdn.edgecommons.org" target="_blank">http://cdn.edgecommons.org</a> or use the link here:
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- TEST -->
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300">
+          <h4 id="anchor_yodf6jvpldi">&raquo;Edge Commons 2.0&laquo;</h4>
+          <strong>Get the latest version of the Edge Commons (2.0.0) now:</strong>
+        <button class="download" onclick="window.location.href=&apos;https://github.com/simonwidjaja/EdgeCommons&apos;">GitHub</button>
+        </center>
+      </text>
+    </div>
+    <!--<data>{}</data>-->
+  </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_m66vjdu0udi">Why are there different versions?</h2>  
+      <p>
+        The Edge Commons are constantly growing and work in progress. In order to provide compatibility with different Animate releases and updates as well as projects, there are different versions of the Edge Commons available. Also, you won't necessarily need all the functionality in all of your projects. That's why the Edge Commons can also be divided into different modules.<br>
+        Make sure to get the right version for your project.
+      </p>
+      <p><h3 id="anchor_ouqa935wmi">jQuery dependency</h3>
+        Note that with the Edge Animate release of October 2014, jQuery is no longer a part of the Edge Animate core. Earlier versions of the Edge Commons still require jQuery, so you might have to load that library as well. With the release of Edge Commons 2.0.0, we've got rid of those dependencies so that you don't need jQuery anymore. 
+      </p>  
+      <p><h3 id="anchor_ldyl2n5qaor">Modularity</h3>
+        The Edge Commons library consists of several packages. If you are new to Edge Commons we recommend the “All-in-one” package. This package includes all available features (except the experimental ones). If you deploy your final compositions you should consider loading only the modules that you actually use.
+      </p>
+      <p><h3 id="anchor_iu1vxfajor">Distribution</h3>
+        You can either use a local version of the Edge Commons library, which means that you have to download the files and include them into your project folder. The other option is to use an online version and simply include a link to the CDN (content delivery network). Note that in this case the Edge Commons only work when you are online!
+      </p>  
+    </section><!-- /Widget -->
+  
+  
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_qlazpxmvx6r">How do I include the Edge Commons into my project?</h2>  
+      <p>
+        No matter which version of the Edge Commons you use, you have to include the library into your project in order to get access to the functionality. Since the update to Animte CC (3.0) in January 2014, you can use the library panel in Animate to add the Edge Commons library easily.
+      </p>
+      <p>Step by step instruction:
+        <ol>
+          <li>Go to <a href="http://cdn.edgecommons.org" target="_blank">http://cdn.edgecommons.org</a> and choose your package.<br>(If you are not sure which suits your needs, choose "All-in-One").<br><br>
+            <img src="media/images/00200%20HowToUse_CDN010.png" width="600"><br><br><br>
+          </li>
+          <li>
+             In Edge Animate click on the "+" icon in the scripts panel of your library. Select "from URL" for the CDN version of Edge Commons. Otherwise choose "from Disk" if you have downloaded the library.<br><br>
+            <img src="media/images/00200%20HowToUse_CDN020.png" width="400"><br><br><br>
+          </li>
+          <li>
+             Now Animate asks for the location/URL of the external library. Paste the URL from the CDN server or the path to the file in your file system.<br><br>
+            <img src="media/images/00200%20HowToUse_CDN030.png" width="400"><br><br><br>
+          </li>
+          <li>
+             The Edge Commons library will now appear in the scripts panel. Now you can start using all the cool Edge Commons features in your composition.<br><br>
+            <img src="media/images/00200%20HowToUse_CDN030.png" width="400"><br><br><br>
+          </li>
+        </ol>
+       <i>Caution:</i> Keep in mind that if you are in fact using an older version of Edge Commons and need to load jQuery as well, that you will have to load jQuery before the Edge Commons in order to make it work. Check the order in your scripts panel to be safe: jQuery should be listed <i>above</i> the Edge Commons.
+      </p>
+    </section><!-- /Widget -->
+  
+  
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_l6bfi1i3sor">Links</h2>  
+      <p>
+        You can find the latest Edge Commons release (2.0.0) currently at Github right here:
+        <ul>
+          <li><a href="https://github.com/simonwidjaja/EdgeCommons/tree/nojquery" target="_blank">https://github.com/simonwidjaja/EdgeCommons/tree/nojquery</a></li>
+        </ul>
+      </p>
+      <p>
+        If you want to use the older version and jQuery, you can use the links to the CDN versions of jQuery 2.1.1 and (the older) Edge Commons 1.4.0 with these URLs:
+        <ul>
+          <li><a href="https://code.jquery.com/jquery-2.1.1.min.js" target="_blank" <="" a="">https://code.jquery.com/jquery-2.1.1.min.js</a></li>
+          <li><a href="http://cdn.edgecommons.org/an/1.4.0/js/min/EdgeCommons.js" target="_blank" <="" a="">http://cdn.edgecommons.org/an/1.4.0/js/min/EdgeCommons.js</a></li>
+        </ul>
+      </p>
+      <p>
+        Now that we know how to get the Edge Commons into your project, it is time to look at the different features and functions...  
+      </p>
+    </section><!-- /Widget -->
+  
+
+
+    
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_qstipddvx6r">Edge Commons Core Features</h1>
+      <h3 id="anchor_fw1cyp66r">Overview of the basic Dirty little helpers</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This section will give you a summary of the currently available features and helper functions of the Edge Commons (2.0.0) release (within the complete All in One package). Remember that you may choose to use only parts of it with the different modules. Consequently, this section is divided in a similar way, starting with the most important Core features here and then moving on to the different modules, i.e. Parallax, Spotlight and SVG throughout the next pages. 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>The subsequent features are all part of the Edge Commons core and therefore always available as soon as you integrate the Edge Commons into your project. Most of these features are useful helper functions that might help you in any given project. 
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_34jii7o80k9">Add custom CSS rules at runtime</h2>
+      <strong>EC.addCSS();</strong><br>
+        This function doesn't add CSS styles inline, but defines global CSS rules like you would have with an externally linked CSS file. You can apply the CSS rules to elements in Animate by added CSS classes in the property inspector.
+Use the !important statement on property level to prevent Animate to override the property.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_gcrztzkt9"><strong>Example:</strong> Adding a CSS class at runtime</h3>  <p>    In this example we define the style for a class "custom-box" that we can assign to any element. The style will then be applied at runtime. The first parameter is the selector (here: .custom-box), followed by the CSS properties as an object in curly braces.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Add CSS rule for class 'custom-box'
+EC.addCSS(".custom-box", {
+ "background-color": "rgba(217,68,148,1.00) !important",
+ "border-radius": "16px"
+});
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button in the demo project below to see how the CSS styles can be applied to the different boxes, for instance both elements on the left and right side ("custom-box"). It is the CSS that we defined in the code above. Note that the click is only for demontration purposes. Usually the styles would be applied as soon as the elements get loaded.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/addCSS_Basic/addCSS_Basic.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+    
+
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_m3yqa8dj9k9">Center an element</h2>
+        The purpose of this helper function is to center an element and keep it centered. This function even works with a flexible stage (percentage-based).
+Known issues:<br>
++ If the affected element resizes you have to call this function again<br>
++ Does not consider rotation/scaling<br>
++ Does currently NOT work with a symbol element (since we are not considering transform/translate).<br>
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_stsjdcxr"><strong>Example:</strong> Centering an element</h3>  <p>    This helper function allows you to center a element (in regard to its parent). See the demo projects below to see it in action.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Center element named "myElement"
+EC.centerElement( sym.$("myElement") );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Here are two demo projects for the centerElement function:<br>The first one shows how the element gets centered in regard to the stage.<br>Click on the button to see the function applied.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/centerElement_Basic/centerElement_Basic.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This second one is a bit more complex: Here the element gets centered within a container. You can even resize the container (using the button on the right). Notice that the element remains centered, once the function is enabled.
+      </p>
+    </section><!-- /Widget -->
+
+ <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/centerElement_Complex/centerElement_Complex.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->
+
+
+
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_2nxjtr442t9">Advanced Logging</h2>
+        Unfortunately, Edge Animate doesn't offer much in regards to finding errors in your code. Especially with more complex projects, it is a good thing to have a variety of advanced logging options at hand. The Edge Commons offer you four different notification types: debug, error, info and warn. They allow you to send a message to the console or a custom target for logging and debugging, each targeting the equivalent mode.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_t22m9veipb9"><strong>Example:</strong> Logging in debug mode</h3>  <p>    Here is an example of how to send a message in debug mode. The first parameter is the logging message that you want to give out, the second the logging group. In this case this group is stored in the variable LOG_GROUP.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Log in debug mode
+var LOG_GROUP = "My Module";
+EC.debug( "Hello logger", LOG_GROUP );
+    </code>    </code>  </pre>  </section>
+
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_7ip9aiqkt9">Get reference to all children of a symbol</h2>
+        The function EC.getChildSymbols(); returns all children of a symbol. You can decide between recursive to return all children or not recursive (= false) to return immediate children only.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_1179kucv7vi"><strong>Example:</strong> Logging all children of the stage and a symbol</h3>  <p>    In this scenario we want to get information about the structure of a composition. Therefore we use console.log(); to display the return value of our helperfunction in the console. We use three different variations to a) get all the children of the stage, b) only the immediate children of the stage and c) get all the children of a symbol on the stage.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Usage
+console.log( "stage: ", getChildSymbols(sym) );
+console.log( "stage: ", getChildSymbols(sym, false) );
+console.log( "MySymbol1: ", getChildSymbols(sym.getSymbol("MySymbol1")) );
+    </code>    </code>  </pre>  </section>
+
+
+
+ <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_jv1esjug14i">Get injected data</h2>
+      <strong>EC.getInjectedData();</strong><br>
+        Use EC.getInjectedData(); to read injected data (JSON formatted) from the HTML wrapper of the stage.
+This is a great helper function for dynamic content and CMS integration.<br>
+<strong>Attention: This feature requires jQuery to be loaded.</strong> Get the latest jQuery library here: <a href=" http://code.jquery.com"> http://code.jquery.com</a>.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_gd29um1jor"><strong>Example:</strong> Getting injected data (title and message)</h3>  <p>    In this case we want to grab the information stored in a data object in the HTML file and render it in our Animate composition, in the corresponding text elements.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// The HTML of the composition with data injection looks like this:
+// &lt;div id="Stage" class="EDGE-145692202">
+//   &lt;script class="data" type="text/text">
+//   { 
+//     "title": "I'm injected", 
+//     "message": "This text was injected from HTML"
+//   }
+//   &lt;/script>
+// &lt;/div>   
+
+// Read injected data from HTML into Animate composition. 
+var data = EC.getInjectedData(sym);
+
+// Render injected data
+sym.$("txtTitle").html( data.title );
+sym.$("txtMessage").html( data.message );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button to see how the injected data gets rendered in the appropriate text fields:
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/getInjectedData_Basic/getInjectedData_Basic.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_eydnritqpvi">Get the name of a symbol</h2>
+      <strong>EC.getSymbolName();</strong><br>
+      Get the full name of a symbol (e.g. Stage_ResponsiveElement). This function is handy if you are working with dynamically created symbols and you don't define the symbol's name yourself.
+(If name should be used in sym.getSymbol(NAME) the preceding "#" is necessary)
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_83z2sc92j4i"><strong>Example:</strong> Getting the name of a dynamically created symbol</h3>  <p>    In this scenario we create a new symbol dynamically with Edge Animate's sym.createChildSymbol(); function. We then need our  Edge Commons helper function to get a reference to this newly created symbol instance in order to e.g. play its timeline:  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Create symbol dynamically
+var newSymbol = sym.createChildSymbol( "MyButton", sym.$("navigation") );
+// Get the name of a symbol
+var name = EC.getSymbolName( sym.getSymbol(newSymbol) );
+// Use symbol name to get reference to a symbol instance 
+//(e.g. to control the timeline)
+sym.getSymbol( name ).play();
+    </code>    </code>  </pre>  </section>
+
+  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_4bt7r5dn29">Find out if full jQuery is used</h2>
+        With <strong>EC.isJQuery();</strong> you can find out if full jQuery is available. In that case, the return value of this function is true.<br>
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_9v9gwbwewmi"><strong>Example:</strong> Logging whether full jQuery is in use</h3>  <p>    Here we use a console log and the Edge Commons helper function to determine whether a full version of jQuery is available:  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Check if full jQuery is in use
+console.log( "jQuery is available: ", EC.isJQuery() );
+    </code>    </code>  </pre>  </section>
+
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_qjeej9yhkt9">Detect a mobile environment</h2>
+      <strong>EC.isMobile();</strong><br> 
+      If you want to find out if the composition is running on a mobile device, you can use this function (e.g. to switch to gestures instead of mouse input). <br>
+Mobile user agents supported: Android, iPhone/iPad/iPod, Opera Mini and IEMobile.<br>
+Also consider using EC.CLICK_OR_TOUCH constant for event handler.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_q2pijc92j4i"><strong>Example:</strong> Checking if composition is running on a mobile device</h3>  <p>    We use a console log and the Edge Commons helper function to determine whether the composition is running on a mobile device. The return value is true when the device is mobile, otherwise false.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Is composition running on a mobile device?
+console.log( "This is a mobile device: ", EC.isMobile() );
+    </code>    </code>  </pre>  </section>
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_oovzba3v7vi">Load external compositions</h2>
+      <strong>EC.loadComposition();</strong><br> 
+      This helper allows you to load an Animate composition into a symbol or element.<br>
+As parameters you have to hand in the path to the HTML file of the external composition as string and the target container (element or symbol). Optional: You can also add a callback function that is called when loading the composition is completed and the external composition is fully built.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_ic1eeb9ms4i"><strong>Example:</strong> Loading an external composition into a symbol</h3>  <p>    In this example we load the external composition "sub2.html" into the symbol "targetContainer". Therefore we first store a reference to that target symbol in a variable and hand in the path and the reference to the helper function. After the composition is loaded we can use the callback to change the inner HTML and append text.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+var targetContainer = sym.getSymbol("targetContainer");
+EC.loadComposition("sub2.html", targetContainer)
+  .done( function(comp) {
+     comp.getStage().$("mytext").html("hello number 2");
+     comp.getStage().$('targetContainer').append("Hello Composition");
+  });
+    </code>    </code>  </pre>  </section>
+  
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_nr7mhjmj9k9">Create animated buttons</h2>
+      <strong>EC.makeAnimatedButton();</strong><br> 
+      Convert any given symbol into an animated button component that will be played forwards and backwards on mouse events. An optional "hotspot" element is supported within the symbol to handle all events (mouseenter etc.).<br> 
+Touch enabled: in mobile environments just a tap/click listener will be attached (no states are supported).<br>
+      The parameters of this function allow you to dynamically set the label, icon and clickHandler for the button, so you only need one symbol for different buttons. You can also add a data object, which will be passed to the button instance and will be available in clickHandler callback as second argument. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_4sl3vh4obt9"><strong>Example:</strong> Creating an animated button</h3>  <p>    In this example we convert a symbol that already contains the animation for the different states into an animated button. The label, icon and clickHandler will be set dynamically, so that we can define all the button instances in one place.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Implement Button logic into target symbols
+// e.g.
+// EC.makeAnimatedButton(sym.getSymbol("MySym"), "Some Label", "images/icon.svg", function() { console.log("CLICKED"); });
+//========================================================================================================================
+// Create Button 
+EC.makeAnimatedButton(sym.getSymbol("MyAnimatedButtonB"), "Button B", "images/icon-01.svg", function() {
+//add code for click action here
+      window.open("http://www.edgedocks.com", "_blank");	
+});
+    </code>    </code>  </pre>  </section>
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Hover over the button to see the animated states (with and without additional hotspot):
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/animatedButton/animatedButton.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_um38yfrbe29">Create static buttons</h2>
+      <strong>EC.makeStaticButton();</strong><br> 
+      Convert any given symbol into a static button component with three states (normal, over and down).<br>
+Implement the three button states (normal, over, down) as labels on the symbol's timeline. An optional "hotspot" element is supported within the symbol to handle all events (click/touch/mouseenter etc.).<br>
+Touch enabled: In mobile environments just a tap/click listener will be attached (no states are supported).<br>
+      The parameters of this function allow you to dynamically set the label, icon and clickHandler for the button, so you only need one symbol for different buttons. You can also add a data object, which will be passed to the button instance and will be available in the clickHandler callback as second argument. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_3eliejyvi"><strong>Example:</strong> Creating a static button</h3>  <p>    In this example we convert a symbol that already contains three button states into a static button. The label, icon and clickHandler will be set dynamically, so that we can define all the button instances in one place.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Implement Button logic into target symbols
+// e.g.
+// EC.makeStaticButton(sym.getSymbol("MySym"), "Some Label", "images/icon.svg", function() { console.log("CLICKED"); });
+//========================================================================================================================
+// Create Button 
+EC.makeStaticButton(sym.getSymbol("MyStaticButtonA"), "Button A", "images/icon-01.svg", function() {
+		// open alert on button click
+        alert("'Button A' was CLICKED");
+}); 
+    </code>    </code>  </pre>  </section>
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button to turn symbols into buttons (with and without additional hotspot):
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/staticButton/staticButton.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_1xwzsrftj4i">Pause and Unpause a symbol</h2>
+      <strong>EC.pause(); | EC.unpause();</strong><br> 
+      With these function you can pause and unpause each and every symbol (timeline) with or without all it's children (optionally recursive). The advantage of EC.pause(...) is that all playback states are stored for proper usage of unpause.
+The stopAll() and playAll() functions from the official Animate API are not really useful (ALL symbols are started, no matter if they were playing or pausing before), therefore we recommend using the Edge Commons function, which also stores the direction of the current playback. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code
+  <widget type="Code">
+    <title><strong>Example:</strong> Pausing and unpausing a symbol</title>
+    <text>TODO.</text>
+    <code>
+// TODO 
+    </code>
+    <data>{"language": "JavaScript"}</data>
+  </widget> -->
+
+
+   <!-- Widget: Animate 
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/pauseUnpause_Complex/pauseUnpause_Complex.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_r7q8wbl0udi">Set adaptive layouts</h2>
+      <strong>EC.setAdaptiveLayouts();</strong><br> 
+      With this feature you can create different symbols that will be displayed on different layout dimensions. Therefore you define an array with the dimensions for alternatvie layouts, hand in a reference to the context (e.g. the stage) and define the (adaptive)container into which the symbols with the different layouts are to be placed. Optional you can add a callback that is being executed on layout switch and/or use the window width as reference. Then the last parameter has to be set to true. 
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_i7d2rgxecdi"><strong>Example:</strong> Creating an adaptive header</h3>  <p>    This sample shows how to create an adaptive header layout with
+alternative sizes for different devices. That can be easily done
+with Edge Commons.  </p>  <pre data-line="">    <code class="language-JavaScript">      <code>
+// Adaptive Layouts
+EC.setAdaptiveLayouts([0, 320, 768, 1200], sym, "content", function(evt) {
+	// This code will always be executed whenever the layout changes
+}, true);
+    </code>    </code>  </pre>  </section>
+
+   <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/adaptiveHeader/AdaptiveHeader.html" style="width: 100%; height: 938px; border: 1px solid white;"></iframe></section><!-- /Widget --> 
+
+
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_qgrxwecow29">Edge Commons Parallax Scrolling</h1>
+      <h3 id="anchor_4z2cjlzbyb9">The most popular feature</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In this section we will introduce you to the most popular feature of the Edge Commons library, our Parallax Scrolling. The basic idea here is to map the timeline onto the scroll bar of the browser, so that scrolling in the browser moves the playhead back and forth on the timeline - enabling you to create a parallax effect.
+      </p>
+      <p>
+        Usually creating such an effect takes a lot of work and effort to get the timing right. The aim here was to make use of Animate as a visual tool to help staging the choreography. At the same time we wanted to keep the required custom code to a bare minimum. Therefore we designed this Edge Commons feature to do all the heavy lifting in the background.<br><strong>As a result you only need to include ONE single function into your project to make the parallax work</strong>.
+      </p>
+      <p>
+        So here's what you need to know...
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_5ix4rmp9zfr">Parallax Module</h2>  
+      <p>The Parallax Scrolling is available with the corresponding EC.Parallax module. It is not part of the core features, therefore you have to either use the All-in-one package of the Edge Commons or additionally load this module together with the core. 
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- DOWNLOAD 
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300" />
+          <h4>&raquo;Parallax Module&laquo;</h4>
+          <strong>Get a local version</strong> of the <strong>EC.Parallax module</strong> right here:
+        <button class="download">Download</button>
+        </center>
+      </text>
+    </div> -->
+    <!--<data>{}</data>-->
+  <!--/section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_si5b5d0a4i">Setup Parallax Scrolling</h2>
+      <strong>EC.Parallax.setup();</strong><br>
+        This function allows you to enable the parallax scrolling feature for a specific composition. You have to hand in the reference to this composition (sym) in order to do so. Additionally, you can define the scroll type with a second argument - vertical or horizontal. The default is vertical.<br>
+      Note that this simple Parallax Scrolling does not work on mobile devices. Check out the UBR.Parallax for a more advanced Parallax Scrolling that even performs great on mobile devices.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_x3yfilfpqfr"><strong>Example:</strong> Setting up a simple vertical Parallax Scrolling</h3>  <p>    This example shows you how to set up the Parallax feature for a vertical scrolling effect. <strong>Note that you have to use this script in compositionReady and NOT in creationComplete</strong>.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Setup Parallax Scrolling
+EC.Parallax.setup(sym,"vertical");
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        You can scroll up and down in this demo composition to see the Parallax at work.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/old_Parallax/Parallax_Test.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+    
+
+
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_syy9b8d7vi">Edge Commons Spotlight Overlay</h1>
+      <h3 id="anchor_ts6w1w6ogvi">Lightbox effect with the Dirty little helpers</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        In this section you will learn how to use the Edge Commons Spotlight Feature to to dislplay images, videos and Animate composition in a lightbox like overlay. In all three cases, the basic principle is the same. You only have to modify the configuration object, which we will have a closer look at in this section further below. The spotlight overlay can be used to set media content into the right spot and is an easy to use improvement for all sorts of projects: websites, banners, interactive storytelling... you name it! 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_b3a6ud0wwmi">Spotlight Module</h2>  
+      <p>The Spotlight Overlay is available with the EC.Spotlight module. It is not part of the core features, therefore you have to either use the All-in-one package of the Edge Commons or additionally load this module together with the core. 
+      </p>
+    </section><!-- /Widget -->
+
+   <!-- DOWNLOAD 
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300" />
+          <h4>&raquo;Spotlight Module&laquo;</h4>
+          <strong>Get a local version</strong> of the <strong>EC.Spotlight module</strong> right here:
+        <button class="download">Download</button>
+        </center>
+      </text>
+    </div> -->
+    <!--<data>{}</data>-->
+  <!--/section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_ebs4qd50zfr">Open a spotlight overlay</h2>
+      <strong>EC.Spotlight.open();</strong><br>
+        This function opens the spotlight overlay. It expects the configuration object, which defines the media type, source, size and other settings. Usually you would save this object right before calling the function and use the variable config to hand it in. The second, optional parameter allows you to set the context for the overlay, for example window.document or window.parent.document.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_1wz6fbyy14i"><strong>Example:</strong> Opening an image in a Spotlight Overlay</h3>  <p>    This example illustrates how you can use the Spotlight feature to open an image in an overlay. The config object contains the appropriate settings. Some parameters are mandatory, for example source and type, whereas borderWidth and borderColor are optional.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "image",                                // Media type (image|animate|youtube)
+      source: "images/MyImage.jpg",                 // Source to media
+}
+
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Click on the button in the demo project below to see the image being opened in the Spotlight Overlay.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/spotlightOverlay/spotlightImage.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+    
+
+<!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_kfmxp9cnmi"><strong>Example:</strong> Opening a Youtube video in a Spotlight Overlay</h3>  <p>    This example explains how you can use the Spotlight feature to open a Youtube Video in the Spotlight Overlay. The config object contains the appropriate settings. With the param object you can adjust additional parameters, for example autoplay. The source in this case is the Youtube ID for the video.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "youtube",                              // Media type (image|animate|youtube)
+      source: "1woru3cyFiw",                        // Source to media
+      param: {                                      // Additional parameter
+        autoPlay: true
+      }
+}
+
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <body>
+      <p>
+        Click on the button in the demo project below to see the video being opened in the Spotlight Overlay.
+      </p>
+    </body>
+    <extra>
+    </extra>
+    <!--<data>{}</data>
+  </widget><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate 
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/spotlightOverlay/spotlightImage.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->
+
+
+<!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_1gs0qwwxw29"><strong>Example:</strong> Opening an Animate composition in a Spotlight Overlay</h3>  <p>    This example demonstrates how you can use the Spotlight feature to open another Animate composition within the Spotlight Overlay. The config object contains the appropriate settings. Make sure to include this additional composition on file level into your project folder, in this case it is located in a folder called composition. The source in this case is the HTML file of that targeted additional composition.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "animate",                              // Media type (image|animate|youtube)
+      source: "composition/index.html",             // Source to media
+}
+
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <body>
+      <p>
+        Click on the button in the demo project below to see the Animate composition being opened in the Spotlight Overlay.
+      </p>
+    </body>
+    <extra>
+    </extra>
+    <!--<data>{}</data>
+  </widget><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate 
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/spotlightOverlay/spotlightImage.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_v11ytwc23xr">Close an existing spotlight overlay</h2>
+      <strong>EC.Spotlight.close();</strong><br>
+        This function usually gets called internally by the close button of the Spotlight Overlay automatically. You can however define a callback function within the config object to react to the closing of the Overlay. This allows you for example to pause and resume playback of the main composition when the Spotlight is opened.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_e45fktvs4i"><strong>Example:</strong> Resume playback when Spotlight is opened</h3>  <p>    In this example we want to pause our main composition when the Spotlight is being opened and resume playback when it is closed again. Therefore we add a callback to our config object.  </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Define configuration for overlay in config object
+var config = {
+      width: 700,                                   // Width of the overlay	
+      height: 400,                                  // Height of the overlay
+      borderWidth: 5,                               // Border width (px)
+      borderColor: "#FFF",                          // Border color
+      type: "image",                                // Media type (image|animate|youtube)
+      source: "images/MyImage.jpg",                 // Source to media
+      onClose: function(config) {                   // Callback for close button
+        EC.unpause(sym);
+      } 
+}
+
+// Pause Playback for the main composition
+EC.pause(sym);
+      
+// Open the Spotlight Overlay with settings stored in the config object
+EC.Spotlight.open( config );
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text 
+  <widget type="Text">
+    <body>
+      <p>
+        Click on the button in the demo project below to pause the animation and open an image in the Spotlight Overlay. When you click on the close button, the animation resumes playing.
+      </p>
+    </body>
+    <extra>
+    </extra>
+    <!--<data>{}</data>
+  </widget><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate
+  <widget type="Animate">
+    <data>
+    {
+      "src": "media/animate/spotlightOverlay/spotlightImage.html",
+      "height": "500px"
+    }
+    </data>
+  </widget><!-- /Widget -->  
+
+
+</article><article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_4wg7isy8pvi">Edge Commons Interactive SVG</h1>
+      <h3 id="anchor_toyu520ggb9">A very promising little helper</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        SVG is a very promising image format for web. Not only can it be scaled without quality loss, it also allows you to place JavaScript inside of the image and thus making it interactive. This then allows you for instance to trigger events and send or retrieve information.
+      </p>
+      <p>
+        Currently Edge Animate only supports SVG files within &lt;img> tags or as background images in &lt;div> containers. So you can neither listen for such SVG events nor reach into the SVG structure to e.g. change the color of a shape. The "interactive SVG" feature provided by Edge Commons allows you to enable this in particular. The best thing about this is that you of course can still use the full potential of Edge Animate to stage your choreographies and create engaging interactive animations. 
+      </p>
+      <p>
+      <strong>This feature requires jQuery to be loaded. Get the latest jQuery library here: <a href="http://code.jquery.com">http://code.jquery.com</a></strong>
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_0fudyjve7b9">Interactive SVG Module</h2>  
+      <p>The Interactive SVG feature is available with the EC.SVG module. It is not part of the core features, therefore you have to either use the All-in-one package of the Edge Commons or additionally load this module together with the core. 
+      </p>
+    </section><!-- /Widget -->
+
+   <!-- DOWNLOAD 
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300" />
+          <h4>&raquo;Interactive SVG Module&laquo;</h4>
+          <strong>Get a local version</strong> of the <strong>EC.SVG module</strong> right here:
+        <button class="download">Download</button>
+        </center>
+      </text>
+    </div> -->
+    <!--<data>{}</data>-->
+  <!--/section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p><h2 id="anchor_dejg550o1or">Convert SVG to be accessible for scripting</h2>
+      <strong>EC.SVG.accessSVG();</strong><br>
+        This function allows you to access the SVG document. The function expects a reference to the element that contains the SVG and then returns a corresponding object.
+      </p>
+    </section><!-- /Widget -->
+ 
+  <!-- Widget: Code -->
+  
+
+<!-- Widget: Code -->
+<section class="widget code">  <h3 id="anchor_ln3su9mgqfr"><strong>Example:</strong> Listen for custom event dispatched by the SVG</h3>  <p>    The following code snippet enables the interactive SVG feature on an SVG asset named "character" (which is placed on the stage). With the done function you are able to listen for the activation process to be completed and you get a reference to the actual SVG document passed in as a parameter (svgDocument). This reference can then be used to add event listener or change the SVG content (shapes, paths etc.) programmatically.   </p>  <pre data-line="">    <code class="language-javascript">      <code>
+// Enable SVG access
+EC.SVG.accessSVG(sym.$("character")).done(
+	function(svgDocument){
+		
+        // add event listener
+		svgDocument.addEventListener("select", function(event) {
+ 
+			// Remember selected part
+			sym.setVariable("selectedPart", event.target);
+ 
+			// show the id of the selected part in the textfield
+			sym.$("selectedPartTxt").html( event.target.id );
+		});
+});
+    </code>    </code>  </pre>  </section>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        This SVG interactivity is very powerfull and can be used to create entire interfaces. This demo shows how you can use this feature to create a configurator. Clicking on the different parts of the image reveals the path that is being selected in the text field. You can then use the colors on the right side to change the color of that selected path in the SVG.
+      </p>
+    </section><!-- /Widget -->
+ 
+
+  <!-- Widget: Animate -->
+  <section class="widget animate"><iframe src="media/animate/accessSVG_ShirtDesigner/accessSVG_ShirtDesigner.html" style="width: 100%; height: 500px; border: 1px solid white;"></iframe></section><!-- /Widget -->  
+    
+
+
+
+
+</article>
+</div>    
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

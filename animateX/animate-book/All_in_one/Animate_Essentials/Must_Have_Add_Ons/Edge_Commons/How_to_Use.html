@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[2];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[2].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[2].chapters[0].pages[1];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(media/placeholder/Hero_Yellow.jpg)">  <div class="title">Must Have Add On:<br><strong>Edge Commons</strong></div>  <br>  <div class="subtitle"></div></section>
+  
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_xqrogmygb9">How to use the Edge Commons</h1>
+      <h3 id="anchor_crn3vdkj4i">A quick guideline</h3>
+    </hgroup>
+  </header>
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        Edge Commons is an extension library for Edge Animate. As such it needs to be integrated into the project in order to provide its functionality. This short section will give you an introduction into where you can find this library, how to add it and which versions are currently available. It will help you get set up and ready with the dirty little helpers, which will then be presented in a detailed way in the subsequent section. But first things first... 
+      </p>
+    </section><!-- /Widget -->
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_ocx8mgc766r">Where do I find the Edge Commons?</h2>  
+      <p>
+        The Edge Commons project itself is hosted on <a href="https://github.com/simonwidjaja/EdgeCommons" target="_blank">GitHub</a>. If you want to contribute and extend the library you should pay a visit there.<br> For working with the Edge Commons and to get a direct access to the files, you can either <i>download the library</i> – in order to use it as a local version – or use the <i>online version</i> via public server (CDN). You will find both possibilities and links on <a href="http://cdn.edgecommons.org" target="_blank">http://cdn.edgecommons.org</a> or use the link here:
+      </p>
+    </section><!-- /Widget -->
+  
+  <!-- TEST -->
+  <section class="widget download">
+    <div>
+      <text>
+        <center style="width: 60%; margin: auto;">
+          <img src="media/images/helpers.png" width="300">
+          <h4 id="anchor_yodf6jvpldi">&raquo;Edge Commons 2.0&laquo;</h4>
+          <strong>Get the latest version of the Edge Commons (2.0.0) now:</strong>
+        <button class="download" onclick="window.location.href=&apos;https://github.com/simonwidjaja/EdgeCommons&apos;">GitHub</button>
+        </center>
+      </text>
+    </div>
+    <!--<data>{}</data>-->
+  </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_m66vjdu0udi">Why are there different versions?</h2>  
+      <p>
+        The Edge Commons are constantly growing and work in progress. In order to provide compatibility with different Animate releases and updates as well as projects, there are different versions of the Edge Commons available. Also, you won't necessarily need all the functionality in all of your projects. That's why the Edge Commons can also be divided into different modules.<br>
+        Make sure to get the right version for your project.
+      </p>
+      <p><h3 id="anchor_ouqa935wmi">jQuery dependency</h3>
+        Note that with the Edge Animate release of October 2014, jQuery is no longer a part of the Edge Animate core. Earlier versions of the Edge Commons still require jQuery, so you might have to load that library as well. With the release of Edge Commons 2.0.0, we've got rid of those dependencies so that you don't need jQuery anymore. 
+      </p>  
+      <p><h3 id="anchor_ldyl2n5qaor">Modularity</h3>
+        The Edge Commons library consists of several packages. If you are new to Edge Commons we recommend the “All-in-one” package. This package includes all available features (except the experimental ones). If you deploy your final compositions you should consider loading only the modules that you actually use.
+      </p>
+      <p><h3 id="anchor_iu1vxfajor">Distribution</h3>
+        You can either use a local version of the Edge Commons library, which means that you have to download the files and include them into your project folder. The other option is to use an online version and simply include a link to the CDN (content delivery network). Note that in this case the Edge Commons only work when you are online!
+      </p>  
+    </section><!-- /Widget -->
+  
+  
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_qlazpxmvx6r">How do I include the Edge Commons into my project?</h2>  
+      <p>
+        No matter which version of the Edge Commons you use, you have to include the library into your project in order to get access to the functionality. Since the update to Animte CC (3.0) in January 2014, you can use the library panel in Animate to add the Edge Commons library easily.
+      </p>
+      <p>Step by step instruction:
+        <ol>
+          <li>Go to <a href="http://cdn.edgecommons.org" target="_blank">http://cdn.edgecommons.org</a> and choose your package.<br>(If you are not sure which suits your needs, choose "All-in-One").<br><br>
+            <img src="media/images/00200%20HowToUse_CDN010.png" width="600"><br><br><br>
+          </li>
+          <li>
+             In Edge Animate click on the "+" icon in the scripts panel of your library. Select "from URL" for the CDN version of Edge Commons. Otherwise choose "from Disk" if you have downloaded the library.<br><br>
+            <img src="media/images/00200%20HowToUse_CDN020.png" width="400"><br><br><br>
+          </li>
+          <li>
+             Now Animate asks for the location/URL of the external library. Paste the URL from the CDN server or the path to the file in your file system.<br><br>
+            <img src="media/images/00200%20HowToUse_CDN030.png" width="400"><br><br><br>
+          </li>
+          <li>
+             The Edge Commons library will now appear in the scripts panel. Now you can start using all the cool Edge Commons features in your composition.<br><br>
+            <img src="media/images/00200%20HowToUse_CDN030.png" width="400"><br><br><br>
+          </li>
+        </ol>
+       <i>Caution:</i> Keep in mind that if you are in fact using an older version of Edge Commons and need to load jQuery as well, that you will have to load jQuery before the Edge Commons in order to make it work. Check the order in your scripts panel to be safe: jQuery should be listed <i>above</i> the Edge Commons.
+      </p>
+    </section><!-- /Widget -->
+  
+  
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_l6bfi1i3sor">Links</h2>  
+      <p>
+        You can find the latest Edge Commons release (2.0.0) currently at Github right here:
+        <ul>
+          <li><a href="https://github.com/simonwidjaja/EdgeCommons/tree/nojquery" target="_blank">https://github.com/simonwidjaja/EdgeCommons/tree/nojquery</a></li>
+        </ul>
+      </p>
+      <p>
+        If you want to use the older version and jQuery, you can use the links to the CDN versions of jQuery 2.1.1 and (the older) Edge Commons 1.4.0 with these URLs:
+        <ul>
+          <li><a href="https://code.jquery.com/jquery-2.1.1.min.js" target="_blank" <="" a="">https://code.jquery.com/jquery-2.1.1.min.js</a></li>
+          <li><a href="http://cdn.edgecommons.org/an/1.4.0/js/min/EdgeCommons.js" target="_blank" <="" a="">http://cdn.edgecommons.org/an/1.4.0/js/min/EdgeCommons.js</a></li>
+        </ul>
+      </p>
+      <p>
+        Now that we know how to get the Edge Commons into your project, it is time to look at the different features and functions...  
+      </p>
+    </section><!-- /Widget -->
+  
+
+
+    
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

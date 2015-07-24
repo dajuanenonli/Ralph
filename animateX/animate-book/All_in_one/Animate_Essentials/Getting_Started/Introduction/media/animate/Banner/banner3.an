@@ -1,0 +1,92 @@
+
+{
+
+	"expanded:images/expendable3.png":"nil",
+	"pref__general__AutoKeyframeProperties":"true",
+	"expanded:images/expendable1.png":"nil",
+	"expanded:images/card1.jpg":"nil",
+	"pref__general__FilterNonAnimatedElements":"false",
+	"expanded:images/expendable0.jpg":"nil",
+	"expanded:media/video.webm":"false",
+	"expanded:images/beams.jpg":"nil",
+	"CompZoomFactor":"100",
+	"StageZoomFactor":"100",
+	"pixelsPerMs":"0.2",
+	"expanded:images/bags.png":"nil",
+	"stage-Default Timeline_mark_ms":"500",
+	"nextElementColorIndex":"8",
+	"pref__general__GenerateSmoothTransitions":"true",
+	"HTMLFileName":"banner3.html",
+	"expanded:images/devices.png":"nil",
+	"ModelData":"{\
+\"stage\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"Preloader\": {\
+   \"timelines\": {\
+\
+   }},\
+\"Down-level\": {\
+   \"timelines\": {\
+\
+   }}\
+}",
+	"expanded:Assets-assets/DownloadIcon.png":"nil",
+	"expanded:images/illustration.png":"nil",
+	"expanded:images/card3.png":"nil",
+	"expanded:images/icon_play.png":"nil",
+	"expanded:images/icon_download.png":"nil",
+	"expanded:images/poster.png":"nil",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"expanded:images/card4.png":"nil",
+	"symbol_stage":{
+		"element_${_video}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767",
+			"animationEnabled":"true",
+			"VideoPosterImageTakenBy":"PosterImageNameImplementer"},
+		"element_${_Rectangle2}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"invisible":"false",
+			"timelineColor":"0x00a096"},
+		"dummyStageParentHeight":"250px",
+		"element_${_Rectangle}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4"},
+		"defaultStageParentHeight":"250px",
+		"element_${_PlayIcon}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad"},
+		"dummyStageParentWidth":"300px",
+		"defaultStageParentWidth":"300px",
+		"element_${_poster}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"},
+		"element_${_Stage}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
+		"element_${_DownloadIcon}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa"}},
+	"TransitionIdCounter":"3",
+	"mediagroup_media/video.webm":"video",
+	"viewStartY":"0",
+	"expanded:images/card2.png":"nil",
+	"PreloadAudio":"auto",
+	"expanded:Assets-assets/PlayIcon.png":"nil",
+	"usedBOM":"false",
+	"stage-Default Timeline_playhead_ms":"0",
+	"expanded:images/expendable2.png":"nil",
+	"mediagroup_media/video.mp4":"video",
+	"expanded:media/video.mp4":"false",
+	"expanded:images/icon.svg":"nil"}

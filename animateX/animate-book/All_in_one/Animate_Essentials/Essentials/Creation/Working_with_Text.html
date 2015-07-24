@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[1];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[1].chapters[0];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[1].chapters[0].pages[4];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{}</script>
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Getting <strong>Creative</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_91d7lj714i">Working with Text</h1>
+      <h3 id="anchor_rp8boiuow29">More than words</h3>
+    </hgroup>
+  </header>
+
+  
+  <!-- Section: Text -->
+  <section class="text">
+    <p>
+      In this section you will learn how to add text to your animate composition and how you can edit the text to fit to your needs. You will also learn how to import and use additional fonts and how to set fallbacks. To round this section up, we will tackle the different HTML tags you can use for your text elements in Animate.<br>Let's get started...
+    </p>
+  </section><!-- /Section -->
+        
+    
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+ 
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_tkv6jmgf1or">Working with text</h2>  
+        <p>
+          Although web content is covered more and more by multi-media elements like images and video, text still remains one of the key components. Therefore we want to spend some time discovering what Edge Animate has to offer and explore how we can use this knowledge to get creative. So first of all, how do we create text in Edge Animate? 
+        </p>
+    </section><!-- /Widget -->
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_bfaesjug14i">Creating text elements</h2>  
+        <p>
+          Since text can not exist for itself in a web environment, we have to place it into a container. In order to create such a container, we can use the Text Tool in the tool panel: 
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool01.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Text Tool  </strong>in the tools panel (short cut: T).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          When you have the text tool selected, you can draw a container on the stage, just like you did with basic shapes in the previews section. This determines the size and position of our newly created text element, which is yet to be filled with text. As soon as you release the mouse button, the text element is created on the stage and an input field opens up. Here you can type or paste in your text, for example the classic "Hello World!"
+        </p>
+    </section><!-- /Widget -->    
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool02.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Using the <strong>text input field </strong>to enter "Hello World!" into the text element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+   
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          You can exit the input field by clicking on the close button or using the "escape" key. You don't have to confirm your entry! Note that hitting the enter key will create a new paragraph and not confirm the input (yes, this is a bit unusual and still happens a lot).
+        </p>
+        <p>
+          To open the text input field again, double-click on the text field on the stage or use a right click to select "Edit Text". Now you can make changes to the content of the text field, i.e. the text itself.
+        </p>
+        <p>
+          You might also have noticed, that a new entry in the elements panel appears as soon as you create a text field on the stage. The letter indicates that it is a text field, and by default it is called "Text". If you take a look at the tag behind the name of the element, you see that it is yet another DIV element (at least for now). 
+        </p>
+    </section><!-- /Widget -->  
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool03.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">The text element appears in the <strong>Elements panel </strong>as DIV by default.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          A huge advantage of the text input field in Animate is that you don't have to worry about reserved characters and HTML entities. For example you can savely use "&amp;", "&lt;" and "&gt;" instead of having to use the corresponding entity names (&amp;amp;, &amp;lt; and &amp;gt). They will be transformed automatically to work in the HTML environment. The same is true for special characters like &euro;, &copy; and diacritical marks, such as a&#771; or i&#769;.
+        </p>
+        <p>
+          This is very convenient when you want to paste text passages from a different source like a text editor, since you don't have to convert them first. Even bullet points can be included. You still have to be carefull regarding text formatting, though, since you can not use tab and several empty spaces here. Look at the following example, which helps to illustrate this: 
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool04.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Text formatting </strong>is not transferred to the text element.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->   
+    
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_90ph18gds4i">Text properties: Fonts</h2>  
+        <p>
+          Text elements can be formatted using the property inspector. When you select a text element, the correspondent section becomes available. Here you can edit the style and appearance of the entire text element. It is therefore not possible to use different styles within one single text element. Let's take a look at the options here:
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Text formatting options in the <strong>Property inspector</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          <i>Tipp:</i> If you don't see the bottom part of the options (underneath the alignment options), click on the small arrows on the left to expand the panel.
+        </p>
+        <p>
+          The options here are pretty obvious. You can for instance choose between different fonts. The selections offered right away contains all the browser default fonts. You can add further fonts by selecting the option on the bottom or by clicking on the "+" button on the right. This opens up the option to search and add <i>Edge Web Fonts</i>, a huge library of fonts free to use in your projects. They are delivered via <i>Typekit</i>. Keep in mind though that you have to have access to the internet to use web fonts!
+        </p>
+    </section><!-- /Widget -->     
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool06.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Adding more fonts with the <strong>Edge Web Fonts</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->    
+ 
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          Click on the desired font and you can immediately see the result on the stage. Click on "Add Font" to include the font into your selection. It is not only applied to the selected text element, but from now on becomes part of the selection of available fonts for the project. This way you can quickly apply it to other text elements as well.  
+        </p>
+        <p>
+          In case you want to or have to use custom fonts, you can switch over to the second tab. Here you can (and always should!) enter a fallback list in case the custom font can not be loaded successfully. Then you can use the second input field to paste in an embed code, for instance when you host a special font on your own server or when you want to use a web font apart from the edge web fonts.
+        </p>
+    </section><!-- /Widget -->        
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working_TextTool07.png" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Panel to add <strong>custom fonts</strong> and a <strong>Fallback List</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+   
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_szmhhugnwmi">Text properties: Formatting</h2>  
+        <p>
+          Besides changing the font, there are a couple of options that allow you to customize your text. First of all, you can set the font size to your likes. Usually it is indicated in pixels, but you can change the unit to % or em as well. 
+        </p>
+        <p>
+          The <i>text color</i> can be selected with the color picker, that we have already encountered in the previous chapter.
+        </p>
+        <p>
+          Another option is to change the <i>font weight</i>, i.e. the thickness of the letters. You can choose between 100 (Thin) and 900 (Black), but keep in mind that not all fonts feature that entire range. In these cases the next appropriate font weight will be displayed.
+        </p>
+        <p>
+          <i>Font-style and text decoration</i> are the properties to add or remove underlines and italics. They can be selected with the corresponding buttons next to the font weight.
+        </p>
+        <p>
+          The section for <i>font alignment</i> offers the four common settings: left, center, right and block. They allow you to align the text within the containing text element.
+        </p>
+        <p>
+          In the <i>additional text property section</i> you can change the values to increase letter spacing, word spacing, change the line height or add a text indent.
+        </p>
+    </section><!-- /Widget -->     
+    
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_wn5fcn5ewmi">HTML Tags for text elements</h2>  
+        <p>
+          We have already indicated that the containing text element does not necessarily have to be a DIV tag. Especially regarding search engine optimization or for using external CSS scripts it might be a good idea to use a different tag for your text element. This might also make the structure of your composition easier to understand. 
+        </p>
+        <p>
+          You can change the HTML tag next to the title in the property inspector:
+        </p>
+    </section><!-- /Widget -->         
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00220_Working-Tags.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Selection of available <strong>HTML Tags</strong> for text elements.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->      
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+        <p>
+          The most commonly used tags are certainly "p" for paragraphs and the different headlines, "h1 - h6". For the average Animate project however it is fully sufficiant to only use DIV tags.
+        </p>
+    </section><!-- /Widget -->    
+
+    
+    
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>

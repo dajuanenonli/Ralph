@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour de Edge</title>
+    <link href="../../../_internals/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../../_internals/css/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../../_internals/libs/jquery-2.0.3.min.js"></script>
+    <script src="../../../_internals/js/generated.js"></script>
+    <script src="../../../_internals/js/main.js"></script>
+    
+    <script>
+      
+      window.global.pathToRoot = "../../../";
+      window.global.currentIssue = window.global.miniTree.issues[0];
+      window.global.currentKit = window.global.miniTree.issues[0].kits[0];
+      window.global.currentBook = window.global.miniTree.issues[0].kits[0].books[0];
+      window.global.currentChapter = window.global.miniTree.issues[0].kits[0].books[0].chapters[2];
+      window.global.currentPage = window.global.miniTree.issues[0].kits[0].books[0].chapters[2].pages[2];
+
+    </script>
+  </head>
+  
+  <body>
+    
+        <div id="sidebarRight">          <div class="pagerButtonGroup">            <div class="btn prevPageButton">          <div class="info">#title</div>        </div>        <div class="btn nextPageButton">          <div class="info">#title</div>        </div>        <div class="btn sectionsButton active">          <div class="info">Page Overview</div>        </div>        <div class="btn bookButton active">          <div class="info">Book Overview</div>        </div>            </div>        </div>    <div id="sectionsOverlay">      <div class="sections-content"></div>    </div>    <div id="bookOverlay">      <div class="book-content"></div>    </div>  
+    
+    <!-- Page Content -->
+<div class="page-content">
+  <script id="meta" type="text/data">{
+  "compatibility": "2014.1"
+}</script>
+
+
+
+
+<!-- Page -->
+<article>
+
+  
+
+<!-- Widget: Hero -->
+<section class="widget hero" style="background-image: url(../../../_internals/placeholder/Hero_Yellow.jpg)">  <div class="title">Understanding the <strong>User Interface</strong></div>  <br>  <div class="subtitle"></div></section>
+
+  <!-- Spacer -->
+  <div style="height: 50px"></div>
+
+  <header>
+    <hgroup>
+      <h1 id="anchor_yim4d4vaemi">UI panels</h1>
+      <p class="subtitle">Understanding the library and timeline</p>
+    </hgroup>
+  </header>    
+  
+
+  <!-- Status 
+  <note>
+    27.11.2014 DC.status: RC<br/>
+    13.11.2014 SW.status: 90%<br/>
+    13.11.2014 SW: ein paar mehr bilder, damit man sich auch visuell orientieren kann, wo man im UI grad ist. Ist streckenweise etwas schwer, wenn man das tool gar nicht kennt<br/>
+  </note>   --> 
+
+  
+  <!-- Section: Text -->
+  <section class="section-text">
+    <h1></h1>
+    <p>In this section we will cover two of the core aspects of the Edge Animate user interface, the Library and the Timeline. A profound knowledge of their mechanisms and functions opens the gateway to successfull workflows and mastering complex Animate projects with ease. But no worries, we will tackle them one at a time. So let's get going...</p>
+  </section><!-- /Section -->      
+
+
+  
+  <!--
+  ######################################################################
+   Content
+  ######################################################################
+  -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_8dkktd9rudi">The Library</h2>  
+        It is important to always keep an overview of your project, especially when it grows bigger and more and more complex. In Animate, the library is a very handy feature in this regard. It is separated into several sections and lists all the assets of your project, from images to external scripts. You can find your library by default underneath the elements panel on the right-hand side of the stage.
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_libraryPanel02.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%"><strong>The library panel</strong> in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+      
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        The library is separated into several sections, according to the different asset types you can use: images, symbols, fonts, audio files, videos and scripts. This helps you to keep an overview of your assets and makes it really easy to work with, since you can simply drag items out of the library and drop them onto the stage. There are some distinctive features for each type, so let's have a closer look at them.  
+     <br><br> </p>
+      <p>
+        <h3 id="anchor_6sm0cslwhfr">Images</h3>  
+        Certainly the most commonly used type of assets in Animate projects are images, which are located in the topmost section. You can import images by using the "+" button or via drag and drop. If you choose to use the button, a window will pop up to let you search through your file system and import images, even several at a time. They will then be included into your library and once you save your project be stored in the images folder of your project.
+    </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_libraryPanel03.jpg" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Image section in the <strong>library panel</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+       Most of the times, however, a more convenient way is to simply drag and drop images onto the stage and remove them right away. This might sound odd, but you will notice that the images are still stored in the library. Removing them from the stage will only delete the instance of the image in the composition, not the image itself in the project. This lets you import all the images at once and then start sorting them and place them into your composition by dragging them onto the stage one at a time.
+        </p>
+        <p>
+          In order to make sure you have the right image selected in the library, you can click on the triangle next to the image icon or double click on its name to open a quick preview.<br>With a right click on the image name you can access the option "show in finder". This will lead you to the location of the image in your project, which is usually the "images" folder. Now with more complex projects it might become difficult to manage the ammount of images when they are all stored in one folder. Luckily, you can create subfolders in your finder to help you sort your project assets. Be carefull, though, changing the location of images that are already in use might lead to errors. So better sort your assets before you start creating the composition.
+      </p>
+    </section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_nfwaqy0t3xr">Symbols</h3> 
+        A great deal of Edge Animate's potential lies in the use of symbols. We will discuss symbols and their role within Edge Animate in detail in a later chapter. This part is only about their place in the library. You can find the according section at the second position in the library panel. Unlike images, symbols are a unique kind of asset for Animate projects. You can create symbols from within your own composition or use symbols from other Animate projects.
+    </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_libraryPanel04.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%"><strong>Symbol</strong> section in the <strong>library panel</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+       In order to import symbols, you can again use the "+" button to search your file system for the appropriate symbol. Drag and drop is no option in this case. If you want to create a symbol, you can select one or several items on the stage and use the "+" button in the library and choose "Convert selection to symbol" or right click on one of the selected elements and use "Convert to Symbol...". The new symbol will then appear in the library. Again, you can delete the instance on the stage, the symbol itself will still remain in the project.</p>
+      <p>
+      A special kind of symbol is the <i>sprite sheet</i>. A sprite sheet is an image, in which a movement is subdivided into a series of animation frames. When played quickly one after the other, the illusion of a continuous movement is created - similar to a flip book. When you import a sprite sheet as a symbol into Edge Animate, you can use the presets to automatically create keyframes. <strong>We will come back to that and spite sheets in general later in the Creation and Animation sections.</strong>
+        </p>
+        <p>
+          As with images, you can use the library to preview your symbols, using the triangle next to the symbol icon. If you double click on the symbol's name you can edit it, a double click on the symbol icon will navigate you into the symbol scope. You can also use a right click on the symbol's name for more options: Besides editing the symbol or changing its name you can also delete, duplicate or export it. Note that these options are only available, when you are currently outside of the symbol's scope. If that sounds a bit confusing right now, don't worry: it will become easier to understand once we get to know more about what symbols are.
+      </p>
+    </section><!-- /Widget -->  
+
+
+<!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_3zpk2c323xr">Fonts</h3>
+        Typography can play an important part in expressing creativity. Luckily we are no longer confined to browser default fonts but have a huge variaty available via web fonts. The font panel in the library helps you keep track of the fonts used in your project, add and remove fonts and define fall backs. Use the "+" button to add new fonts and right click on an existing one to be able to remove it. Double click on a font to edit the fall back list or change the embed code. You can learn more about fonts and how to use them in Edge Animate in the corresponding chapter.
+      </p>
+    </section><!-- /Widget -->
+
+   <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_libraryPanel05.png" alt="" width="100%" style="display: inline; max-width: 400px">        <figcaption style="max-width: 80%">Adding <strong>Fonts</strong> in the <strong>library panel</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_gqrjh8h0k9">Audio and video</h3>
+        With HTML5, audio and video files can be included natively into a web context. Edge Animate supports this feature and therefore enables you to use sounds and videos in your Animate compositions. You can use the "+" option in the library panel or use drag and drop to import audio and video files into your project. Due to different browser support, it is advised to include different formats (mp3 and ogg for audio, for instance). You will notice that you have the different options listed under one name in the panel, so that it is easier to keep an overview. You can edit this selection name by double clicking on it. The name of the actual audio file can not be altered.<br> In order to place an audio or video file into your composition, you can either use drag and drop or right click on the file and select "Add to composition".<br><br>
+      </p>
+      <p>
+        <h3 id="anchor_nleqt0ozuxr">Scripts</h3>
+        Edge Animate allows you to include external script files like JavaScript libraries into your project, for instance the <a href="http://www.edgecommons.org" target="_blank">Edge Commons extension</a>. In general you have two options here: Either use a local version and include the script from disk or use a CDN hosted version and include the library via URL. You can find both options when clicking on the "+" icon in the library. The order in the script panel defines the order in which the files are being loaded. You can remove a script by right clicking on the name and select the appropriate option.<br>Note that you can (at the moment) only manage JavaScript files within this script panel. If you want to include other types like external CSS, you will have to do that manually. We will cover this in the Interactivity section.<br><br>
+      </p>
+    </section><!-- /Widget -->
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">  <h2 id="anchor_qovxr7tx1or">The Timeline</h2>  
+       The command center of Edge Animate is the timeline. It contains not only all animation tracks and keyframes in chronological order but may also contain trigger, labels and playback actions. The timeline always refers to the current scope, whether this is the stage or a symbol. The choreography on the stage is relative to the position of the playhead on the timeline, that means you can watch your composition in Animate in real-time. This gives you full control over your timing in every instance.<br> Let's see what the timeline looks like...
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_timeline01.png" alt="" width="100%" style="display: inline; max-width: 800px">        <figcaption style="max-width: 80%"><strong>The main timeline</strong> in Edge Animate.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+      
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+       <p>
+        <h3 id="anchor_3zire019k9">Playback controls</h3>
+        Obviously, a timeline has to contain control options in order to manage the playback. Since you can watch the animation choreography in real time, these controls directly effect the position of the playhead on the timeline. You can use the controls to jump the playhead back to the starting position, to toggle play/stop, to move to the end position and to return to the previous start position.<br><br>
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_timeline02.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Playback controls</strong>.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+
+   <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+       <p>
+        <h3 id="anchor_3z1yb162yb9">Playhead</h3>
+        The position of the playhead indicates the current state of the composition with its animations on the timeline. The red line stretches across all animation tracks so that it is easier to coordinate simultanous animations even in large projects. Everything that is listed underneath this position will take place at that very moment in time. This gives you full control for precise timing. It also allows you to preview right in the design view: You can position the playhead by simply clicking onto any point on the timeline or scrub back and forth by holding the mouse button pressed and moving along the timeline.
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_timeline03.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%"><strong>Playhead</strong> (top) and <strong>Keyframes</strong> on the timeline.</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_yh67uv7vi">Keyframe</h3>
+        Keyframes are represented through diamond shaped icons. They are used to store the value of a property at a certain point in time on the timeline, for instance the position of an element on the X-axis. The change of the value from one keyframe to another results in an animation. Keyframes in Edge Animate can be set and edited manually or created automatically.<br><br>
+      </p>
+      <p>
+        <h3 id="anchor_91yuvkotj4i">Auto-Keyframe Mode</h3>
+        The stop watch icon resembles the so-called "Auto-Keyframe Mode". This option decides whether keyframes are set automatically when you make changes on the stage. It has three different states: "Disengaged", "Enabled" and "Disabled". When you start placing elements on the stage, the stop watch is shaded, indicating that the Auto-Keyframe Mode is set to "Disengaged", allowing you to make changes without producing keyframes right away. Once you set the first keyframe or enable the pin tool (see below), the mode automatically switches to "Enabled" (stop watch filled with red color). From now on, every change will be stored in a keyframe. If you want to make changes without creating keyframes, click on the button one more time. The mode then switches to "Disabled" and the stop watch icon is grey. No further keyframes will be created unless you create one manually, enable the pin or switch the Auto-Keyframe Mode back to "Enabled". This might require some practicing at the beginning, but once you have tried it several times, you will get used to it very easily.<br><br>
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_timeline04.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Switches for <strong>Auto-Keyframe Mode</strong>, <strong>Auto-Transition Mode</strong>, <strong>Pin Tool</strong> and <strong>Easings</strong> (from left to right).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_lrujrurqkt9">Auto-Transition Mode</h3>
+        Similar to the Auto-Keyframe Mode is the Auto-Transition Mode, only that this time you enable/disable the creation of tweenings between two keyframes. Tweenings are generated intermediate frames between the inital and the final position/state. With this option enabled, the intermediate states between the keyframe values are calculated to create a smooth transition, for instance to move an object all the way from A to B. With the Auto-Transition Mode being disabled, the state switches instantly at the second keyframe. In this case the object would jump from A to B without crossing the space inbetween. By default, the Auto-Transition Mode is enabled.<br><br>
+      </p>
+      <p>
+        <h3 id="anchor_04t2863l3di">Pin tool</h3>
+        Next to the Auto-Transition Mode, you find the option to enable and disable the pin tool. This feature is powerfull for creating animations, even though a bit tricky to master at first. How is that? The pin is a sort of additional, virtual playhead, that allows you to freeze the settings at its current position. Moving the playhead will create a "rubber band" between the two points, resembling the duration of the animation and its direction (yes, you can create animations towards a certain state or away from it). Just keep that in mind for now, we will be dealing with the pin tool at length in the Animation chapter.<br><br>
+      </p>
+      <p>
+        <h3 id="anchor_0c8ooyo80k9">Easings</h3>
+        In reality, movements hardly ever occur with constant velocity. Therefore, linear animations tend to appear rather unrealistic. With the help of easings, you can create more naturalistic animations. You can find the equivalent option on the timeline next to the pin tool. If you click on the easing button, you get access to a whole variety of options, divided into five groups: Linear, Ease-In, Ease-Out, Ease-In-Out and Swing. The graph on the right-hand side pictures the equivalent effect. We will enlarge upon this topic in the Animation section as well.<br><br>
+      </p>
+      <p>
+        <h3 id="anchor_ium1jor">Open timeline actions</h3>
+        As always in Edge Animate, curly braces indicate the option to place code snippets, or so called actions. The timeline has some specific options, for instance reacting to the events "update", "play", "complete" and "stop". You can access these by clicking on the curly braces at the top. The braces underneath lead to the same options as on the elements panel, referring to the equivalent element on that particular animation track.<br><br>
+      </p>
+      <p>
+        <h3 id="anchor_5m4e8wwxw29">Elements and animation tracks</h3>
+        The timeline contains a list of all the elements placed on the stage, in the same order as in the elements panel. Accordingly, there are animation tracks that refer to these elements, with one track for every property that is being animated. You can find all the keyframes and transitions on the animation tracks in chronological order.<br>You can change the color code by simply clicking on the color bar on the left hand side. Notice that the color of the animation tracks is being updated as well.<br><br>
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_3187ntrzfr">Trigger</h3>
+        Triggers are actions that are executed at a certain point in time. They are represented by curly braces with a keyframe inside. Clicking on the trigger icon in the timeline control panel will create a trigger on the timeline at the current position of the playhead. Any code entered here will be executed when the playhead reaches this position at runtime.<br><br>
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_timeline05.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Switches for <strong>Auto-Keyframe Mode</strong>, <strong>Auto-Transition Mode</strong>, <strong>Pin Tool</strong> and <strong>Easings</strong> (from left to right).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+    
+  
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+        <h3 id="anchor_kkplint57b9">Label</h3>
+        A label is some sort of marker on the timeline. It can be used for navigational purposes, since you can refer to labels on code level to move the playhead there. This is often easier and more reproducible than using timestamps. <strong>We will be dealing with Labels and Triggers in the interactivity chapter</strong>.<br><br>
+      </p>
+    </section><!-- /Widget -->
+    
+  <!-- Widget: Image Center -->
+  
+
+<!-- Widget: ImageCenter -->
+<section class="widget image-center">  <div style="float: left; width: 100%;">    <center>      <figure>        <img src="media/images/00200_timeline06.jpg" alt="" width="100%" style="display: inline; max-width: 600px">        <figcaption style="max-width: 80%">Switches for <strong>Auto-Keyframe Mode</strong>, <strong>Auto-Transition Mode</strong>, <strong>Pin Tool</strong> and <strong>Easings</strong> (from left to right).</figcaption>      </figure>    </center>  </div></section><!-- /Widget -->  
+
+  <!-- Widget: Text -->
+  
+
+<!-- Widget: Text -->
+<section class="widget text">    
+      <p>
+      <h3 id="anchor_f8m6q7iudi">Timestamp</h3>
+        Next to the playhead and above the timeline itself is a timestamp that shows the current position of the animation in milliseconds. When the pin is activated, a second number shows the difference between playhead and pin, thus the duration of the respective animation. Both numbers can be edited. The playhead and the pin will be repositioned respectively.<br><br>
+      </p>
+    </section><!-- /Widget -->
+
+</article><!-- /Page -->
+</div>
+    
+    <div id="book-overview-content">
+      <h1>Book Overview</h1><hr/>  <div class="overview-complete">    <!-- Books -->          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Getting_Started">Getting Started</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Getting_Started/Introduction/index.html">Introduction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Welcome.html">Welcome</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/What_is_Edge_Animate.html">What exactly is Edge Animate?</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Features.html">Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Limitations.html">Limitations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Showcase.html">Showcases</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Introduction/Recommendations.html">Recommendations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/index.html">Prerequisites</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/Prerequisites/Downloading.html">Downloading and Installing</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Getting_Started/User_Interface/index.html">User Interface</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Overview.html">UI Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Property_Inspector.html">UI Property Inspector</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Getting_Started/User_Interface/Panels.html">UI Panels</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Essentials">Essentials</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Essentials/Creation/index.html">Creation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Overview.html">Creation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Starting_from_Scratch.html">Starting from Scratch</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_with_shapes.html">Creating with shapes</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Property_Overview.html">Property Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Text.html">Working with Text</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Positioning_Alignment_Groups.html">Positioning, Alignment, Groups</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Creating_Symbols.html">Creating Symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Creation/Working_with_Assets.html">Working with Assets</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">2</div>            <a href="../../../Animate_Essentials/Essentials/Animation/index.html">Animation</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Overview.html">Animation Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Basic_Animations.html">Basic Animations</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Symbolanimations.html">Animations and symbols</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Animation/Controlling.html">Controlling animations</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">3</div>            <a href="../../../Animate_Essentials/Essentials/Interaction/index.html">Interaction</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Overview.html">Interaction Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Events.html">Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Actions.html">Ready for Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Interaction/Logging.html">Logging</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">4</div>            <a href="../../../Animate_Essentials/Essentials/Publishing/index.html">Publishing</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Overview.html">Publishing Overview</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Publishing/Publish_Settings.html">Publish Settings</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">5</div>            <a href="../../../Animate_Essentials/Essentials/Workshops/index.html">Workshops</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/First_Animate_Project.html">My first Animate Project</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Workshops/StoryTelling.html">Interactive Story Telling</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">6</div>            <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/index.html">Cheat Sheets</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Actions.html">Cheat Sheet: Actions</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Events.html">Cheat Sheet: Events</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Shortcuts.html">Cheat Sheet: Keyboard Shortcuts</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Cheat_Sheets/Terms.html">Cheat Sheet: Important Terms</a>              </div>                    </div>                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">7</div>            <a href="../../../Animate_Essentials/Essentials/Recipes/index.html">Recipes</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SpeechBubble.html">Creating a speech bubble</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SimpleButton.html">Creating a simple button</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/SexyBadges.html">Sexy Badges with CSS</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/RepeatedBackground.html">Repeated Background Image</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/GoogleMaps.html">Google Maps Integration</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Essentials/Recipes/PublishToWordpress.html">Publish to Wordpress</a>              </div>                    </div>              </div>          <div class="overview-book-cell">        <a href="../../../Animate_Essentials/Must_Have_Add_Ons">Must Have Add Ons</a>        <!-- Chapters -->                  <div class="overview-chapter-cell">            <div class="overview-chapter-number">1</div>            <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/index.html">Edge Commons</a>            <!-- Pages -->                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Introduction.html">Introduction</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/How_to_Use.html">How to use Edge Commons</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/CoreFeatures.html">Edge Commons Core Features</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Parallax.html">Edge Commons Parallax</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/Spotlight.html">Edge Commons Spotlight</a>              </div>                          <div class="overview-page-cell">                <a href="../../../Animate_Essentials/Must_Have_Add_Ons/Edge_Commons/SVG.html">Edge Commons SVG</a>              </div>                    </div>              </div>      </div>  
+    </div>
+    
+    
+    <!-- Non-Blocking -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900|league-gothic' rel='stylesheet' type='text/css'>-->
+    <script src="http://use.edgefonts.net/league-gothic;source-sans-pro:n3,n4,n6,n7.js"></script>
+    
+    <!-- Prism (Code formatter) -->
+    <script src="../../../_internals/libs/prism/prism.js"></script>
+    <link href="../../../_internals/libs/prism/prism.css" rel="stylesheet" type="text/css" />
+    
+  </body>
+</html>
